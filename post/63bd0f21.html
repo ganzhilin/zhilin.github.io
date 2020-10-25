@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,7 +17,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2020/9 - zhilin</title>
+  <title>HTML特效代码大全 - zhilin</title>
+  
+    <meta name="keywords" content="WEB">
   
 
   
@@ -329,7 +329,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg"></div>
           
@@ -407,8 +407,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">HTML特效代码大全</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -417,14 +417,14 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("half" == "half") { // 半屏 
+    if ("none" == "half") { // 半屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
+    } else if ("none" == "full") { // 全屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
     } 
@@ -438,70 +438,220 @@
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
-      
+    
+    
+      <h1 class="title">
+        HTML特效代码大全
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
+          
+            
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/post/4a17b156.html">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：May 29, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
+      <div id="lc-pv" data-title="HTML特效代码大全" data-path="/post/63bd0f21.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-27</time>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line">1.贴图：&lt;img src&#x3D;&quot;图片地址&quot;&gt;</span><br><span class="line"></span><br><span class="line">2.加入连接：&lt;a href&#x3D;&quot;所要连接的相关地址&quot;&gt;写上你想写的字&lt;&#x2F;a&gt;</span><br><span class="line"></span><br><span class="line">3.在新窗口打开连接：&lt;a href&#x3D;&quot;相关地址&quot; target&#x3D;&quot;_blank&quot;&gt;写上要写的字&lt;&#x2F;a&gt;</span><br><span class="line"></span><br><span class="line">消除连接的下划线在新窗口打开连接：</span><br><span class="line"></span><br><span class="line">4.&lt;a href&#x3D;&quot;相关地址&quot; style&#x3D;&quot;text-decoration:none&quot; target&#x3D;&quot;_blank&quot;&gt;写上你想写的字&lt;&#x2F;a&gt;</span><br><span class="line"></span><br><span class="line">5.字体加粗：&lt;b&gt;写上你想写的字&lt;&#x2F;b&gt;</span><br><span class="line"></span><br><span class="line">6.字体斜体：&lt;i&gt;写上你想写的字&lt;&#x2F;i&gt;</span><br><span class="line"></span><br><span class="line">7.字体下划线: &lt;u&gt;写上你想写的字&lt;&#x2F;u&gt;</span><br><span class="line"></span><br><span class="line">8.字体删除线: &lt;s&gt;写上你想写的字&lt;&#x2F;s&gt;</span><br><span class="line"></span><br><span class="line">9.字体加大: &lt;big&gt;写上你想写的字&lt;&#x2F;big&gt;</span><br><span class="line"></span><br><span class="line">10.字体控制大小：&lt;h1&gt;写上你想写的字&lt;&#x2F;h1&gt; (其中字体大小可从h1-h5,h1最大，h5最小)</span><br><span class="line"></span><br><span class="line">11.更改字体颜色：&lt;font color&#x3D;&quot;#value&quot;&gt;写上你想写的字&lt;&#x2F;font&gt;(其中value值在000000与ffffff(16位进制)之间</span><br><span class="line"></span><br><span class="line">12.消除连接的下划线：&lt;a href&#x3D;&quot;相关地址&quot; style&#x3D;&quot;text-decoration:none&quot;&gt;写上你想写的字&lt;&#x2F;a&gt;</span><br><span class="line"></span><br><span class="line">13.贴音乐：&lt;embed src&#x3D;音乐地址 width&#x3D;300 height&#x3D;45 type&#x3D;audio&#x2F;mpeg autostart&#x3D;&quot;false&quot;&gt;</span><br><span class="line"></span><br><span class="line">14.贴flash: &lt;embed src&#x3D;&quot;flash地址&quot; width&#x3D;&quot;宽度&quot; height&#x3D;&quot;高度&quot;&gt;</span><br><span class="line"></span><br><span class="line">15.贴影视文件：&lt;img dynsrc&#x3D;&quot;文件地址&quot; width&#x3D;&quot;宽度&quot; height&#x3D;&quot;高度&quot; start&#x3D;mouseover&gt;</span><br><span class="line"></span><br><span class="line">16.换行：&lt;br&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">17.段落：&lt;p&gt;段落&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">18.原始文字样式：&lt;pre&gt;正文&lt;&#x2F;pre&gt;</span><br><span class="line"></span><br><span class="line">19.换帖子背景：&lt;body background&#x3D;&quot;背景图片地址&quot;&gt;</span><br><span class="line"></span><br><span class="line">20.帖子背景音乐：&lt;bgsound&#x3D;&quot;背景音乐地址&quot; loop&#x3D;infinite&gt;</span><br><span class="line"></span><br><span class="line">21.贴网页：&lt;iframe src&#x3D;&quot;相关地址&quot; width&#x3D;&quot;宽度&quot; height&#x3D;&quot;高度&quot;&gt;&lt;&#x2F;iframe&gt;</span><br><span class="line"></span><br><span class="line">HTML特效代码</span><br><span class="line">1。忽视右键 </span><br><span class="line">　 &lt;body οncοntextmenu&#x3D;&quot;return false&quot;&gt; </span><br><span class="line">　 或 </span><br><span class="line">　 &lt;body style&#x3D;&quot;overflow-y:hidden&quot;&gt;</span><br><span class="line"></span><br><span class="line">2。加入背景音乐 </span><br><span class="line">　 IE:&lt;bgsound src&#x3D;&quot;*.mid&quot; loop&#x3D;infinite&gt; </span><br><span class="line">　 NS:&lt;embed src&#x3D;&quot;*.mid&quot; autostart&#x3D;true hidden&#x3D;true loop&#x3D;true&gt; </span><br><span class="line">　 &lt;&#x2F;embed&gt; </span><br><span class="line">　 *.mid你的背景音乐的midi格式文件 </span><br><span class="line"></span><br><span class="line">3。拉动页面时背景图不动 </span><br><span class="line">　 &lt;style&gt; </span><br><span class="line">　 body&#123;background-image:url(logo.gif); </span><br><span class="line">　 background-repeat:no-repeat;background-position:center&#125; </span><br><span class="line">　 &lt;&#x2F;style&gt; </span><br><span class="line"> </span><br><span class="line">4。网页自动刷新 </span><br><span class="line">　 在head部记入 </span><br><span class="line">　 &lt;META HTTP-EQUIV&#x3D;&quot;Refresh&quot; content&#x3D;&quot;20&quot;&gt; </span><br><span class="line">　 其中20为20秒后自动刷新，你可以更改为任意值。 </span><br><span class="line"></span><br><span class="line">5。网页自动转页 </span><br><span class="line">　 &lt;META HTTP-EQUIV&#x3D;&quot;Refresh&quot; CONTENT&#x3D;&quot;时间(秒);URL&#x3D;地址&quot;&gt; </span><br><span class="line"></span><br><span class="line">6。返回上一页 </span><br><span class="line">　 &lt;a href&#x3D;javascript :history.back(1)&gt;『返回上一页』&lt;&#x2F;a&gt; </span><br><span class="line"></span><br><span class="line">7。关闭窗口 </span><br><span class="line">　 &lt;a href&#x3D;javascript :self.close()&gt;『关闭窗口』&lt;&#x2F;a&gt; </span><br><span class="line"></span><br><span class="line">1.  &lt;link rel&#x3D;&quot;Shortcut Icon&quot; href&#x3D;&quot;favicon.ico&quot;&gt; IE地址栏前换成自己的图标</span><br><span class="line"></span><br><span class="line">2.  &lt;link rel&#x3D;&quot;Bookmark&quot; href&#x3D;&quot;favicon.ico&quot;&gt; 可以在收藏夹中显示出你的图标</span><br><span class="line"></span><br><span class="line">3.  &lt;input style&#x3D;&quot;ime-mode:disabled&quot;&gt; 关闭输入法</span><br><span class="line"></span><br><span class="line">8  网页将不能被另存为</span><br><span class="line">&lt;noscript&gt;&lt;iframe src&#x3D;*.html&gt;&lt;&#x2F;iframe&gt;&lt;&#x2F;noscript&gt;</span><br><span class="line"></span><br><span class="line">9.不要滚动条? </span><br><span class="line">让竖条没有: </span><br><span class="line">&lt;body style&#x3D;&quot;overflow:scroll;overflow-y:hidden&quot;&gt; </span><br><span class="line">&lt;&#x2F;body&gt; </span><br><span class="line">让横条没有: </span><br><span class="line">&lt;body style&#x3D;&quot;overflow:scroll;overflow-x:hidden&quot;&gt; </span><br><span class="line">&lt;&#x2F;body&gt; </span><br><span class="line">两个都去掉？更简单了 </span><br><span class="line">&lt;body scroll&#x3D;&quot;no&quot;&gt; </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line"></span><br><span class="line">10.怎样去掉图片链接点击后，图片周围的虚线？</span><br><span class="line"></span><br><span class="line">&lt;a href&#x3D;&quot;#&quot; onFocus&#x3D;&quot;this.blur()&quot;&gt;&lt;img src&#x3D;&quot;logo.jpg&quot; border&#x3D;0&gt;&lt;&#x2F;a&gt;</span><br><span class="line"></span><br><span class="line">11.如何设定打开页面的大小 </span><br><span class="line">&lt;body οnlοad&#x3D;&quot;top.resizeTo(300,200);&quot;&gt; </span><br><span class="line">打开页面的位置&lt;body οnlοad&#x3D;&quot;top.moveBy(300,200);&quot;&gt;</span><br><span class="line"></span><br><span class="line">12.  最小化、最大化、关闭窗口</span><br><span class="line">&lt;object id&#x3D;hh1 classid&#x3D;&quot;clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11&quot;&gt; </span><br><span class="line">&lt;param name&#x3D;&quot;Command&quot; value&#x3D;&quot;Minimize&quot;&gt;&lt;&#x2F;object&gt;</span><br><span class="line">&lt;object id&#x3D;hh2 classid&#x3D;&quot;clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11&quot;&gt; </span><br><span class="line">&lt;param name&#x3D;&quot;Command&quot; value&#x3D;&quot;Maximize&quot;&gt;&lt;&#x2F;object&gt;</span><br><span class="line">&lt;OBJECT id&#x3D;hh3 classid&#x3D;&quot;clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11&quot;&gt;</span><br><span class="line">&lt;PARAM NAME&#x3D;&quot;Command&quot; value&#x3D;&quot;Close&quot;&gt;&lt;&#x2F;OBJECT&gt;</span><br><span class="line"></span><br><span class="line">&lt;input type&#x3D;button value&#x3D;最小化 οnclick&#x3D;hh1.Click()&gt;</span><br><span class="line">&lt;input type&#x3D;button value&#x3D;最大化 οnclick&#x3D;hh2.Click()&gt;</span><br><span class="line">&lt;input type&#x3D;button value&#x3D;关闭 οnclick&#x3D;hh3.Click()&gt;</span><br><span class="line"></span><br><span class="line">13.在规定时间内跳转</span><br><span class="line">&lt;META http-equiv&#x3D;V&#x3D;&quot;REFRESH&quot; content&#x3D;&quot;5;URL&#x3D;http:&#x2F;&#x2F;www.xxxx.com&quot;&gt; </span><br></pre></td></tr></table></figure>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/post/4a17b156.html'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://zhilin.cc/post/63bd0f21.html>https://zhilin.cc/post/63bd0f21.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-05T10:42:52+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 5, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/WEB/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>WEB</p></a></div>
 
 
-	
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zhilin.cc/post/63bd0f21.html&title=HTML特效代码大全 - zhilin&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhilin.cc/post/63bd0f21.html&title=HTML特效代码大全 - zhilin&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://zhilin.cc/post/63bd0f21.html&title=HTML特效代码大全 - zhilin&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/post/fc296de6.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>阿里云域名解析</p>
+          <p class='content'>
+我的域名是在GoDaddy注册的，进入GoDaddy后台，修改DNS服务器，改成阿里云的。
+12ns1.alidns.comns2.alidns.com
+登录阿里云后台，修改域名解析。国内 C...</p>
+        </a>
+      
+      
+        <a class='next' href='/post/91527a97.html'>
+          <p class='title'>jsDeliver CDN 加速 JS CSS 文件<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>很多时候，我们网站在引用 第三方js代码的时候加载比较慢，第一种办法是把js代码下载过来放到自己的慢站中加载，这样会消耗自己网站的带宽，还有一个就是可以使用jsDeliver的免费CDN。
+
+
+...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -509,103 +659,14 @@ Qu...
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/avatar1.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">zhilin</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
 
 
-    <div class='content'>
-      <a href="/tags/Blog/" style="font-size: 22px; color: #636363">Blog</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/WEB/" style="font-size: 20px; color: #707070">WEB</a> <a href="/tags/Windows/" style="font-size: 20px; color: #707070">Windows</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 14px; color: #999">数学</a> <a href="/tags/%E6%98%93%E8%AF%AD%E8%A8%80/" style="font-size: 16px; color: #8b8b8b">易语言</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 18px; color: #7e7e7e">树莓派</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 24px; color: #555">生活</a>
-    </div>
-  </section>
-
-
-  
 
   
 
 
 </aside>
+
 
 
         

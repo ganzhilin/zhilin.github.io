@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2020/9 - zhilin</title>
+  <title>Python批量压缩图片500张 - zhilin</title>
+  
+    <meta name="keywords" content="Python">
   
 
+  
+    <meta name="description" content="这几天，我在用 Github page + hexo  搭建个人网站，为了延续风格，就想把配图与文章一起迁移过去。这时候就出现了一个难题：我所用的图片都是高清大图，放到网站上会严重拖慢加载速度。因此，需要先把图片压缩，再上传。">
   
 
   <!-- feed -->
@@ -329,7 +331,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg"></div>
           
@@ -407,8 +409,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">Python批量压缩图片500张</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -417,14 +419,14 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("half" == "half") { // 半屏 
+    if ("none" == "half") { // 半屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
+    } else if ("none" == "full") { // 全屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
     } 
@@ -438,70 +440,226 @@
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
-      
+    
+    
+      <h1 class="title">
+        Python批量压缩图片500张
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
+          
+            
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/post/4a17b156.html">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 28, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
+      <div id="lc-pv" data-title="Python批量压缩图片500张" data-path="/post/de48f5d4.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-27</time>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>这几天，我在用 Github page + hexo  搭建个人网站，为了延续风格，就想把配图与文章一起迁移过去。这时候就出现了一个难题：我所用的图片都是高清大图，放到网站上会严重拖慢加载速度。因此，需要先把图片压缩，再上传。</p>
+<a id="more"></a>
+<p>我把需求概括如下：<br>批量压缩图片，现有约 200 张，后会再增<br>是压缩，不是切割截取，不改变图片尺寸<br>原图片大部分是 10M - 30M，目标是压缩成 1M 以内，越小越好<br>按着这几条线索，我搜索“批量压缩图片”、“图片压缩工具“、”批量处理图片“……<br>开始的想法是找轻量级的图片压缩工具，简单处理一下就好。然而不知是搜索的姿势不对，还是筛选过滤信息的姿势不对，结果都差强人意。<br>查找到的工具有本地与在线两类，可试验后都不太理想：有的软件下载后才发现是付费的，有的在使用时直接导致程序卡死，有的压缩率不够需要多次压缩，有的要求原始图片大小不能超过 5 M，有的要求批量处理数量不超过 20 张，有的不支持批量压缩……群内小伙伴还帮忙推荐了“PS+批处理”、acdsee、甚至手机应用 snapseed，都不合我意。<br>花了不少时间后，偶然看到有文章写用 Python 来压缩图片。一文惊醒梦中人，我怎么没想到呢？<br>先看看别人是怎么做的。 [这篇<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/32246003">如何用Python智能批量压缩图片</a> 文章中介绍了使用 PIL 库的 Image 模块来压缩图片的方法，主要通过调节图片长宽数值的方式。<br>PIL 是个强大的图片处理库，但只支持 Python 2，而且早已停止更新。有开发者在它基础上改良并维护了 Pillow，支持 Python 3。之前有所耳闻，没用过。于是猫哥查了几篇教程和文档。读后发现它压缩图片的方法主要是等比例缩放、裁剪以及改变格式等，并非我所要的。<br>还看到一篇 <a target="_blank" rel="noopener" href="https://juejin.im/post/5959fbe0f265da6c2518d740">如何在无损的情况下让图片变的更小</a> 文章，它介绍了 Yelp（美国最大点评网站）的三种优化图片的策略：Pillow、动态调优、更换编码器。有些方法很高大上，应该是业界先进经验了，但它希望保证图片无损，所有方法加起来才可以使图片大小平均减少 30%，因此并不满足我的要求。另外它引申介绍了几种方法，可是需要花费时间去研究，我也放弃了。<br>最后，终于找到了一种非常便捷，又十分满足的方案，下面开始进入正题了。（不要嫌我啰嗦，探索的过程也很有趣）（嘘，实际上是因为下面要介绍的方法太简单，才区区几行代码，我实在忍不住强行加戏……）<br>Tinypng 网站提供在线图片压缩服务，是所有图片压缩工具中最好用的之一，但有限制：批量最多处理 20 张，且每张大小不允许超过 5M。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/8HqMEMhT/8HqMEMhT_1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/8HqMEMhT/8HqMEMhT_1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>这个网站非常良心，开放了免费的 API ，API 取消了每张大小的限制，只限定每个月处理 500 张图片。这对我来说，已经足足有余了。<br>下面介绍怎么使用它。第一步是在它网站上注册，获得专属的 API_KEY。使用的是邮箱注册，很简单。<br>然后是安装 package：<br><code>pip install --upgrade tinify</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/8HqMEMhT/8HqMEMhT_2.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/8HqMEMhT/8HqMEMhT_2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>接着是处理图片：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import tinify</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">tinify.key &#x3D; &#39;此处填入你的key&#39;</span><br><span class="line">path &#x3D; &quot;C:\\Users\\yunpoyue\\Pictures\\cat&quot; # 图片存放的路径</span><br><span class="line"></span><br><span class="line">for dirpath, dirs, files in os.walk(path):</span><br><span class="line">    for file in files:</span><br><span class="line">        imgpath &#x3D; os.path.join(dirpath, file)</span><br><span class="line">        print(&quot;compressing ...&quot;+ imgpath)</span><br><span class="line">        tinify.from_file(imgpath).to_file(imgpath)</span><br></pre></td></tr></table></figure>
+<p>不到 10 行代码，轻轻松松就批量压缩图片，简直不要太爽！20 M 的图片能压缩到 2 M，压缩率达到惊人的 90%，成绩喜人。<br>它的API还提供图片裁剪、加水印、保存压缩图片至云服务商（亚马逊云、谷歌云）等功能，非常强大。除压缩过程有点慢，其它无可挑剔。<br>经过一番探索与比较，我确定这是目前的最优方案，所以强烈分享给大家。</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/post/4a17b156.html'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://zhilin.cc/post/de48f5d4.html>https://zhilin.cc/post/de48f5d4.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-05T18:49:02+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 5, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div>
 
 
-	
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zhilin.cc/post/de48f5d4.html&title=Python批量压缩图片500张 - zhilin&summary=这几天，我在用 Github page + hexo  搭建个人网站，为了延续风格，就想把配图与文章一起迁移过去。这时候就出现了一个难题：我所用的图片都是高清大图，放到网站上会严重拖慢加载速度。因此，需要先把图片压缩，再上传。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhilin.cc/post/de48f5d4.html&title=Python批量压缩图片500张 - zhilin&summary=这几天，我在用 Github page + hexo  搭建个人网站，为了延续风格，就想把配图与文章一起迁移过去。这时候就出现了一个难题：我所用的图片都是高清大图，放到网站上会严重拖慢加载速度。因此，需要先把图片压缩，再上传。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://zhilin.cc/post/de48f5d4.html&title=Python批量压缩图片500张 - zhilin&summary=这几天，我在用 Github page + hexo  搭建个人网站，为了延续风格，就想把配图与文章一起迁移过去。这时候就出现了一个难题：我所用的图片都是高清大图，放到网站上会严重拖慢加载速度。因此，需要先把图片压缩，再上传。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/post/5a23fa72.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Ex_DirectUI自绘第一课</p>
+          <p class='content'>历经数个月，泆寒终于发布了Ex_Dui 3.0，中间经历了无数次跳票，漂亮的界面就跟人的脸一样重要，想做出漂亮的界面，就得学习自绘。
+对于易语言爱好者来说，选择自绘就应该选择Ex_Dui，易语言...</p>
+        </a>
+      
+      
+        <a class='next' href='/post/df0aadce.html'>
+          <p class='title'>追梦win8皮肤模块<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1：编译时不会把没有用到的皮肤资源打包，编译出来的程序体积小。
+2：不会向系统写入任何东西。
+3：还去除了，界面上的 “小衣服” 哦！
+
+皮肤使用说明.↓.
+下载地址：https://ganzh...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -509,103 +667,14 @@ Qu...
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/avatar1.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">zhilin</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
 
 
-    <div class='content'>
-      <a href="/tags/Blog/" style="font-size: 22px; color: #636363">Blog</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/WEB/" style="font-size: 20px; color: #707070">WEB</a> <a href="/tags/Windows/" style="font-size: 20px; color: #707070">Windows</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 14px; color: #999">数学</a> <a href="/tags/%E6%98%93%E8%AF%AD%E8%A8%80/" style="font-size: 16px; color: #8b8b8b">易语言</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 18px; color: #7e7e7e">树莓派</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 24px; color: #555">生活</a>
-    </div>
-  </section>
-
-
-  
 
   
 
 
 </aside>
+
 
 
         

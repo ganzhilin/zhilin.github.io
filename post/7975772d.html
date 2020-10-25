@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+
+  <!-- 页面元数据 -->
+  
+  <title>小窍门解决大问题 - zhilin</title>
+  
+    <meta name="keywords" content="生活">
+  
+
+  
+    <meta name="description" content="这里搜集了好多生活的小窍门，希望能给大家带来更多的方便，让我们的生活越来越美好！">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+
+  
+  
+
+  
+
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/ico.png">
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  <!-- 脚本懒加载函数 -->
+  <script>
+  function loadScript(src, cb) {
+    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+    var script = document.createElement('script');
+    script.setAttribute('type','text/javascript');
+    if (cb) script.onload = cb;
+    script.setAttribute('src', src);
+    HEAD.appendChild(script);
+  }
+  //https://github.com/filamentgroup/loadCSS
+  !function(c){"use strict";var e=function(e,t,n,r){var o,i=c.document,a=i.createElement("link");if(t)o=t;else{var d=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=d[d.length-1]}var f=i.styleSheets;if(r)for(var l in r)r.hasOwnProperty(l)&&a.setAttribute(l,r[l]);a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(a,t?o:o.nextSibling)});var s=function(e){for(var t=a.href,n=f.length;n--;)if(f[n].href===t)return e();setTimeout(function(){s(e)})};function u(){a.addEventListener&&a.removeEventListener("load",u),a.media=n||"all"}return a.addEventListener&&a.addEventListener("load",u),(a.onloadcssdefined=s)(u),a};"undefined"!=typeof exports?exports.loadCSS=e:c.loadCSS=e}("undefined"!=typeof global?global:this);
+  </script>
+  <script id="loadcss"></script>
+</head>
+
+<body>
+  <header class="l_header auto shadow blur " style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/logo.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+  
+    
+    
+        <div class='cover-wrapper post dock' style="display: none;">
+          
+            <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg"></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/v4/getting-started/"
+              
+              
+              id="v4getting-started">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>文档</p>
+            </a>
+          
+            <a href="/faqs/"
+              
+              
+              id="faqs">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>帮助</p>
+            </a>
+          
+            <a href="/examples/"
+              
+              
+              id="examples">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>示例</p>
+            </a>
+          
+            <a href="/contributors/"
+              
+              
+              id="contributors">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>社区</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
+              
+              
+              id="https:githubcomvolantis-xhexo-theme-volantis">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>源码</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+  
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量--> 
+<!--思路大概是将值藏到重加载的区域内--> 
+ 
+ 
+ 
+<div id="pjax-data" style="display: none"> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">小窍门解决大问题</div> 
+  <div id="pjax-enable-cover">true</div> 
+  <div id="pjax-comment-path"></div> 
+  <div id="pjax-comment-placeholder"></div> 
+</div> 
+ 
+ 
+<script> 
+  // 处理封面 此时 jquery 还没加载 
+  if ("none" == "none") { // 移除封面 
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
+  } else { 
+    if ("none" == "half") { // 半屏 
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
+      document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
+    } else if ("none" == "full") { // 全屏 
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
+      document.getElementsByClassName('scroll-down')[0].style.display = ""; 
+    } 
+    document.getElementsByClassName('cover-wrapper')[0].style.display = ""; 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show"); 
+  } 
+</script> 
+ 
+
+        
+        
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        小窍门解决大问题
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jul 12, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="小窍门解决大问题" data-path="/post/7975772d.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  <p>这里搜集了好多生活的小窍门，希望能给大家带来更多的方便，让我们的生活越来越美好！<br> <a id="more"></a><br>1、不用水，毛绒玩具巧清洁</p>
+<p>方法：将半碗大粒盐(即粗盐，超市有售，2元一袋)和脏了的毛绒玩具一起放入一个塑料袋，系口，用力摇晃几十下即可。取出时盐已因吸附了污垢而变成灰黑色。</p>
+<p>优点：避免了因水洗造成玩具毛绒打结。同时盐还有消毒效果。快捷省时。</p>
+<p>原理：利用了食盐即氯化钠的正负离子对污垢的吸附作用。</p>
+<p>举一反三：也可用此方法来清洁棉服的毛绒领子和车内的毛绒靠垫之类的小东西。</p>
+<p>2、蛋清蛋黄巧分离</p>
+<p>方法：把鸡蛋打进碗里，用一个空饮料瓶子在蛋黄上面轻轻吸取即可轻松分离蛋清蛋黄。</p>
+<p>优点：比其他传统方法干净卫生快捷，如果暂时不用蛋黄，可以盖上饮料瓶的盖子，直接放进冰箱保存。</p>
+<p>3、巧晒厚毛毯</p>
+<p>方法：将毛毯沿对角线晾晒在晒衣绳上，可使晾干所需要的时间大大缩短。</p>
+<p>4、相框内照片巧固定</p>
+<p>方法：将一个或几个猴皮筋放在照片后面再压好玻璃板即可。横摆竖摆斜摆悉听尊便。</p>
+<p>原理：利用了皮筋增大了照片与玻璃板之间的摩擦力。此法同样可以用固定大幅的画。</p>
+<p>5、巧剥橙皮</p>
+<p>方法：这个方法好像有人发过了，我再重复一遍吧。用一个钢勺把橙子蒂部挖掉，挖一个比勺子略大的圆，然后把勺子贴着橙子皮插进去(勺子的弧度贴合橙子皮的弧度)，一点一点撬开表皮即可。不知道这样的表述清楚与否，呵呵</p>
+<p>6、利用手表巧辨方向(必备条件：太阳)</p>
+<p>方法：把当时的时间除以2，得到的数字的指针对准太阳的方向，则12点所对的方向即为北方。例如，下午两点即14点，除2得7，把7点的位置对准太阳的方向，则12的方向就是北方。</p>
+<p>7、塑料盆巧清洁</p>
+<p>方法：把喝剩下的茶叶用纱布包起来，蘸取适量的食用油擦拭，之后再用少许洗洁剂清洗即可。</p>
+<p>优点：相比传统用菜瓜布等用力擦洗的办法，此法避免了划伤塑料制品表面。而塑料制品表面划伤后会凹凸不平，则更加容易堆积污垢。</p>
+<p>原理：以油吸油，</p>
+<p>8、不锈钢餐具巧清洗</p>
+<p>方法：把做菜时切下不用的胡萝卜头在火上烤一烤之后用来擦拭不锈钢制品。</p>
+<p>优点：不伤表面光洁度。</p>
+<p>原理：忘了，呵呵。好像是利用烤过胡萝卜的小小酸性吧。</p>
+<p>9、巧泡八宝米</p>
+<p>方法：把各色难煮的豆子和米放进普通的保温瓶内，加入开水，放置十几个小时，即可倒出用普通锅或者高压锅煮粥。</p>
+<p>我已经使用这个方法几次了，强烈推荐!!!非常方便，大大缩短了煮粥时间。煮出的粥粘粘糯糯，好吃极了!!</p>
+<p>10、巧洗细口脏瓶子</p>
+<p>方法：把鸡蛋壳弄成碎片，放进瓶子，加温水，用力摇晃，即可洗得干干净净。</p>
+<p>原理：利用鸡蛋壳的摩擦力来清除附着在瓶子内壁的油和果酱之类的东西。</p>
+<p>11、巧开铁瓶盖</p>
+<p>方法：在瓶子底部用掌心用力拍打几下即可轻松旋开瓶盖。</p>
+<p>12、鸡蛋清巧粘玻璃或瓷器</p>
+<p>方法：用棉棒蘸取少量蛋清(做菜后鸡蛋壳内剩下的就够用了)，涂抹要粘和的两块玻璃的边缘，将两块玻璃用力挤压在一起，放置24小时即可粘牢。同样适用于部分摔掉的瓷器。</p>
+<p>13、鸡蛋清巧粘皮鞋破皮儿</p>
+<p>方法：用棉棒蘸取少量蛋清(做菜后鸡蛋壳内剩下的就够用了)，涂抹在破皮儿的内侧，即可粘好，而且不留痕迹，不怕水浸泡。</p>
+<p>14、巧除干燥冬季身上的静电</p>
+<p>方法：在平时穿的拖鞋底儿脚跟中央的位置用锥子扎一个小洞，然后将两枚图钉分别从鞋内和鞋底插入小洞里，使针尖部分相抵。出门穿的底儿比较厚的皮鞋等可以用大头针如法炮制，注意把针尖的一头在鞋底别个弯儿。</p>
+<p>15、炸馒头片巧省油</p>
+<p>方法：先将馒头片在一碗水里略微浸泡之后再放进油锅里炸，省油又健康，外观口感更好。</p>
+<p>16、巧煎饺子</p>
+<p>方法：在平底锅内加少量油，稍热后放入一个小钢蒸屉，把饺子放在上面煎，均匀不糊。</p>
+<p>17、巧除衣服、床单上的头发丝等</p>
+<p>衣服、床单上沾了头发丝之类的小东西，用手摘很麻烦，于是很多人在超市里买那种带胶纸的滚子来粘除。有一个更加经济方便的方法如下：</p>
+<p>在一个用完的保鲜膜内的滚轴（即纸筒）的一端紧紧地缠上两根最普通的橡皮筋，然后手持纸筒的另一端，利用橡皮筋的摩擦力，即可把头发等杂物缠绕在橡皮筋上。清理完之后把橡皮筋取下来，放在水里洗净即可继续使用。</p>
+<p>18、巧存豆腐</p>
+<p>买来的豆腐，很容易变质，放在冰箱里最多只能存上两三天，而且容易发粘。</p>
+<p>方法：把豆腐放在盐水中煮开，放凉后之后连水一起放在保鲜盒里再放进冰箱，则至少可以存放一个星期不变质。</p>
+<p>19、淋过水的书刊杂志巧复原：</p>
+<p>方法很简单：只要把书页上的水稍稍抹干，再放进冰箱的冷冻室里，十几个小时之后即可平整如新，一点皱痕都没有。</p>
+<p>20、仿真首饰巧保护</p>
+<p>方法：在佩带之前在首饰上均匀地涂抹上一层透明的指甲油即可。</p>
+<p>21、巧别胸针</p>
+<p>在单薄的衬衫上别胸针的时候，由于胸针本身的重量，往往会在衣服上留下比较明显的痕迹。只要在衣服里面粘上一块略大于胸针长度的医用白胶布，之后再别上胸镇，就不会伤害你珍贵的衣服了。当我们用胸针来别丝巾的时候，也可以用这个方法。</p>
+<p>22、巧穿旧鞋带</p>
+<p>用久了的鞋带头儿往往会变得松散，不好穿。这时，我们只要剪一小条约1厘米宽的锡纸，在鞋带头儿紧紧地缠上几圈，之后即可轻松地穿鞋带了。巧克力等零食内的锡纸可废物利用。</p>
+<p>23、巧切洋葱不辣眼</p>
+<p>切洋葱不辣眼的方法很多，今天介绍个新鲜点的。方法很简单，就是在你切洋葱的时候在案板旁边点两根蜡烛。这个方法我试过了，还不错，虽然还是有一点刺激，但是不会泪流满面了，呵呵。</p>
+<p>24、巧存生姜</p>
+<p>生姜不是很好保存，一般做法是把它埋在沙土里。今天介绍个更方便的方法，就是把生姜切成稍粗的丝，用保鲜膜包起来，放进冰箱的冷冻室。记住，是 冷冻室哦!以后随用随取即可。这个方法同样试用于葱。我们可以把葱花切好，分成等分，同样放进冷冻室，每次炒菜用一包。这样保存葱姜不会烂掉蔫掉，不会影 响风味，还节省了每次炒菜切葱花姜丝的时间，何乐而不为呢?</p>
+<p>24、巧蒸蛋羹</p>
+<p>蛋羹爽滑细腻，营养丰富，大人小孩都爱，但有个小问题，蒸过蛋羹的碗很难洗干净。只要在蒸之前，在碗的内壁上薄薄地抹上一层食用油，之后再放进搅好的鸡蛋。</p>
+<p>吃完了蛋羹，很轻松就可以把碗洗干净了。</p>
+<p>25、巧用微波炉加热不烫手</p>
+<p>在用微波炉加热剩菜的时候，为了防止水分的流失，我们要在盘子上罩上一层保鲜膜。加热完毕，盘子会很烫，我们往往会用微波专用手套去取。但是菜 汤常常会弄脏手套，垫着抹布来拿吧，又不卫生。今天介绍一个简单的方法：在包保鲜膜的时候，留两个边不要包，取出的时候用手端这两个边就不会烫手。</p>
+<p>26，巧穿鞋带不易送脱</p>
+<p>运动鞋的鞋带在运动过程中很容易松脱，给人带来不大不小的困扰。有一个很好的小妙招可以解决这个问题：首先，把两个鞋带系一下，然后分别穿上一 个小螺丝母，之后再按照普通的方法系鞋带即可。这个方法利用了离心力的原理，通俗地说就是螺丝母对鞋带有个拉力，使鞋带不容易松开。</p>
+<p>举一反三：这个方法同样适用与其他系袋子的地方，比如说用绳子收口的手袋，用绳子代替纽扣的衣服等等。大家可以发挥想像力，把外形不美的螺丝母换成其他东西，比如说五颜六色的珠子，塑料石头水晶等各种质地均可。不但能够防止带子松开，还能起到别出心裁的装饰作用哦。</p>
+<p>27、橡皮擦去除污垢</p>
+<p>有很多MM家里肯定有许多百色的包包呀，皮鞋呀什么的，这些白色的东西上面脏了怎么办呢，那我就告诉你一个即简单又容易去除污垢的巧办法。</p>
+<p>那就是用橡皮擦，不管是什么污垢，用橡皮擦一擦即可擦除污垢，大家不妨试试哦，还有白色的桌面，墙面，沙发什么的都可以用橡皮擦的，大家快试试吧</p>
+<p>另，有朋友有其他妙招的别自己偷偷的用，要告诉大家啊</p>
+<p>绿豆的储存方法</p>
+<p>夏天到了，很多人家有煲绿豆汤去暑的习惯，但绿豆容易生虫，买回的绿豆可以存放在塑料壶或者塑料瓶里，象大些的饮料瓶，这个夏天吃不完的绿豆也可以这样存放，可以保存到来年的夏天。</p>
+<p>可以放在喝可乐的大瓶子里，放到冰箱里面去存更好<del>~</del></p>
+<p>也有人说买回来的绿豆放进冰箱冷冻一周后再拿出来，就不会生虫了</p>
+<p>再新增十个：</p>
+<p>一、用鸡蛋壳清理瓶子里的油污。家里装酱油、醋的瓶子时间久了会有很多污垢，手又够不着，可以把鸡蛋壳担碎后放在里面，加少量水，反复晃动，就可以清理干净了。</p>
+<p>二、用矿泉水瓶子把鸡蛋与蛋清分离。把鸡蛋打入碗中，用捏扁的矿泉水瓶子对着蛋黄轻轻一吸，就可以把蛋黄吸出来了，试试看。</p>
+<p>三、巧煮绿豆汤：洗净的绿豆放入锅中炒五六分钟，边炒边碾压。然后放入锅中煮，这样容易煮烂，而且豆和皮不分家。</p>
+<p>四、如何把袋装的醋倒入瓶中？把袋装的醋放在带把的杯子中，然后再剪一个小口，再往瓶子里倒非常方便，而且不会外漏。</p>
+<p>五、煮豆浆妙招：先加入少许凉水，再倒入豆浆煮，不会糊锅。</p>
+<p>六、饼干防潮：家中买的饼干时间久了会潮，口感不好，在饼干里放几块方块糖，问题就解决了。</p>
+<p>七、杯子上有了茶垢怎么办？用牙膏来清除，方便快捷。</p>
+<p>八、电池的负极涂上蜡，防跑电。大家都知道买回来的电池如果长时间不用的话，它的电量会自然减少，用这个方法可以有效地防止电量流失，有实验为证哦。</p>
+<p>九、家中剪刀不利了怎么办？剪刀如果比较钝了，用它剪易拉罐，越剪越锋利，跟磨过了一样。</p>
+<p>十、巧揭膏药：膏药粘在皮肤上揭得时候会比较痛，把润肤油涂在膏药表面再揭就好多了。</p>
+<p>01、切洋葱不怕辣眼：切洋葱前先用卫生纸把鼻孔堵住，然后切洋葱就不会辣眼流泪了。</p>
+<p>02、毛笔叉恢复：分把分叉的毛笔放到鸡蛋清里面沾沾沾到一起后放到通风处晾干后就焕然一新了。</p>
+<p>03、巧切窝笋皮：切窝笋皮的时候顺着周围最外边的一圈白的地方(笋筋)直着往下削就行了。</p>
+<p>04、用盐打扫碎鸡蛋：只要撒少许盐到碎鸡蛋上面，过一分钟后再用卫生纸把碎鸡蛋抓起来扔掉就行了。</p>
+<p>05、巧做标签：先用笔把字写到玻璃制品上面，然后用透明胶布粘上，然后把胶布揭下来粘到玻璃杯上就行了。</p>
+<p>06、巧拎易拉罐：找一块餐巾纸，把它捻成一根绳。然后依次从易拉罐中的拉环穿过去，提六七罐没问题。</p>
+<p>07、破雨伞巧利用：先把破雨伞的伞面去掉，再把有坏的伞骨去掉。伞骨的接口处都有小孔，用别针或布条把小夹子和伞骨的接口连到一块。把伞骨的 接口处都弄好小夹子后晾衣服或者晾鞋子都很好看，而且不用的话可以把伞合起来，不占地方。伞面是防水材料，可以做成浴帽、袖套、围裙等。</p>
+<p>08、痛快吃西瓜：先把西瓜拦腰切成两半，然后顺着西瓜的纹理往下切，切到中间。把其它的纹理也切到中间，这样切成的西瓜块的西瓜籽就都在西瓜瓤表面，用勺子把西瓜籽舀掉就行了。虽然里面不是一颗西瓜籽都没有，但是可比用普通的切法少很多了。</p>
+<p>09。韭菜保鲜：用两片白菜或生菜叶把韭菜包起来放到阴凉处就行了，原理是韭菜水分蒸发快，大白菜水分多蒸发慢。用白菜叶把韭菜包起来的话韭菜的水分也不容易蒸发，而且还能吸收白菜叶的水分。同样的方法，用来保存香菜也可以。</p>
+<p>10、巧洗葡萄（20070527）：准备一个盆子，往里面倒入少量淀粉。再倒入清水，只要能够漫过葡萄就行。再把葡萄放入水中来回涮涮，然后用清水冲洗干净。这样洗的葡萄不掉珠子，又洗的干净。央视&gt;(111-155)</p>
+<p>111、烟或长时间使用深色指甲油会使指甲变色，可每天用半个新鲜柠檬擦拭，连续擦上两周即可除去污渍。</p>
+<p>112、生活窍门：减少洗衣粉泡沫的窍门：往洗涤液中加少量肥皂粉，泡沫会显着减少。若用洗衣机洗衣，可在洗衣缸里放一杯醋，洗衣粉泡沫就会消失。</p>
+<p>113、生活窍门：在服用四环素类药物时，不宜吃豆腐，因豆腐中含有较多钙，用盐卤做的石膏中含有较多镁，四环素遇到钙、镁会发生反应，降低杀菌效果。</p>
+<p>114、生活窍门：丸子、松肉的配料比例：在烹饪丸子或松肉菜肴时，只要是按50克肉、10克淀粉的比例调料，就能使松肉松酥、丸子软嫩。</p>
+<p>115、生活窍门：巧除领带上的皱纹。打皱了的领带，不用熨斗烫也能变得既平整又漂亮，只要把领带卷在啤酒瓶上，第二天再用时，原来的皱纹就消除了。</p>
+<p>116、生活窍门：取适量红糖放口中含十分钟后刷牙2-3分钟，漱口。再用盐碱水（清水掺食盐、食碱各50克）刷牙2分钟。每日2次，1周后烟垢可脱落</p>
+<p>117、生活窍门：将废药瓶上的橡皮盖子搜集起来，按纵横交错位置，一排排钉在一块长方形木板上（钉子须钉在盖子凹陷处），就成为一块很实用的搓衣板。</p>
+<p>118、生活窍门：使衣物香气袭人：用完的香水瓶、化妆水瓶等不要立即扔掉，把它们的盖打开，放在衣箱或衣柜里，会使衣物变得香气袭人。</p>
+<p>119、生活窍门：咸肉放时间长了会有一股辛辣味，在煮咸肉时放一个白萝卜，然后再烹调，辛辣味即可除去。若咸肉仅表面有异味，用水加少量醋清洗即可。</p>
+<p>120、生活窍门：手表内不小心进水，可用一种叫硅胶的颗粒状物质与手表一起放入密闭的容器内，数小时后取出，表中的积水即可消失。硅胶可反复使用。</p>
+<p>121、生活窍门：擀面条时，如果一时找不到擀面杖，可用空玻璃瓶代替。用灌有热水的瓶子擀面条，还可以使硬面变软。</p>
+<p>122、生活窍门：用洁厕灵当疏通剂：隔三差五地将适量洁厕灵倒入马桶，盖上马桶盖闷一会儿，再用水冲洗，能保持马桶通畅。</p>
+<p>123、生活窍门：被蚊虫叮咬后可将热水瓶盖子（取自约90度水温的热水瓶）放在患处摩擦2-3秒钟，然后拿起，连续2-3次，瘙痒即会消失。</p>
+<p>124、生活窍门：将待熟的香蕉放入冰箱内贮存，能使香蕉在较长时间内保鲜，即使外皮变色，里面也一样新鲜如初。</p>
+<p>125、生活窍门：巧用84消毒液：洗衣时，白色纯棉织物易被其他衣服染色，可将被染衣服泡到稀释后的84消毒液中，利用其脱色性，还您衣服的本来面目</p>
+<p>126、生活窍门：用墩布拖地很沉，且容易腰酸背疼，地面也要很长时间才干。用旧毛巾当抹布擦地，干净、干得快、省时间，用旧化纤料效果更好。</p>
+<p>127、生活窍门：喝烫过的白酒对人体有益。因白酒中的醛对人体损害较大，只要把酒烫热一些，就可使大部分醛挥发掉，这样对人身体的危害就会少一些。</p>
+<p>128、生活窍门：巧用废瓶盖洁墙壁。将几只小瓶盖钉在小木板上，即成一个小铁刷，用它可刮去贴在墙壁上的纸张和鞋底上的泥土等，用途很广。</p>
+<p>129、生活窍门：当你非常口渴而家中又无凉开水时，可把装有热水的杯子放入冷水中浸泡，然后在冷水中撒上一把盐，这样能加速开水的冷却。</p>
+<p>130、生活窍门：写钢笔字时，如写了错别字，抹点牙膏，一擦就净。圆珠笔芯写字不流利时，将笔头插进吸过香烟的过滤嘴中转一转即可。</p>
+<p>131、生活窍门：如果你身边只有温开水而又想喝到浓郁的香茶，可在温开水中放少许白糖或红糖，搅拌溶解，然后放入茶叶，5分钟后，你便能如愿以偿。</p>
+<p>132、生活窍门：将废弃无用的橡皮盖子用双面胶固定在房门的后面，可防止门在开关时与墙的碰撞，能起到保护房门的作用。</p>
+<p>133、生活窍门：将西瓜浸入15%的盐水中3-5日，捞出揩干，再用西瓜蔓叶中挤出的水汁涂一遍，密封于聚乙稀塑料袋内，放入地窖，可使西瓜保鲜半年</p>
+<p>134、生活窍门：鉴别宝石的窍门：将宝石放在衬物上让日光照射，穿透宝石的光线在衬物上呈现金星样子的为真品。若是假宝石，衬物上会呈现一块黑影</p>
+<p>135、生活窍门：怎样烧鱼鱼不碎？1烧鱼之前，先将鱼下油锅炸一下。如烧鱼块，应裹一层薄薄的淀粉再炸。炸时注意油温宜高不宜低。</p>
+<p>136、生活窍门：怎样烧鱼鱼不碎？2烧鱼时汤以刚没过鱼为宜，待汤烧开后，要改用小火煨焖至汤浓放香时即可，煨焖时要少翻动鱼，可将锅端起轻轻晃动。</p>
+<p>137、生活窍门：鸡肉与芹菜同食会伤元气；牛肉与栗子同食后会呕吐；兔肉与芹菜同食会伤头发；蟹与柿子同食会中毒；洋葱与蜂蜜同食会伤眼睛。</p>
+<p>138、生活窍门：戳伤手指的救护窍门：用冷湿布冷却患处，用厚纸作夹板固定受伤手指，再用绷带包扎好。普通扭伤或脱位，可自行将患处整复好，恢复原状</p>
+<p>139、生活窍门：面粉能洗净葡萄！葡萄去蒂放在水盆里，加入适量面粉，用手轻搅几下，然后将浑浊的面粉水倒掉，用清水冲净即可。</p>
+<p>140、生活窍门：车船行驶途中，将鲜姜片随时放在鼻孔下面闻，使辛辣味吸入鼻中，可以防晕车；将姜片贴在肚脐上，用伤湿止痛膏固定好，有相同效果。</p>
+<p>141、生活窍门：旅途中处理脚泡的方法：先用热水烫脚十分钟，用消过毒的针刺破脚泡，使泡内液体流出、排干，再将脚泡部位消毒。忌剪去泡皮，以防感染</p>
+<p>142、生活窍门：旅途中小腿抽筋的防治：扳脚法：取坐姿，一手用力压迫痉挛的腿肚肌肉，一手抓住足趾向后扳脚，使足部背曲，再活动一下，即可缓解。</p>
+<p>143、生活窍门：旅途中遭遇雷雨时，千万不要在巨石、悬崖下和山洞口躲避，电流从这些地方通过时会产生电弧，击伤避雨者。若山洞很深，可躲在里面</p>
+<p>144、生活窍门：受潮软化的饼干放入冰箱冷藏几天，即可恢复原状；切洋葱等蔬菜时，可将其去皮放入冰箱冷冻室存放数小时后再切，就不会刺眼流泪了。</p>
+<p>145、生活窍门：酿酒用的葡萄皮有丰富的抗氧化剂，经常适量饮点红酒，能增加好的胆固醇，减少血管硬化。</p>
+<p>146、生活窍门：熬粥加碱的做法是不科学的，加碱熬出来的粥虽然显得粘稠、滑口，但粥内的一些重要的营养成分大部分都被破坏了，因此，熬粥不宜加碱。</p>
+<p>147、生活窍门：治疗风湿症的窍门：生姜皮晒干研末，装入瓶内储存备用。每次取姜皮末半茶匙冲酒（低度白酒）饮服，可缓解症状。</p>
+<p>148、生活窍门：吃羊肉有助于保持健美体形，羊肉是理想的肉碱来源，这种和氨基酸类似的物质能帮助细胞“烧”掉人体多余的脂肪。</p>
+<p>149、生活窍门：炒青菜脆嫩法：在炒黄瓜、莴笋等青菜时，洗净切好后，撒少许盐拌合，腌渍几分钟，控去水分后再炒，能保持脆嫩清鲜。</p>
+<p>150、生活窍门：鱼刺卡喉的救治窍门1：吞咽橙皮。鱼刺卡喉时，可剥取橙皮，块窄一点，含着慢慢咽下，可化解鱼刺。</p>
+<p>151、生活窍门：鱼刺卡喉的救治窍门2：用维生素C软化。细小鱼刺卡喉，可取维生素C一片，含服慢慢咽下，数分钟后，鱼刺就会软化清除。</p>
+<p>152、生活窍门：皮肤粗糙者可将醋与甘油以5：1比例调和涂抹面部，每日坚持，会使皮肤变细嫩。在洗脸水中加一汤匙醋洗脸，也有美容功效。</p>
+<p>153、生活窍门：晾晒衣服要诀1：衣服最好不要在阳光下曝晒，应在阴凉通风处晾至半干时，再放到较弱的太阳光下晒干，以保护衣服的色泽和穿着寿命。</p>
+<p>154、生活窍门：晾晒衣服要诀2：晾晒衣服不可拧得太干，应带水晾晒，并用手将衣服的襟、领、袖等处拉平，这样晾晒干的衣服会保持平整，不起皱褶。</p>
+<p>155、生活窍门：西红柿、黄瓜不宜放冰箱储存。将西红柿、黄瓜放入冰箱存放，其表皮会呈现水浸状态，从而失去它们特有的风味，乃至变质腐败，不能食用央视&gt;整理版之五(156–200)</p>
+<p>156、生活窍门：常吃苹果可防治口腔疾病，因为苹果的纤维质能清除牙龈中的污垢。但有一点需注意，吃完苹果后应漱口，以防龋齿的发生。</p>
+<p>157、生活窍门：巧除室内怪味：室内通风不畅时，经常有碳酸怪味，可在灯泡上滴几滴香水或花露水，待遇热后慢慢散发出香味，室内就清香扑鼻了。</p>
+<p>158、生活窍门：炒洋葱宜放面粉、酒。切好的洋葱蘸点干面粉，炒熟后色泽金黄，质地脆嫩，味美可口。炒洋葱时，加少许白葡萄酒，不易炒焦。</p>
+<p>159、生活窍门：巧除软刺：仙人掌之类的植物软刺扎进皮肤时，可用伤湿止痛膏贴在扎刺的部位，在灯泡下烘烤一会儿，然后快速将其揭去，刺就会被拔出。</p>
+<p>160、生活窍门：巧识香油是否掺假1：看颜色。颜色淡红或红中带黄为正品。机榨香油比小磨香油颜色淡。如颜色黑红或深黄，则可能掺进了棉籽油或菜籽油</p>
+<p>161、生活窍门：熬粥防溢妙法：熬粥时，稍不注意便会溢锅。如果往锅里加5-6滴植物油或动物油，就可避免粥汁溢锅了。</p>
+<p>162、生活窍门：报纸油墨味可驱虫。在放衣服的箱子底上铺一层报纸，再放入衣物（最好使深色衣物贴着报纸），这样可使衣物免遭虫咬，报纸每半年换一次</p>
+<p>163、生活窍门：巧识香油是否掺假2：看变化。香油在日光下清晰透明，如掺进凉水，在光照下则不透明，如果掺水过多，香油还会分层并容易沉淀变质。</p>
+<p>164、生活窍门：旧邮票出现黄斑后，可将少许盐放在热牛奶中化开，然后把邮票放在冷却的奶液中浸泡2小时后取出，再用清水冲净、晾干，黄斑即可消除。</p>
+<p>165、生活窍门：白萝卜美容：将白萝卜切碎捣烂取汁，加入适量清水，用来洗脸，长期坚持，可以使皮肤变得清爽润滑。</p>
+<p>166、生活窍门：拔丝糖汁的熬制：在熬制做拔丝菜用的糖汁时，加入同大米粒差不多大小的明矾，就能延长凝结时间，并使糖丝拉得更长。</p>
+<p>167、生活窍门：变质葡萄糖粉是好肥料。变质的葡萄糖粉捣碎撒入花盆土四周，三日后黄叶就会变绿，长势茂盛。其适用于吊兰、刺梅、万年青、龟背竹等。</p>
+<p>168、生活窍门：电动剃须刀可修整衣裤。毛料衣裤、毛衣等穿久了会起很多小球，很不美观，可用电动剃须刀像剃胡须一样将衣服剃一遍，衣服即可平整如新</p>
+<p>169、生活窍门：巧治气管炎：将蜂蜜和白酒（多少根据自己的酒量大小而定）掺在一起，用火烧热，凉后喝下，每天1-2次，坚持喝一个月，即可见效。</p>
+<p>170、生活窍门：防衣物褪色二法：洗涤深色棉织物时加适量醋，可防止其褪色，且光泽如新；新买的有色花布第一次下水时，加盐浸泡十分钟可防止布料褪色。</p>
+<p>171、生活窍门：身上有伤口流血时，可立即在伤口上撒些白糖，因为白糖能减少伤口局部的水分，抑制细菌的繁殖，有助于伤口收敛愈合。</p>
+<p>172、生活窍门：吃过大蒜后，喝杯牛奶，可消除大蒜遗留在口中的异味。抽屉、壁橱、衣箱里有霉味时，在里面放块肥皂，即可去除。</p>
+<p>173、生活窍门：巧选羽绒服1：一般以选含绒量多的为好。可将羽绒服放在案子上，用手拍打，蓬松度越高说明绒质越好，含绒量也越多。</p>
+<p>174、生活窍门：巧选羽绒服2：全棉防绒布表面有一层蜡质，耐热性强，但耐磨性差；防绒尼龙绸面料耐磨耐穿，但怕烫怕晒。选购涤棉面料的羽绒服较好。</p>
+<p>175、生活窍门：珍珠不佩戴时，先用弱碱性的肥皂水洗涤一下，再用清水充分冲洗，然后用洁净软布将其擦净、阴干，放在丝绒盒内，置于避晒、防潮处保存</p>
+<p>176、生活窍门：发面加盐好！面发酵得好坏是制作馒头、包子等各类主食的关键，发面时可加入少量食盐，这样发出的面气泡多，蒸出的主食松软可口。</p>
+<p>177、生活窍门：根据美国国家药典规定，药品一旦开罐，罐内所附的棉花和干燥剂，就必须立刻丢弃，否则它们会因吸附水气，成为药罐内的一项污染源！</p>
+<p>178、生活窍门：化妆时，先把微湿的化妆绵放到冰箱里，几分钟后把冰凉的海绵拍在抹好粉底的肌肤上，你会觉得肌肤格外清爽，彩妆也显得特别清新</p>
+<p>179、生活窍门：蜂蜜能洁齿。蜂蜜含有类似溶菌酶的成分，对各种致病病菌有较强的杀菌和抑菌能力，经常食用蜂蜜并注意口腔卫生，能预防龋齿的发生。</p>
+<p>180、生活窍门：在粮食中放少量干海带，可吸收粮食中水分，防止其生虫发霉，海带用后会变湿，可晾干后再次放入，仍保持吸湿和杀菌能力，且不影响食用</p>
+<p>181、生活窍门：电视机或电脑着火时，先拔掉插头或关上总开关，再用毯状物扑灭火焰。切勿用水或灭火器救火，因机体内可能仍有残余电力，会引致电击。</p>
+<p>182、生活窍门：画眼线的小技巧：要画好一双细致的眼线，可以先把手肘固定在桌上，然后平放一块小镜子，让双眼朝下望向镜子，就可以放心描画眼线了。</p>
+<p>183、生活窍门：糕点的保存：保存糕点时，可在贮藏糕点的密封容器里加1片新鲜的面包，当面包发硬时，再及时更换一块新鲜的，这样糕点能保鲜较长时间</p>
+<p>184、生活窍门：日光灯管使用数月后会两端发黑，照明度降低。这时把灯管取下，颠倒一下其两端接触极，日光灯管的寿命就可延长一倍，还可提高照明度</p>
+<p>185、生活窍门：圆珠笔油弄到手上很难洗掉，可用酒精棉球（也可用白酒）放在手上被污染处，圆珠笔油很快就被吸附，再用清水冲洗即能洗净。</p>
+<p>186、生活窍门：要防止毛线衣缩水，洗涤时水温不要超过30度，用中性肥皂片或洗涤剂洗涤，过最后一遍水时加少许食醋，，能有效保持毛衣的弹性和光泽</p>
+<p>187、生活窍门：浴室用电注意事项：宜用12伏低压电源，用防潮照明灯，里面的任何电气设备都要有足够高度（2米以上），以保证不会有人误触电源</p>
+<p>188、生活窍门：识别优质酱油：摇晃瓶子看沿瓶壁流下的速度快慢，优质酱油浓度高流动慢；瓶底无沉淀物；颜色呈红褐色、棕褐色、有光泽而发乌。</p>
+<p>189、生活窍门：米饭做好后，挑些比较软、温热的揉成团，放在面部轻揉，直到米饭团变得油腻污黑，然后用清水洗掉，这样可使皮肤呼吸通畅，减少皱纹。</p>
+<p>190、生活窍门：珍珠的保养：不宜在阳光下曝晒，少与香水、油脂以及强酸强碱等化学物质接触，防止珍珠失光、褪色。佩戴时要常用洁净的软布擦抹。</p>
+<p>191、生活窍门：识别优质酱油：摇晃瓶子看沿瓶壁流下的速度快慢，优质酱油浓度高流动慢；瓶底无沉淀物；颜色呈红褐色、棕褐色、有光泽而发乌。</p>
+<p>192、生活窍门：心绞痛病人的急救：让患者保持最舒适坐姿，头部垫起；如随身携带药品则给患者用药；松开紧身的衣服使其呼吸通畅；安慰患者。</p>
+<p>193、生活窍门：将一头大蒜切成薄片，与三百毫升凉开水一起装入密封容器内6-7小时，然后加入三十克碎冰糖，每天早晚漱口一次，可防感冒。</p>
+<p>194、生活窍门：购买保暖内衣应选内外表层均用40支以上全棉的产品，用手轻抖不出现“沙沙”声，手感柔顺无异物感，有优良回弹性，最好选知名品牌。</p>
+<p>195、生活窍门：自来水刚煮沸就关火对健康不利，煮沸3-5分钟再熄火，烧出来的开水亚硝酸盐和氯化物等有毒物质含量都处于最低值，最适合饮用。</p>
+<p>196、生活窍门：电毯失火时应先拔掉插头，然后向床泼水灭火，切勿揭起床单，否则空气进入，冒烟的床容易着火。如情势严重，则立即通知消防队。</p>
+<p>197、生活窍门：巧煮牛肉：在头天晚上将牛肉涂上一层芥末，第二天洗净后加少许醋煮；或用纱布包一小撮茶叶与牛肉同煮，都可使牛肉易熟快烂。</p>
+<p>198、生活窍门：西红柿可治病，每天生食1-2个鲜熟西红柿可防癌，每早吃1-2个鲜熟西红柿蘸白糖可降血压，西红柿汁和西瓜汁各半杯混饮，可退烧。</p>
+<p>199、生活窍门：煤气中毒的急救：迅速打开门窗使空气流通；尽可能把中毒者转移至通风处，同时注意保暖；保证呼吸道通畅，及时给氧，必要时做人工呼吸</p>
+<p>200、生活窍门：专家建议冬天多吃红辣椒、胡萝卜、西红柿、洋葱、山楂等红颜色食品，可预防感冒；每天喝一杯酸奶、一碗鸡汤也有预防感冒的作用。央视&gt;整理版之六(201—250)</p>
+<p>201、生活窍门：巧刮鱼鳞：将鱼装一较大塑料袋里，放到案板上，用刀背反复拍打鱼体两面的鳞，然后将勺伸入袋内轻轻地刮，鱼鳞即可刮净，且不外溅。</p>
+<p>202、生活窍门：鲜蛋与生姜、洋葱不能混放，生姜和洋葱有强烈气味，易透进蛋壳上的小气孔，使鲜蛋变质。粮食与水果混放，则水果易干瘪、粮食易霉变。</p>
+<p>203、生活窍门：巧煮面条：煮面时在水面加一汤匙油，面条就不会沾了，还能防止面汤起泡沫溢出锅外。</p>
+<p>204、生活窍门：买肉常识：看肉色，新鲜肉肥肉乳白，瘦肉粉红。如肥肉发黄或肉呈黑紫色有淤血，不能要。含瘦肉精的肉则特别鲜亮，色泽红艳。</p>
+<p>205、生活窍门：煮挂面时不要等水沸再下，当锅底有小气泡往上冒时就可下面，搅几下盖锅煮沸，适量加冷水，再盖锅煮沸即熟。这样煮出的面，面柔而汤清</p>
+<p>206、生活窍门：毛巾科学消毒法：将毛巾先用开水煮沸10分钟左右，再用肥皂洗涤，然后用清水充分洗净，最后将毛巾折叠好放入微波炉中，加热5分钟。</p>
+<p>207、生活窍门：将白菜帮叶切斜片，锅内油热后放花椒10粒左右，炸黑后放白菜，紧跟将一小酒杯米醋入锅，翻炒后勾淀粉少许，此菜有助防流感。</p>
+<p>208、生活窍门：亮光可以帮助你早起，在床头准备一盏明灯，闹钟一响就打开，坚持下去，有一天你会发现，每天起床后你都会精神奕奕。</p>
+<p>209、生活窍门：9种让你笑容绽放的食物：芹菜、乳酪、绿茶、洋葱、香菇、芥末、无糖口香糖、薄荷、水；常食这些食物可消除口臭、防止蛀牙。</p>
+<p>210、生活窍门：背阴客厅的“亮”招：补充人工光源。厅内色调统一，忌沉闷。选白榉、枫木饰面哑光漆家具并合理摆放。地面砖宜亮色，如浅米黄色光面的</p>
+<p>211、生活窍门：识别假蜂蜜：在蜂蜜中加入少量冷开水，也可滴几滴碘酒或酒精，如滴入物呈紫、绿或红褐色的，就是假蜂蜜。</p>
+<p>212、生活窍门：头皮屑过多可通过饮食改善。多吃碱性食物如水果、蔬菜、蜂蜜等；多吃含维生素B2、B6食物，如动物肝、肾、心、奶类、蛋黄、麦胚等</p>
+<p>213、生活窍门：挑选瓷器餐具时，用食指在瓷器上轻轻拍弹，如发出清脆的罄一般的声响，表明瓷器胚胎细腻、烧制好，如拍弹声发哑，则有破损或瓷胚质劣</p>
+<p>214、生活窍门：枕头应有一定弹性，但过强也不好，头部不断受到外加的弹力作用，易产生肌肉疲劳和损伤。如弹簧枕、气枕等，都不能算是有利健康的枕头</p>
+<p>215、生活窍门：鉴别香油：纯正香油色泽透明鲜亮，不纯香油有混浊物。冰箱中低温存放24小时后，纯正香油保持晶莹剔透液体状，不纯香油则有明显结晶</p>
+<p>216、生活窍门：表面多刺、多斑、釉质不够均匀甚至有裂纹的陶瓷品，其釉中所含铅易溢出，不宜做餐具。瓷器粘合剂大多含铅高，瓷器补过后也不宜做餐具</p>
+<p>217、生活窍门：冬季当心“低热烫伤”！热水袋内水温不要太热，热力表面不要直接贴近皮肤。糖尿病人或末梢感觉神经迟钝者及婴幼儿最好不用热水袋取暖</p>
+<p>218、生活窍门：挑选熟透的西红柿，将柿肉挖出，搅拌均匀，敷在眼睛上，约十分钟后用湿毛巾擦掉。此法可淡化黑眼圈，同时还可延缓眼周皮肤的老化。</p>
+<p>219、生活窍门：苹果的另类疗效：治疗头痛！头痛时，把苹果磨成泥状，涂在纱布上，贴在头痛部位，头痛症状可减轻。</p>
+<p>220、生活窍门：减少电脑伤害策略：连续工作1小时后应休息十分钟左右。室内光线要适宜，且保持通风干爽。注意正确的操作姿势。保持皮肤清洁。</p>
+<p>221、生活窍门：苹果的另类疗效：消除口臭！用苹果汁刷牙，可消除口臭，还可保持牙齿洁白，但切记刷完后要再用牙膏刷一遍牙。</p>
+<p>222、生活窍门：用大号针头的废旧注射器，把胶水或其他无色、无腐蚀、流动性较好的粘合剂，均匀适量注入西服的气泡处，再熨干、熨平，西服会挺括如初</p>
+<p>223、生活窍门：开启干白葡萄酒的软木瓶塞：将酒瓶握手中，用瓶底轻撞墙壁，木塞会慢慢向外顶，当顶出近一半时，停，待瓶中气泡消失后，木塞一拔即起</p>
+<p>224、生活窍门：仰卧位是护送急症病人的常用体位。如病人处于昏迷状态，还应将其头部偏向一侧，以免咽喉部分泌物或呕吐物吸入气管，引起窒息。</p>
+<p>225、生活窍门：毛巾常洗且每隔一段时间用肥皂、洗衣粉或碱液煮沸数分钟，可防发硬。煮沸时毛巾应全部浸水中，以免与空气接触发生氧化而降低柔软度</p>
+<p>226、生活窍门：将急症病人护送医院时，心力衰竭或支气管哮喘病人适用坐位；一侧肺炎、气胸、胸腔积液病人适用侧卧位，且歪向患侧，有利保持呼吸功能</p>
+<p>227、生活窍门：袋装牛奶冬季或冰箱放置后，其油脂会凝结附着在袋壁上，不易刮下，可在煮之前将其放暖气片上或火炉旁预热片刻，油脂即溶。</p>
+<p>228、生活窍门：冬季室内湿度不够易诱发疾病！家中应配备加湿器，此外，向地上洒些水、用湿拖把每天拖几次地，或在室内养几盆水仙花也能增加湿度！</p>
+<p>229、生活窍门：毛衣穿久了，有些部位会磨得发亮，可用醋、水各半的混合液在发亮部位喷洒一下，再洗涤，就可恢复原样。</p>
+<p>230、生活窍门：辨识鲜鱼：鲜鱼外表鲜艳、鱼体完整无损害、鳞片整齐、眼球清晰、鳃无异味、肌肉坚实有弹性；冻鱼除以上要求外，表层要无干缩、油烧状</p>
+<p>231、生活窍门：巧克力不宜放冰箱中冷存！巧克力在冰箱中冷存后，一旦取出，在室温条件下其表面会结出一层白霜，且极易发霉变质，失去原味。</p>
+<p>232、生活窍门：清洗钻石：先将钻饰放盛有温和清洁剂或肥皂的小碟中约半小时，再用小软刷轻刷，用自来水冲洗后擦干即可，冲洗时将水池堵住，以防万一</p>
+<p>233、生活窍门：市场上的海蟹以梭子蟹为多，也称枪蟹，优质的枪蟹蟹体暗紫发青，比较重，蟹甲有青白色云斑，两尖角无损，四对足硬朗。</p>
+<p>234、生活窍门：很多除油烟机上有油盒，油满倒掉后，油盒很难清洗，可在干净油盒里先放点水再安在油烟机上，让油滴在水上，快满时一倒，油就全出来了</p>
+<p>235、生活窍门：白色毛衣穿旧了会逐渐发黑，将毛衣清洗后放入冰箱冷冻1小时，再取出晾干，即可洁白如新。</p>
+<p>236、生活窍门：钻石保养：不要将钻饰堆放在一起，以免镶托间相互摩擦刮花；做粗重、剧烈活动时，先将钻饰脱下；每隔半年送珠宝店作一次专业性清洗。</p>
+<p>237、生活窍门：选择睡衣：棉质睡衣柔软、贴身、透气性能好；睡衣忌色彩鲜丽，浅色有安眠宁神作用；要足够肥，不能过小或刚刚好，要易穿、易脱。</p>
+<p>238、生活窍门：防止涂料变色：对最易发生变色情况的虫胶清漆，用非金属容器盛装；使用清漆前再加入金粉、银粉，不要过早加入清漆中存放。</p>
+<p>239、生活窍门：据报道市场上有废毛发为原料制成的劣质酱油。消协提醒：合格酱油必须有QS标志，且标签规范，标明生产日期、生产厂家、酿造或配制等</p>
+<p>240、生活窍门：不同用途的酱油卫生指标不同，供佐餐用的可直接入口，卫生指标较好的，也可用于烹调，但如果是供烹调用的，则千万别用于凉拌菜。</p>
+<p>241、生活窍门：专家指出，学生用纸应注意：纸并非越白越好！有些厂家为使纸色更白，加入大量超标的荧光增白剂，该物质含多种致病物，且危害视力！</p>
+<p>242、生活窍门：纸的重量和厚度不是鉴定纸质的标准，劣质原料只须加入适量机油、漂白粉等，就可做出厚纸，而机油含铅等毒害神经系统物质，危害极大！</p>
+<p>243、生活窍门：辨识驼毛：优质驼毛纤维长、有光泽，毛色有杏黄色、棕红色、银灰色、白色等，较差的呈黑色，毛也较粗。假驼毛一般毛纤维短且粗。</p>
+<p>244、生活窍门：辨识驼毛：优质驼毛手感柔软，富有弹性，干燥，假驼毛手感和弹性一般较差，有的还有潮湿感；取适量毛浸泡或水煮几分钟。假驼毛会褪色</p>
+<p>245、生活窍门：清除黄金饰品污渍：放冷开水与中性洗衣粉调和水中浸泡15分钟（忌用自来水和偏酸碱洗衣粉），再用软毛刷轻刷表面，最后用冷开水过清</p>
+<p>246、生活窍门：冬瓜五百克、赤豆40克加水两碗煮沸再小火煨20分钟，不加或少加盐，日服2次，利小便、消水肿、解热毒；慢性肾炎、脾肾虚寒者不宜</p>
+<p>247、生活窍门：春节前四五天菜价最高，可提前储备蔬菜，如大白菜、卷心菜、芹菜、黄瓜、西红柿、冬瓜、胡萝卜、青萝卜、马铃薯、大葱、生姜、山药等</p>
+<p>248、生活窍门：不宜提前购买的蔬菜：青椒、豆角、菜花、韭菜、菠菜、茴香、生笋、蘑菇、生菜、油麦菜等，即使温度适宜，最好也别存放三天以上。</p>
+<p>249、生活窍门：街头散装炒货慎买！看起来有光泽且摸时有油状物的黑瓜子，很可能表面涂有矿物油，用漂白剂漂过或硫磺熏过的白瓜子、开心果有异味。</p>
+<p>250、生活窍门：购年货当心“洗衣粉”鱼！卫生部门提醒：用甲醛和洗衣粉泡过的海产品颜色偏白，鱼的肉与刺粘连较紧，肉质僵硬，入口腥涩，闻之有药味。</p>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://zhilin.cc/post/7975772d.html>https://zhilin.cc/post/7975772d.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-12T20:24:20+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 12, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%94%9F%E6%B4%BB/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>生活</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zhilin.cc/post/7975772d.html&title=小窍门解决大问题 - zhilin&summary=这里搜集了好多生活的小窍门，希望能给大家带来更多的方便，让我们的生活越来越美好！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhilin.cc/post/7975772d.html&title=小窍门解决大问题 - zhilin&summary=这里搜集了好多生活的小窍门，希望能给大家带来更多的方便，让我们的生活越来越美好！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://zhilin.cc/post/7975772d.html&title=小窍门解决大问题 - zhilin&summary=这里搜集了好多生活的小窍门，希望能给大家带来更多的方便，让我们的生活越来越美好！"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/post/29adc026.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>代码注释 各种版本</p>
+          <p class='content'> 佛祖保佑 永无BUG   美女 无敌剪刀手 
+佛祖保佑 永无BUG123456789101112131415161718192021222324252627282930&#x2F;&#x2F;...</p>
+        </a>
+      
+      
+        <a class='next' href='/post/f557509b.html'>
+          <p class='title'>100个小秘密<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+在古代，我们汉族人不吃晚饭，连皇帝都不吃；不是为了省钱，而是“晚饭不吃，饿治百病”；大家晚饭尽量吃少一点，对身体绝对有益无害。
+
+危害健康的四大不良习惯：第一吸烟，第二长期熬夜，第三酗酒，第四...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+
+  
+
+
+</aside>
+
+
+
+        
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+        Use
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0" target="_blank" class="codename">Volantis</a>
+        as theme
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>Copy Text</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>Copy Link</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>Open Link in New Tab</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>Copy Image Link</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
+        
+        
+        
+        
+          id="https:volantisjsorgfaqs"
+        >
+        <i class='fa fa-question fa-fw'></i> 常见问题
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
+        
+        
+        
+        
+          id="https:volantisjsorgexamples"
+        >
+        <i class='fa fa-rss fa-fw'></i> 示例博客
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
+        
+        
+        
+        
+          id="https:volantisjsorgcontributors"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
+        
+        
+        
+        
+          id="https:githubcomvolantis-xvolantis-docs"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
+        
+        
+        
+        
+          id="https:githubcomvolantis-xhexo-theme-volantis"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 主题源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "快来评论吧~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "",
+      appKey: "",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      recordIP: 'false',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+(function ($) {
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+})(jQuery);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
+    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'https://zhilin.cc' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'https://zhilin.cc' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'https://zhilin.cc' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        
+        
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+</body>
+</html>

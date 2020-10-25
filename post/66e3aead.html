@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2020/9 - zhilin</title>
+  <title>DNS 劫持/污染 - zhilin</title>
+  
+    <meta name="keywords" content="Windows">
   
 
+  
+    <meta name="description" content="who is dns 劫持 or 污染？对 劫持 和 污染 这两个名词的理解一直都很混淆，这里就简单的记录一下他俩到底有哪些本质上的区别吧~">
   
 
   <!-- feed -->
@@ -329,7 +331,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg"></div>
           
@@ -407,8 +409,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">DNS 劫持/污染</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -417,14 +419,14 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("half" == "half") { // 半屏 
+    if ("none" == "half") { // 半屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
+    } else if ("none" == "full") { // 全屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
     } 
@@ -438,70 +440,249 @@
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
-      
+    
+    
+      <h1 class="title">
+        DNS 劫持/污染
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
+          
+            
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/post/4a17b156.html">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jul 5, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
+      <div id="lc-pv" data-title="DNS 劫持/污染" data-path="/post/66e3aead.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-27</time>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>who is dns 劫持 or 污染？<br>对 劫持 和 污染 这两个名词的理解一直都很混淆，这里就简单的记录一下他俩到底有哪些本质上的区别吧~</p>
+<a id="more"></a>
+<h2 id="DNS-劫持"><a href="#DNS-劫持" class="headerlink" title="DNS 劫持"></a>DNS 劫持</h2><p>DNS劫持 即: DNS Hijacking<br>指用户访问一个被标记的地址时，DNS服务器故意将此地址指向一个错误的IP地址的行为。<br>网通、电信、铁通的某些用户有时候会发现自己打算访问一个地址，却被转向了各种推送广告等网站，这就是DNS劫持。</p>
+<h3 id="劫持过程"><a href="#劫持过程" class="headerlink" title="劫持过程"></a>劫持过程</h3><p>假现在存在两个网站: 一个是A(正规网站) ，另一个是 B（钓鱼网站）<br>用户访问A网站 但是打开的却是B网站<br>用户 –(打开)–&gt; A –(劫持到)–&gt; B</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/eRlesGWqJ/eRlesGWqJ_1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/eRlesGWqJ/eRlesGWqJ_1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><p>Dns劫持我们其实是经常可以遇到的，只不过碰到的时候我们不知道 那就是DNS劫持罢了<br>比如说早些年拨号上网之后 首次打开任何页面都指向ISP提供的“电信互联星空”、“网通黄页广告”等内容页面。<br>还有就是曾经出现过用户访问Google域名的时候出现了百度的网站。这些都属于DNS劫持。</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>对于DNS劫持，可以采用使用国外免费公用的DNS服务器解决。<br>例如OpenDNS（208.67.222.222）或GoogleDNS（8.8.8.8）。</p>
+<h3 id="DNS污染"><a href="#DNS污染" class="headerlink" title="DNS污染"></a>DNS污染</h3><p>dns污染 即：网域服务器缓存污染（DNS cache pollution） 又称域名服务器缓存污染（DNS cache poisoning）<br>DNS污染是一种让一般用户由于得到虚假目标主机IP而不能与其通信的方法，是一种DNS缓存投毒攻击（DNS cache poisoning）</p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>由于通常的DNS查询没有任何认证机制，而且DNS查询通常基于的UDP是无连接不可靠的协议，因此DNS的查询非常容易被篡改，<br>通过对UDP端口53上的DNS查询进行入侵检测，一经发现与关键词相匹配的请求则立即伪装成目标域名的解析服务器（NS，Name Server）给查询者返回虚假结果。</p>
+<h3 id="案例-1"><a href="#案例-1" class="headerlink" title="案例"></a>案例</h3><p>这里不得不提一下咱们国家最最🐂🍺的GFW<br>为什么咱们国内无法访问 google 和 youtube 这些网站呢，那当然全是我们GFW的功劳<code>(DNS污染)</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/eRlesGWqJ/eRlesGWqJ_2.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/eRlesGWqJ/eRlesGWqJ_2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></p>
+<h3 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h3><p>DNS污染一般个人用户很难单单靠设置解决，<br>可以通过使用VPN(翻墙)或者SSH，也可以通过手动修改host 手动绑定域名正确的IP。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>DNS 劫持 一般用于跳转到第三方网站(钓鱼/诈骗网站)<br>DNS 污染 一般用于禁止访问某网站</p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>today，一个小伙伴突然问我，被运营商劫持了 是否可以通过修改本地DNS地址来绕过？<br>我挠了挠头皮，感觉问题没有这么简单，运营商难道就这么好对付吗？</p>
+<h3 id="运营商劫持"><a href="#运营商劫持" class="headerlink" title="运营商劫持"></a>运营商劫持</h3><p>在验证是否可以通过修改dns来绕过地址之前，我们需要先深度解析这个问题<br>什么是运营商劫持？<br>运营商劫持用的是什么方法？<br>一般情况下分两种</p>
+<ul>
+<li>DNS劫持</li>
+<li>HTTP劫持</li>
+<li>DNS劫持上文已经说过了，这里就不多讲了<h3 id="HTTP劫持"><a href="#HTTP劫持" class="headerlink" title="HTTP劫持"></a>HTTP劫持</h3>运营商在路由器节点上，设置协议检测，一旦发现是HTTP请求，而且是html类型请求，则拦截处理。<br>后续做法往往分为2种 （URL劫持跳转 和 网页内容篡改）</li>
+</ul>
+<ol>
+<li>类似DNS劫持返回302让用户浏览器跳转到另外的地址</li>
+<li>在服务器返回的HTML数据中插入js或dom节点（广告）<br>危害 : 在用户角度，这些劫持的表现分为：</li>
+</ol>
+<ul>
+<li>网址被无辜跳转，多了推广尾巴；</li>
+<li>页面出现额外的广告（iframe模式或者直接同页面插入了dom节点）。<br>归根结底，由于HTTP是明文传输的，同时流量的获利空间巨大，所以流量劫持的现象才会越来越严重。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/eRlesGWqJ/eRlesGWqJ_3.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/eRlesGWqJ/eRlesGWqJ_3.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br><code>这里再多深入一下，isp只是旁路监听http请求而不是拦截，这个请求（图步骤2）还是会到达真实服务器的，只是真实服务器发回来的响应慢过劫持设备伪造的302响应。</code></p>
+<h3 id="解决方法-2"><a href="#解决方法-2" class="headerlink" title="解决方法"></a>解决方法</h3><p>DNS劫持可以通过 <code>修改dns</code> 或者 <code>本地host文件</code><br>HTTP劫持的话， 最好的办法就是使用 <code>https</code> 或者使用<code>加密代理</code>来访问网页</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/post/4a17b156.html'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://zhilin.cc/post/66e3aead.html>https://zhilin.cc/post/66e3aead.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-05T18:46:33+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 5, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Windows/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Windows</p></a></div>
 
 
-	
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zhilin.cc/post/66e3aead.html&title=DNS 劫持/污染 - zhilin&summary=who is dns 劫持 or 污染？对 劫持 和 污染 这两个名词的理解一直都很混淆，这里就简单的记录一下他俩到底有哪些本质上的区别吧~"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhilin.cc/post/66e3aead.html&title=DNS 劫持/污染 - zhilin&summary=who is dns 劫持 or 污染？对 劫持 和 污染 这两个名词的理解一直都很混淆，这里就简单的记录一下他俩到底有哪些本质上的区别吧~"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://zhilin.cc/post/66e3aead.html&title=DNS 劫持/污染 - zhilin&summary=who is dns 劫持 or 污染？对 劫持 和 污染 这两个名词的理解一直都很混淆，这里就简单的记录一下他俩到底有哪些本质上的区别吧~"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/post/3ed93edf.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>获取网易云音乐MP3外链地址</p>
+          <p class='content'>前言一个获取网易云音乐MP3，外链地址下载方法，还有网易云音乐歌单，因为版权原因无法生成外链，此方法也可以获取的，如果对你有帮助就看看吧。
+
+正文一个网易音乐外链地址长期有效，很简单的方法：
+第...</p>
+        </a>
+      
+      
+        <a class='next' href='/post/e80c82d9.html'>
+          <p class='title'>肩胛骨<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>肩胛骨为什么会肩胛骨?长期久坐和低头工作有关，属于肌肉韧带慢性劳损的表现。
+
+肩胛骨位置
+收缩肩胛骨首先第一个步骤就是耸肩，第二个步骤就是，耸起来肩部之后，向后缩我们的肩胛骨，第三个步骤就是下沉...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -509,103 +690,28 @@ Qu...
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/avatar1.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">zhilin</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <a href="/tags/Blog/" style="font-size: 22px; color: #636363">Blog</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/WEB/" style="font-size: 20px; color: #707070">WEB</a> <a href="/tags/Windows/" style="font-size: 20px; color: #707070">Windows</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 14px; color: #999">数学</a> <a href="/tags/%E6%98%93%E8%AF%AD%E8%A8%80/" style="font-size: 16px; color: #8b8b8b">易语言</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 18px; color: #7e7e7e">树莓派</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 24px; color: #555">生活</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DNS-%E5%8A%AB%E6%8C%81"><span class="toc-text">DNS 劫持</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%AB%E6%8C%81%E8%BF%87%E7%A8%8B"><span class="toc-text">劫持过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B"><span class="toc-text">案例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">解决方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS%E6%B1%A1%E6%9F%93"><span class="toc-text">DNS污染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-text">原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-1"><span class="toc-text">案例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-1"><span class="toc-text">解决方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E5%B1%95"><span class="toc-text">拓展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%90%A5%E5%95%86%E5%8A%AB%E6%8C%81"><span class="toc-text">运营商劫持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP%E5%8A%AB%E6%8C%81"><span class="toc-text">HTTP劫持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95-2"><span class="toc-text">解决方法</span></a></li></ol></li></ol>
     </div>
   </section>
 
 
   
 
-  
-
 
 </aside>
+
 
 
         

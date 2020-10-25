@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+
+  <!-- 页面元数据 -->
+  
+  <title>HTML、CSS知识点总结 - zhilin</title>
+  
+    <meta name="keywords" content="WEB">
+  
+
+  
+    <meta name="description" content="史上最全的HTML、CSS知识点总结，浅显易懂。">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css">
+
+  
+  
+
+  
+
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/ico.png">
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  <!-- 脚本懒加载函数 -->
+  <script>
+  function loadScript(src, cb) {
+    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+    var script = document.createElement('script');
+    script.setAttribute('type','text/javascript');
+    if (cb) script.onload = cb;
+    script.setAttribute('src', src);
+    HEAD.appendChild(script);
+  }
+  //https://github.com/filamentgroup/loadCSS
+  !function(c){"use strict";var e=function(e,t,n,r){var o,i=c.document,a=i.createElement("link");if(t)o=t;else{var d=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=d[d.length-1]}var f=i.styleSheets;if(r)for(var l in r)r.hasOwnProperty(l)&&a.setAttribute(l,r[l]);a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(a,t?o:o.nextSibling)});var s=function(e){for(var t=a.href,n=f.length;n--;)if(f[n].href===t)return e();setTimeout(function(){s(e)})};function u(){a.addEventListener&&a.removeEventListener("load",u),a.media=n||"all"}return a.addEventListener&&a.addEventListener("load",u),(a.onloadcssdefined=s)(u),a};"undefined"!=typeof exports?exports.loadCSS=e:c.loadCSS=e}("undefined"!=typeof global?global:this);
+  </script>
+  <script id="loadcss"></script>
+</head>
+
+<body>
+  <header class="l_header auto shadow blur " style='opacity: 0' >
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/logo.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+  <div class="l_body">
+    <div class="l_cover">
+  
+    
+    
+        <div class='cover-wrapper post dock' style="display: none;">
+          
+            <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg"></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/v4/getting-started/"
+              
+              
+              id="v4getting-started">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>文档</p>
+            </a>
+          
+            <a href="/faqs/"
+              
+              
+              id="faqs">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg'><p>帮助</p>
+            </a>
+          
+            <a href="/examples/"
+              
+              
+              id="examples">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg'><p>示例</p>
+            </a>
+          
+            <a href="/contributors/"
+              
+              
+              id="contributors">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg'><p>社区</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              id="archives">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg'><p>博客</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/"
+              
+              
+              id="https:githubcomvolantis-xhexo-theme-volantis">
+              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg'><p>源码</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div class="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+  
+    <div class='safearea'>
+      <div class='body-wrapper' id="pjax-container">
+        
+          <!--此文件用来存放一些不方便取值的变量--> 
+<!--思路大概是将值藏到重加载的区域内--> 
+ 
+ 
+ 
+<div id="pjax-data" style="display: none"> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">HTML、CSS知识点总结</div> 
+  <div id="pjax-enable-cover">true</div> 
+  <div id="pjax-comment-path"></div> 
+  <div id="pjax-comment-placeholder"></div> 
+</div> 
+ 
+ 
+<script> 
+  // 处理封面 此时 jquery 还没加载 
+  if ("none" == "none") { // 移除封面 
+    document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
+  } else { 
+    if ("none" == "half") { // 半屏 
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
+      document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
+    } else if ("none" == "full") { // 全屏 
+      document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
+      document.getElementsByClassName('scroll-down')[0].style.display = ""; 
+    } 
+    document.getElementsByClassName('cover-wrapper')[0].style.display = ""; 
+    document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.remove("show"); 
+  } 
+</script> 
+ 
+
+        
+        
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        HTML、CSS知识点总结
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jul 5, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="HTML、CSS知识点总结" data-path="/post/355e5789.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  <p>史上最全的HTML、CSS知识点总结，浅显易懂。</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br><span class="line">554</span><br><span class="line">555</span><br><span class="line">556</span><br><span class="line">557</span><br><span class="line">558</span><br><span class="line">559</span><br><span class="line">560</span><br><span class="line">561</span><br><span class="line">562</span><br><span class="line">563</span><br><span class="line">564</span><br><span class="line">565</span><br><span class="line">566</span><br><span class="line">567</span><br><span class="line">568</span><br><span class="line">569</span><br><span class="line">570</span><br><span class="line">571</span><br><span class="line">572</span><br><span class="line">573</span><br><span class="line">574</span><br><span class="line">575</span><br><span class="line">576</span><br><span class="line">577</span><br><span class="line">578</span><br><span class="line">579</span><br><span class="line">580</span><br><span class="line">581</span><br><span class="line">582</span><br><span class="line">583</span><br><span class="line">584</span><br><span class="line">585</span><br><span class="line">586</span><br><span class="line">587</span><br><span class="line">588</span><br><span class="line">589</span><br><span class="line">590</span><br><span class="line">591</span><br><span class="line">592</span><br><span class="line">593</span><br><span class="line">594</span><br><span class="line">595</span><br><span class="line">596</span><br><span class="line">597</span><br><span class="line">598</span><br><span class="line">599</span><br><span class="line">600</span><br><span class="line">601</span><br><span class="line">602</span><br><span class="line">603</span><br><span class="line">604</span><br><span class="line">605</span><br><span class="line">606</span><br><span class="line">607</span><br><span class="line">608</span><br><span class="line">609</span><br><span class="line">610</span><br><span class="line">611</span><br><span class="line">612</span><br><span class="line">613</span><br><span class="line">614</span><br><span class="line">615</span><br><span class="line">616</span><br><span class="line">617</span><br><span class="line">618</span><br><span class="line">619</span><br><span class="line">620</span><br><span class="line">621</span><br><span class="line">622</span><br><span class="line">623</span><br><span class="line">624</span><br><span class="line">625</span><br><span class="line">626</span><br><span class="line">627</span><br><span class="line">628</span><br><span class="line">629</span><br><span class="line">630</span><br><span class="line">631</span><br><span class="line">632</span><br><span class="line">633</span><br><span class="line">634</span><br><span class="line">635</span><br><span class="line">636</span><br><span class="line">637</span><br><span class="line">638</span><br><span class="line">639</span><br><span class="line">640</span><br><span class="line">641</span><br><span class="line">642</span><br><span class="line">643</span><br><span class="line">644</span><br><span class="line">645</span><br><span class="line">646</span><br><span class="line">647</span><br><span class="line">648</span><br><span class="line">649</span><br><span class="line">650</span><br><span class="line">651</span><br><span class="line">652</span><br><span class="line">653</span><br><span class="line">654</span><br><span class="line">655</span><br><span class="line">656</span><br><span class="line">657</span><br><span class="line">658</span><br><span class="line">659</span><br><span class="line">660</span><br><span class="line">661</span><br><span class="line">662</span><br><span class="line">663</span><br><span class="line">664</span><br><span class="line">665</span><br><span class="line">666</span><br><span class="line">667</span><br><span class="line">668</span><br><span class="line">669</span><br><span class="line">670</span><br><span class="line">671</span><br><span class="line">672</span><br><span class="line">673</span><br><span class="line">674</span><br><span class="line">675</span><br><span class="line">676</span><br><span class="line">677</span><br><span class="line">678</span><br><span class="line">679</span><br><span class="line">680</span><br><span class="line">681</span><br><span class="line">682</span><br><span class="line">683</span><br><span class="line">684</span><br><span class="line">685</span><br><span class="line">686</span><br><span class="line">687</span><br><span class="line">688</span><br><span class="line">689</span><br><span class="line">690</span><br><span class="line">691</span><br><span class="line">692</span><br><span class="line">693</span><br><span class="line">694</span><br><span class="line">695</span><br><span class="line">696</span><br><span class="line">697</span><br><span class="line">698</span><br><span class="line">699</span><br><span class="line">700</span><br><span class="line">701</span><br><span class="line">702</span><br><span class="line">703</span><br><span class="line">704</span><br><span class="line">705</span><br><span class="line">706</span><br><span class="line">707</span><br><span class="line">708</span><br><span class="line">709</span><br><span class="line">710</span><br><span class="line">711</span><br><span class="line">712</span><br><span class="line">713</span><br><span class="line">714</span><br><span class="line">715</span><br><span class="line">716</span><br><span class="line">717</span><br><span class="line">718</span><br><span class="line">719</span><br><span class="line">720</span><br><span class="line">721</span><br><span class="line">722</span><br><span class="line">723</span><br><span class="line">724</span><br><span class="line">725</span><br><span class="line">726</span><br><span class="line">727</span><br><span class="line">728</span><br><span class="line">729</span><br><span class="line">730</span><br><span class="line">731</span><br><span class="line">732</span><br><span class="line">733</span><br><span class="line">734</span><br><span class="line">735</span><br><span class="line">736</span><br><span class="line">737</span><br><span class="line">738</span><br><span class="line">739</span><br><span class="line">740</span><br><span class="line">741</span><br><span class="line">742</span><br><span class="line">743</span><br><span class="line">744</span><br><span class="line">745</span><br><span class="line">746</span><br><span class="line">747</span><br><span class="line">748</span><br><span class="line">749</span><br><span class="line">750</span><br><span class="line">751</span><br><span class="line">752</span><br><span class="line">753</span><br><span class="line">754</span><br><span class="line">755</span><br><span class="line">756</span><br><span class="line">757</span><br><span class="line">758</span><br><span class="line">759</span><br><span class="line">760</span><br><span class="line">761</span><br><span class="line">762</span><br><span class="line">763</span><br><span class="line">764</span><br><span class="line">765</span><br><span class="line">766</span><br><span class="line">767</span><br><span class="line">768</span><br><span class="line">769</span><br><span class="line">770</span><br><span class="line">771</span><br><span class="line">772</span><br><span class="line">773</span><br><span class="line">774</span><br><span class="line">775</span><br><span class="line">776</span><br><span class="line">777</span><br><span class="line">778</span><br><span class="line">779</span><br><span class="line">780</span><br><span class="line">781</span><br><span class="line">782</span><br><span class="line">783</span><br><span class="line">784</span><br><span class="line">785</span><br><span class="line">786</span><br><span class="line">787</span><br><span class="line">788</span><br><span class="line">789</span><br><span class="line">790</span><br><span class="line">791</span><br><span class="line">792</span><br><span class="line">793</span><br><span class="line">794</span><br><span class="line">795</span><br><span class="line">796</span><br><span class="line">797</span><br><span class="line">798</span><br><span class="line">799</span><br><span class="line">800</span><br><span class="line">801</span><br><span class="line">802</span><br><span class="line">803</span><br><span class="line">804</span><br><span class="line">805</span><br><span class="line">806</span><br><span class="line">807</span><br><span class="line">808</span><br><span class="line">809</span><br><span class="line">810</span><br><span class="line">811</span><br><span class="line">812</span><br><span class="line">813</span><br><span class="line">814</span><br><span class="line">815</span><br><span class="line">816</span><br><span class="line">817</span><br><span class="line">818</span><br><span class="line">819</span><br><span class="line">820</span><br><span class="line">821</span><br><span class="line">822</span><br><span class="line">823</span><br><span class="line">824</span><br><span class="line">825</span><br><span class="line">826</span><br><span class="line">827</span><br><span class="line">828</span><br><span class="line">829</span><br><span class="line">830</span><br><span class="line">831</span><br><span class="line">832</span><br><span class="line">833</span><br><span class="line">834</span><br><span class="line">835</span><br><span class="line">836</span><br><span class="line">837</span><br></pre></td><td class="code"><pre><span class="line">一，html+css基础</span><br><span class="line">1-1</span><br><span class="line">Html和CSS的关系</span><br><span class="line">学习web前端开发基础技术需要掌握：HTML、CSS、JavaScript语言。下面我们就来了解下这三门技术都是用来实现什么的：</span><br><span class="line">1. HTML是网页内容的载体。内容就是网页制作者放在页面上想要让用户浏览的信息，可以包含文字、图片、视频等。</span><br><span class="line">2. CSS样式是表现。就像网页的外衣。比如，标题字体、颜色变化，或为标题加入背景图片、边框等。所有这些用来改变内容外观的东西称之为表现。</span><br><span class="line">3. JavaScript是用来实现网页上的特效效果。如：鼠标滑过弹出下拉菜单。或鼠标滑过表格的背景颜色改变。还有焦点新闻（新闻图片）的轮换。可以这么理解，有动画的，有交互的一般都是用JavaScript来实现的。</span><br><span class="line">1-2</span><br><span class="line">1， HTML标签不区分大小写，&lt;h1&gt;和&lt;H1&gt;是一样的，但建议小写，因为大部分程序员都以小写为准。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1-3</span><br><span class="line">一个HTML文件是有自己固定的结构的。</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;...&lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body&gt;...&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br><span class="line">代码讲解：</span><br><span class="line">1. &lt;html&gt;&lt;&#x2F;html&gt;称为根标签，所有的网页标签都在&lt;html&gt;&lt;&#x2F;html&gt;中。</span><br><span class="line">2. &lt;head&gt; 标签用于定义文档的头部，它是所有头部元素的容器。头部元素有&lt;title&gt;、&lt;script&gt;、 &lt;style&gt;、&lt;link&gt;、 &lt;meta&gt;等标签，头部标签在下一小节中会有详细介绍。</span><br><span class="line">3. 在&lt;body&gt;和&lt;&#x2F;body&gt;标签之间的内容是网页的主要内容，如&lt;h1&gt;、&lt;p&gt;、&lt;a&gt;、&lt;img&gt;等网页内容标签，在这里的标签中的内容会在浏览器中显示出来。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1-4</span><br><span class="line">1，下面这些标签可用在 head 部分：</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;...&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;meta&gt;</span><br><span class="line">    &lt;link&gt;</span><br><span class="line">    &lt;style&gt;...&lt;&#x2F;style&gt;</span><br><span class="line">    &lt;script&gt;...&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">2，代码注释不仅方便程序员自己回忆起以前代码的用途，还可以帮助其他程序员很快的读懂你的程序的功能，方便多人合作开发网页代码。</span><br><span class="line">语法：</span><br><span class="line">&lt;!--注释文字 --&gt;</span><br><span class="line">3，CSS注释代码</span><br><span class="line">就像在Html的注释一样，在CSS中也有注释语句：用&#x2F;*注释语句*&#x2F;来标明（Html中使用&lt;!--注释语句--&gt;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1-5</span><br><span class="line">1，语义化：说的通俗点就是：明白每个标签的用途（在什么情况下我可以使用这个标签才合理）比如，网页上的文章的标题就得用标题标签，网页上的各个栏目的栏目名称也可以使用标题标签。</span><br><span class="line">2，语义化的作用</span><br><span class="line">1）. 更容易被搜索引擎收录。</span><br><span class="line">2）. 更容易让屏幕阅读器读出网页内容。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">二，认识标签（第一部分）</span><br><span class="line">2-1</span><br><span class="line">如果想在网页上显示文章，这时就需要&lt;p&gt;标签了，把文章的段落放到&lt;p&gt;标签中。</span><br><span class="line">语法：</span><br><span class="line">&lt;p&gt;段落文本&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2-2</span><br><span class="line">&lt;hx&gt;标签来制作文章的标题。</span><br><span class="line">标题标签一共有6个，h1、h2、h3、h4、h5、h6分别为一级标题、二级标题、三级标题、四级标题、五级标题、六级标题。并且依据重要性递减。&lt;h1&gt;是最高的等级。</span><br><span class="line">语法：</span><br><span class="line">&lt;hx&gt;标题文本&lt;&#x2F;hx&gt; (x为1-6)</span><br><span class="line">文章的标题前面已经说过了，可以使用标题标签，另外网页上的各个栏目的标题也可使用它们</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2-3</span><br><span class="line">有了段落又有了标题，现在如果想在一段话中特别强调某几个文字，这时候就可以用到&lt;em&gt;或&lt;strong&gt;标签。</span><br><span class="line">       但两者在强调的语气上有区别:&lt;em&gt; 表示强调，&lt;strong&gt; 表示更强烈的强调。并且在浏览器中&lt;em&gt; 默认用斜体表示，&lt;strong&gt; 用粗体表示。两个标签相比，目前国内前端程序员更喜欢使用&lt;strong&gt;表示强调</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2-4</span><br><span class="line">&lt;em&gt;、&lt;strong&gt;、&lt;span&gt;的区别：</span><br><span class="line">1. &lt;em&gt;和&lt;strong&gt;标签是为了强调一段话中的关键字时使用，它们的语义是强调。</span><br><span class="line">2. &lt;span&gt;标签是没有语义的，它的作用就是为了设置单独的样式用的，把一段话圈起来，然后用css设置样式。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2-5</span><br><span class="line">q标签，短文本引用</span><br><span class="line">  比如在你的网页的文章里想引用某个作家的一句诗，这样会使你的文章更加出彩，那么&lt;q&gt;标签是你所需要的。</span><br><span class="line">语法：</span><br><span class="line">&lt;q&gt;引用文本&lt;&#x2F;q&gt;</span><br><span class="line">1，注意要引用的文本不用加双引号，浏览器会对q标签自动添加双引号。</span><br><span class="line">2，注意这里用&lt;q&gt;标签的真正关键点不是它的默认样式双引号（如果这样我们不如自己在键盘上输入双引号就行了），而是它的语义：引用别人的话</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">blockquote标签，长文本引用</span><br><span class="line">  &lt;blockquote&gt;的作用也是引用别人的文本。但它是对长文本的引用</span><br><span class="line">&lt;q&gt;标签是对简短文本的引用，比如说引用一句话就用到&lt;q&gt;标签。</span><br><span class="line">语法:</span><br><span class="line">&lt;blockquote&gt;引用文本&lt;&#x2F;blockquote&gt;</span><br><span class="line">浏览器对&lt;blockquote&gt;标签的解析是缩进样式</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2-6</span><br><span class="line">换行标签&lt;br&#x2F;&gt;</span><br><span class="line">&lt;br&#x2F;&gt;标签作用相当于word文档中的回车。</span><br><span class="line">分割线标签&lt;hr&#x2F;&gt;</span><br><span class="line">&lt;hr&#x2F;&gt;标签和&lt;br&#x2F;&gt;标签一样也是一个空标签，所以只有一个开始标签，没有结束标签。</span><br><span class="line">&lt;hr&#x2F;&gt;标签的在浏览器中的默认样式线条比较粗，颜色为灰色，可能有些人觉得这种样式不美观，没有关系，这些外在样式在我们以后学习了css样式表之后，都可以对其修改。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2-7</span><br><span class="line">html特殊字符</span><br><span class="line">空格：&amp;nbsp; (;分号必不可少)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2-8</span><br><span class="line">address标签，为网页加入地址信息</span><br><span class="line">语法：</span><br><span class="line">&lt;address&gt;地址信息&lt;&#x2F;address&gt;</span><br><span class="line">如：</span><br><span class="line">&lt;address&gt;北京市西城区德外大街10号&lt;&#x2F;address&gt;</span><br><span class="line">      在浏览器上显示的样式为斜体，如果不喜欢斜体，当然可以，可以在后面的课程中使用css样式来修改它&lt;address&gt;标签的默认样式</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2-9</span><br><span class="line">在介绍语言技术的网站中，必免不了在网页中显示一些计算机专业的编程代码，当代码为一行代码时，你就可以使用&lt;code&gt;标签了，如下面例子：</span><br><span class="line">&lt;code&gt;var i&#x3D;i+300;&lt;&#x2F;code&gt;</span><br><span class="line">语法：</span><br><span class="line">&lt;code&gt;代码语言&lt;&#x2F;code&gt;</span><br><span class="line">注意：在文章中一般如果要插入多行代码时不能使用&lt;code&gt;标签，如果是多行代码，可以使用&lt;pre&gt;标签。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;pre&gt; 标签的主要作用:预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。如果用以前的方法，回车需要输入&lt;br&gt;签，空格需要输入&amp;nbsp;。</span><br><span class="line">注意：&lt;pre&gt; 标签不只是为显示计算机的源代码时用的，在你需要在网页中预显示格式时都可以使用它，只是&lt;pre&gt;标签的一个常见应用就是用来展示计算机的源代码。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">三，认识标签（第二部分）</span><br><span class="line">3-1</span><br><span class="line">1，无序列表</span><br><span class="line">ul-li是没有前后顺序的信息列表。</span><br><span class="line">语法：</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;信息&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;li&gt;信息&lt;&#x2F;li&gt;</span><br><span class="line">   ......</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br><span class="line">举例：</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;精彩少年&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;li&gt;美丽突然出现&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;li&gt;触动心灵的旋律&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br><span class="line">ul-li在网页中显示的默认样式一般为：每项li前都自带一个圆点</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2,有序列表</span><br><span class="line">语法：</span><br><span class="line">&lt;ol&gt;</span><br><span class="line">   &lt;li&gt;信息&lt;&#x2F;li&gt;</span><br><span class="line">   &lt;li&gt;信息&lt;&#x2F;li&gt;</span><br><span class="line">   ......</span><br><span class="line">&lt;&#x2F;ol&gt;</span><br><span class="line">举例：</span><br><span class="line">下面是一个热点课程下载排行榜：</span><br><span class="line">&lt;ol&gt;</span><br><span class="line">   &lt;li&gt;前端开发面试心法 &lt;&#x2F;li&gt;</span><br><span class="line">   &lt;li&gt;零基础学习html&lt;&#x2F;li&gt;</span><br><span class="line">   &lt;li&gt;JavaScript全攻略&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ol&gt;</span><br><span class="line">&lt;ol&gt;在网页中显示的默认样式一般为：每项&lt;li&gt;前都自带一个序号，序号默认从1开</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3-2</span><br><span class="line">&lt;div&gt;容器标签</span><br><span class="line">在网页制作过程过中，可以把一些独立的逻辑部分划分出来，放在一个&lt;div&gt;标签中，这个&lt;div&gt;标签的作用就相当于一个容器。</span><br><span class="line">语法：</span><br><span class="line">&lt;div&gt;…&lt;&#x2F;div&gt;</span><br><span class="line">确定逻辑部分：</span><br><span class="line">什么是逻辑部分？它是页面上相互关联的一组元素。如网页中的独立的栏目版块，就是一个典型的逻辑部分。如下图所示：图中用红色边框标出的部分就是一个逻辑部分，就可以使用&lt;div&gt;标签作为容器</span><br><span class="line">注释：&lt;div&gt; 是一个块级元素，也就是说，浏览器通常会在 div 元素前后放置一个换行符。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3-3</span><br><span class="line">创建表格的五个元素：</span><br><span class="line">table、tbody、tr、th、td</span><br><span class="line">1、&lt;table&gt;…&lt;&#x2F;table&gt;：整个表格以&lt;table&gt;标记开始、&lt;&#x2F;table&gt;标记结束。</span><br><span class="line">2、&lt;tbody&gt;…&lt;&#x2F;tbody&gt;：当表格内容非常多时，表格会下载一点显示一点，但如果加上&lt;tbody&gt;标签后，这个表格就要等表格内容全部下载完才会显示。如右侧代码编辑器中的代码。（这个标签基本上不怎么用了）</span><br><span class="line">3、&lt;tr&gt;…&lt;&#x2F;tr&gt;：表格的一行，所以有几对tr 表格就有几行。</span><br><span class="line">4、&lt;td&gt;…&lt;&#x2F;td&gt;：表格的一个单元格，一行中包含几对&lt;td&gt;...&lt;td&#x2F;&gt;，说明一行中就有几列。</span><br><span class="line">5、&lt;th&gt;…&lt;&#x2F;th&gt;：表格的头部的一个单元格，表格表头。</span><br><span class="line">6、表格中列的个数，取决于一行中数据单元格的个数。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">表格还是需要添加一些标签进行优化，可以添加标题和摘要</span><br><span class="line">&lt;table summary&#x3D;&quot;本表格记录2012年到2013年库存记录，记录包括U盘和耳机库存量&quot;&gt;</span><br><span class="line">  &lt;caption&gt;2012年到2013年库存记录&lt;&#x2F;caption&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3-4</span><br><span class="line">1，使用&lt;a&gt;标签，链接到别一个页面</span><br><span class="line">使用&lt;a&gt;标签可实现超链接，它在网页制作中可以说是无处不在，只要有链接的地方，就会有这个标签。</span><br><span class="line">语法：</span><br><span class="line">&lt;a href&#x3D;”目标网址”&gt;链接显示的文本&lt;&#x2F;a&gt;</span><br><span class="line">例如：</span><br><span class="line">&lt;a href &#x3D; &quot;http:&#x2F;&#x2F;www.imooc.com&quot;&gt;click here!&lt;&#x2F;a&gt;</span><br><span class="line">上面例子作用是单击click here!文字，网页链接到http:&#x2F;&#x2F;www.imooc.com这个网页。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3-5</span><br><span class="line">认识&lt;img&gt;标签，为网页插入图片</span><br><span class="line">在网页的制作中为使网页炫丽美观，肯定是缺少不了图片，可以使用&lt;img&gt;标签来插入图片。</span><br><span class="line">语法：</span><br><span class="line">&lt;img src&#x3D;&quot;图片地址&quot; alt&#x3D;&quot;下载失败时的替换文本&quot; title &#x3D; &quot;提示文本&quot;&gt;</span><br><span class="line">举例：</span><br><span class="line">&lt;img src &#x3D; &quot;myimage.gif&quot; alt &#x3D; &quot;My Image&quot; title &#x3D; &quot;My Image&quot; &#x2F;&gt;</span><br><span class="line">讲解：</span><br><span class="line">1、src：标识图像的位置；</span><br><span class="line">2、alt：指定图像的描述性文本，当图像不可见时（下载不成功时），可看到该属性指定的文本；</span><br><span class="line">3、title：提供在图像可见时对图像的描述(鼠标滑过图片时显示的文本)；</span><br><span class="line">4、图像可以是GIF，PNG，JPEG格式的图像文件。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">四，表单标签（与用户进行交互）</span><br><span class="line">4-1</span><br><span class="line">表单是可以把浏览者输入的数据传送到服务器端，这样服务器端程序就可以处理表单传过来的数据。</span><br><span class="line">语法：</span><br><span class="line">&lt;form   method&#x3D;&quot;传送方式&quot;   action&#x3D;&quot;服务器文件&quot;&gt;</span><br><span class="line">讲解：</span><br><span class="line">1.&lt;form&gt; ：&lt;form&gt;标签是成对出现的，以&lt;form&gt;开始，以&lt;&#x2F;form&gt;结束。</span><br><span class="line">2.action ：浏览者输入的数据被传送到的地方,比如一个PHP页面(save.php)。</span><br><span class="line">3.method ： 数据传送的方式（get&#x2F;post）。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4-2</span><br><span class="line">&lt;input&gt;输入框</span><br><span class="line">文本输入框、密码输入框</span><br><span class="line">当用户要在表单中键入字母、数字等内容时，就会用到文本输入框。文本框也可以转化为密码输入框。</span><br><span class="line">语法：</span><br><span class="line">&lt;form&gt;</span><br><span class="line">   &lt;input type&#x3D;&quot;text&#x2F;password&quot; name&#x3D;&quot;名称&quot; value&#x3D;&quot;文本&quot; &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br><span class="line">1、type：</span><br><span class="line">   当type&#x3D;&quot;text&quot;时，输入框为文本输入框;</span><br><span class="line">   当type&#x3D;&quot;password&quot;时, 输入框为密码输入框。</span><br><span class="line">2、name：为文本框命名，以备后台程序ASP 、PHP使用。</span><br><span class="line">3、value：为文本输入框设置默认值。(一般起到提示作用)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4-3</span><br><span class="line">文本域，支持多行文本输入</span><br><span class="line">当用户需要在表单中输入大段文字时，需要用到文本输入域。</span><br><span class="line">语法：</span><br><span class="line">&lt;textarea  rows&#x3D;&quot;行数&quot; cols&#x3D;&quot;列数&quot;&gt;文本&lt;&#x2F;textarea&gt;</span><br><span class="line">1、&lt;textarea&gt;标签是成对出现的，以&lt;textarea&gt;开始，以&lt;&#x2F;textarea&gt;结束。</span><br><span class="line">2、cols ：多行输入域的列数。</span><br><span class="line">3、rows ：多行输入域的行数。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4-4</span><br><span class="line">单选框，复选框</span><br><span class="line">语法：</span><br><span class="line">&lt;input   type&#x3D;&quot;radio&#x2F;checkbox&quot;   value&#x3D;&quot;值&quot;    name&#x3D;&quot;名称&quot;   checked&#x3D;&quot;checked&quot;&#x2F;&gt;</span><br><span class="line">1、type:</span><br><span class="line">   当type&#x3D;&quot;radio&quot;时，控件为单选框</span><br><span class="line">   当type&#x3D;&quot;checkbox&quot;时，控件为复选框</span><br><span class="line">2、value：提交数据到服务器的值（后台程序PHP使用）</span><br><span class="line">3、name：为控件命名，以备后台程序ASP、PHP使用</span><br><span class="line">4、checked：当设置checked&#x3D;&quot;checked&quot;时，该选项被默认选中</span><br><span class="line">注意：同一组的单选按钮，name取值一定要一致，这样同一组的单选按钮才可以起到单选的作用。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4-5</span><br><span class="line">下拉列表框，节省空间</span><br><span class="line">下拉列表在网页中也常会用到，它可以有效的节省网页空间。既可以单选、又可以多选。</span><br><span class="line">语法：&lt;option value&#x3D;&quot;提交值&quot;&gt;选项&lt;&#x2F;option&gt;</span><br><span class="line">提交值是向服务器提交的值，选项是显示的值。</span><br><span class="line">&lt;form action&#x3D;&quot;save.php&quot; method&#x3D;&quot;post&quot; &gt;</span><br><span class="line">    </span><br><span class="line">&lt;label&gt;爱好:&lt;&#x2F;label&gt;</span><br><span class="line">    </span><br><span class="line">&lt;select&gt;</span><br><span class="line">      </span><br><span class="line">&lt;option value&#x3D;&quot;看书&quot;&gt;看书&lt;&#x2F;option&gt;</span><br><span class="line">      </span><br><span class="line">&lt;option value&#x3D;&quot;旅游&quot; selected&#x3D;&quot;selected&quot;&gt;旅游&lt;&#x2F;option&gt;</span><br><span class="line">      </span><br><span class="line">&lt;option value&#x3D;&quot;运动&quot;&gt;运动&lt;&#x2F;option&gt;</span><br><span class="line">      </span><br><span class="line">&lt;option value&#x3D;&quot;购物&quot;&gt;购物&lt;&#x2F;option&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;select&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;&#x2F;form&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4-6</span><br><span class="line">使用下拉列表框进行多选</span><br><span class="line">下拉列表也可以进行多选操作，在&lt;select&gt;标签中设置multiple&#x3D;&quot;multiple&quot;属性，</span><br><span class="line">就可以实现多选功能，进行多选时按下Ctrl键同时进行单击，可以选择多个选项。</span><br><span class="line">如下代码：</span><br><span class="line">&lt;form action&#x3D;&quot;save.php&quot; method&#x3D;&quot;post&quot; &gt;</span><br><span class="line">    </span><br><span class="line">&lt;label&gt;爱好:&lt;&#x2F;label&gt;</span><br><span class="line">    </span><br><span class="line">&lt;select multiple&#x3D;&quot;multiple&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      &lt;option value&#x3D;&quot;看书&quot;&gt;看书&lt;&#x2F;option&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      &lt;option value&#x3D;&quot;旅游&quot;&gt;旅游&lt;&#x2F;option&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      &lt;option value&#x3D;&quot;运动&quot;&gt;运动&lt;&#x2F;option&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      &lt;option value&#x3D;&quot;购物&quot;&gt;购物&lt;&#x2F;option&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;select&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;&#x2F;form&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4-7</span><br><span class="line">在表单中有两种按钮可以使用，分别为：提交按钮、重置。</span><br><span class="line">1，提交按钮：当用户需要提交表单信息到服务器时，需要用到提交按钮。</span><br><span class="line">语法：</span><br><span class="line">&lt;input   type&#x3D;&quot;submit&quot;   value&#x3D;&quot;提交&quot;&gt;</span><br><span class="line">type：只有当type值设置为submit时，按钮才有提交作用</span><br><span class="line">value：按钮上显示的文字</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2，重置按钮，重置表单信息</span><br><span class="line">当用户需要重置表单信息到初始时的状态时，比如用户输入“用户名”后，发现书写有误，可以使用重置按钮使输入框恢复到初始状态。只需要把type设置为&quot;reset&quot;就可以。</span><br><span class="line">语法：</span><br><span class="line">&lt;input type&#x3D;&quot;reset&quot; value&#x3D;&quot;重置&quot;&gt;</span><br><span class="line">type：只有当type值设置为reset时，按钮才有重置作用</span><br><span class="line">value：按钮上显示的文字</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">五，css样式</span><br><span class="line">5-1</span><br><span class="line">认识css样式</span><br><span class="line">CSS全称为“层叠样式表 (Cascading Style Sheets)”，它主要是用于定义HTML内容在浏览器内的显示样式，如文字大小、颜色、字体加粗等。</span><br><span class="line">如下列代码：</span><br><span class="line">p&#123;</span><br><span class="line">   font-size:12px;</span><br><span class="line">   color:red;</span><br><span class="line">   font-weight:bold;</span><br><span class="line">&#125;</span><br><span class="line">使用CSS样式的一个好处是通过定义某个样式，可以让不同网页位置的文字有着统一的字体、字号或者颜色等。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">5-2</span><br><span class="line">CSS代码语法</span><br><span class="line">css 样式由选择符和声明组成，而声明又由属性和值组成</span><br><span class="line">选择符&#123;属性:值&#125;</span><br><span class="line">p&#123;color:red;&#125;</span><br><span class="line">选择符：又称选择器，指明网页中要应用样式规则的元素，如本例中是网页中所有的段（p）的文字将变成蓝色，而其他的元素（如ol）不会受到影响。</span><br><span class="line">声明：在英文大括号“｛｝”中的的就是声明，属性和值之间用英文冒号“：”分隔。当有多条声明时，中间可以英文分号“;”分隔，如下所示：</span><br><span class="line">p&#123;font-size:12px;color:red;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">5-3</span><br><span class="line">从CSS 样式代码插入的形式来看基本可以分为以下3种：</span><br><span class="line">内联式、嵌入式和外部式三种</span><br><span class="line">1,内联式css样式</span><br><span class="line">就是把css代码直接写在现有的HTML标签中，如下面代码：</span><br><span class="line">&lt;p style&#x3D;&quot;color:red&quot;&gt;这里文字是红色。&lt;&#x2F;p&gt;</span><br><span class="line">css样式代码要写在style&#x3D;&quot;&quot;双引号中，如果有多条css样式代码设置可以写在一起，中间用分号隔开。如下代码：</span><br><span class="line">&lt;p style&#x3D;&quot;color:red;font-size:12px&quot;&gt;这里文字是红色。&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2,嵌入式css样式，</span><br><span class="line">就是可以把css样式代码写在&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;&lt;&#x2F;style&gt;标签之间。如下面代码实现把三个&lt;span&gt;标签中的文字设置为红色：</span><br><span class="line">&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">span&#123;</span><br><span class="line">color:red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">嵌入式css样式必须写在&lt;style&gt;&lt;&#x2F;style&gt;之间，并且一般情况下嵌入式css样式写在&lt;head&gt;&lt;&#x2F;head&gt;之间。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3,外部式css样式</span><br><span class="line">写在单独的一个文件中</span><br><span class="line">外部式css样式(也可称为外联式)就是把css代码写一个单独的外部文件中，这个css样式文件以“.css”为扩展名，在&lt;head&gt;内（不是在&lt;style&gt;标签内）使用&lt;link&gt;标签将css样式文件链接到HTML文件内，如下面代码：</span><br><span class="line">&lt;link href&#x3D;&quot;base.css&quot; rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; &#x2F;&gt;</span><br><span class="line">注意：</span><br><span class="line">1、css样式文件名称以有意义的英文字母命名，如 main.css。</span><br><span class="line">2、rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; 是固定写法不可修改。</span><br><span class="line">3、&lt;link&gt;标签位置一般写在&lt;head&gt;标签之内。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">六，CSS选择器</span><br><span class="line">每一条css样式定义由两部分组成，形式如下：</span><br><span class="line">选择器&#123;</span><br><span class="line">    样式;</span><br><span class="line">&#125;</span><br><span class="line">在&#123;&#125;之前的部分就是“选择器”，“选择器”指明了&#123;&#125;中的“样式”的作用对象，也就是“样式”作用于网页中的哪些元素</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6-1，标签选择器</span><br><span class="line">标签选择器其实就是html代码中的标签。如右侧代码编辑器中的&lt;html&gt;、&lt;body&gt;、&lt;h1&gt;、&lt;p&gt;、&lt;img&gt;。例如下面代码：</span><br><span class="line">p&#123;font-size:12px;line-height:1.6em;&#125;</span><br><span class="line">上面的css样式代码的作用：为p标签设置12px字号，行间距设置1.6em的样式。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6-2，类选择器</span><br><span class="line">类选择器在css样式编码中是最常用到的，如右侧代码编辑器中的代码:可以实现为“胆小如鼠”、“勇气”字体设置为红色。</span><br><span class="line">语法：</span><br><span class="line">.类选器名称&#123;css样式代码;&#125;</span><br><span class="line">注意：</span><br><span class="line">1、英文圆点开头</span><br><span class="line">2、其中类选器名称可以任意起名（但不要起中文噢）</span><br><span class="line">使用方法：</span><br><span class="line">第一步：使用合适的标签把要修饰的内容标记起来，如下：</span><br><span class="line">&lt;span&gt;胆小如鼠&lt;&#x2F;span&gt;</span><br><span class="line">第二步：使用class&#x3D;&quot;类选择器名称&quot;为标签设置一个类，如下：</span><br><span class="line">&lt;span class&#x3D;&quot;stress&quot;&gt;胆小如鼠&lt;&#x2F;span&gt;</span><br><span class="line">第三步：设置类选器css样式，如下：</span><br><span class="line">.stress&#123;color:red;&#125;&#x2F;*类前面要加入一个英文圆点*&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6-3，ID选择器</span><br><span class="line">在很多方面，ID选择器都类似于类选择符，但也有一些重要的区别：</span><br><span class="line">1、为标签设置id&#x3D;&quot;ID名称&quot;，而不是class&#x3D;&quot;类名称&quot;。</span><br><span class="line">2、ID选择符的前面是井号（#）号，而不是英文圆点（.）。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6-4,类和ID选择器的区别</span><br><span class="line">相同点：可以应用于任何元素</span><br><span class="line">不同点：</span><br><span class="line">1、ID选择器只能在文档中使用一次。与类选择器不同，在一个HTML文档中，ID选择器只能使用一次，而且仅一次。而类选择器可以使用多次。</span><br><span class="line">下面代码是正确的：</span><br><span class="line"> &lt;p&gt;三年级时，我还是一个&lt;span class&#x3D;&quot;stress&quot;&gt;胆小如鼠&lt;&#x2F;span&gt;的小女孩，上课从来不敢回答老师提出的问题，生怕回答错了老师会批评我。就一直没有这个&lt;span class&#x3D;&quot;stress&quot;&gt;勇气&lt;&#x2F;span&gt;来回答老师提出的问题。&lt;&#x2F;p&gt;</span><br><span class="line">而下面代码是错误的：</span><br><span class="line"> &lt;p&gt;三年级时，我还是一个&lt;span id&#x3D;&quot;stress&quot;&gt;胆小如鼠&lt;&#x2F;span&gt;的小女孩，上课从来不敢回答老师提出的问题，生怕回答错了老师会批评我。就一直没有这个&lt;span id&#x3D;&quot;stress&quot;&gt;勇气&lt;&#x2F;span&gt;来回答老师提出的问题。&lt;&#x2F;p&gt;</span><br><span class="line">2、可以使用类选择器词列表方法为一个元素同时设置多个样式。我们可以为一个元素同时设多个样式，但只可以用类选择器的方法实现，ID选择器是不可以的（不能使用 ID 词列表）。</span><br><span class="line">下面的代码是正确的(完整代码见右侧代码编辑器)</span><br><span class="line">.stress&#123;</span><br><span class="line">    color:red;</span><br><span class="line">&#125;</span><br><span class="line">.bigsize&#123;</span><br><span class="line">    font-size:25px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;p&gt;到了&lt;span class&#x3D;&quot;stress bigsize&quot;&gt;三年级&lt;&#x2F;span&gt;下学期时，我们班上了一节公开课...&lt;&#x2F;p&gt;</span><br><span class="line">上面代码的作用是为“三年级”三个文字设置文本颜色为红色并且字号为25px</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">下面的代码是不正确的(完整代码见右侧代码编辑器)</span><br><span class="line">#stressid&#123;</span><br><span class="line">    color:red;</span><br><span class="line">&#125;</span><br><span class="line">#bigsizeid&#123;</span><br><span class="line">    font-size:25px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;p&gt;到了&lt;span id&#x3D;&quot;stressid bigsizeid&quot;&gt;三年级&lt;&#x2F;span&gt;下学期时，我们班上了一节公开课...&lt;&#x2F;p&gt;</span><br><span class="line">上面代码不可以实现为“三年级”三个文字设置文本颜色为红色并且字号为25px的作用。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6-5，子选择器</span><br><span class="line">还有一个比较有用的选择器子选择器，即大于符号(&gt;),用于选择指定标签元素的子元素。如下面的代码：</span><br><span class="line">.food&gt;li&#123;border:1px solid red;&#125;</span><br><span class="line">这行代码会使class名为food下的子元素li加入红色实线边框。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6-6，包含(后代)选择器</span><br><span class="line">包含选择器，即加入空格,用于选择指定标签元素下的后辈元素。如右侧代码编辑器中的代码：</span><br><span class="line">.first  span&#123;color:red;&#125;</span><br><span class="line">请注意这个选择器与子选择器的区别</span><br><span class="line">1，子选择器（child selector）仅是指它的直接后代，或者你可以理解为作用于子元素的第一代后代</span><br><span class="line">2，后代选择器是作用于所有子后代元素。后代选择器通过空格来进行选择，而子选择器是通过“&gt;”进行选择。</span><br><span class="line">总结：&gt;作用于元素的第一代后代，空格作用于元素的所有后代。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6-7，通用选择器</span><br><span class="line">通用选择器是功能最强大的选择器，它使用一个（*）号指定，它的作用是匹配html中任意标签元素，如下使用下面代码使用html中任意标签元素字体颜色全部设置为红色：</span><br><span class="line">* &#123;color:red;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6-8，伪类选择符</span><br><span class="line">更有趣的是伪类选择符，为什么叫做伪类选择符，它允许给html不存在的标签设置样式，比如说我们给html中一个标签元素的鼠标滑过的状态来设置字体颜色：</span><br><span class="line">a:hover&#123;color:red;&#125;</span><br><span class="line">这行代码会使被&lt;a&gt;&lt;&#x2F;a&gt;标签包裹的文字内容中的“胆小如鼠”字体颜色在鼠标滑过时变为红色。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6-9，分组选择符</span><br><span class="line">当你想为html中多个标签元素设置同一个样式时，可以使用分组选择符（，），如下代码为右侧代码编辑器中的h1、span标签同时设置字体颜色为红色：</span><br><span class="line">h1,span&#123;color:red;&#125;</span><br><span class="line">它相当于下面两行代码：</span><br><span class="line">h1&#123;color:red;&#125;</span><br><span class="line">span&#123;color:red;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">七，CSS的继承、层叠和特殊性。</span><br><span class="line">7-1</span><br><span class="line">CSS的某些样式是具有继承性的，那么什么是继承呢？继承是一种规则，它允许样式不仅应用于某个特定html标签元素，而且应用于其后代。比如下面代码：如某种颜色应用于p标签，这个颜色设置不仅应用p标签，还应用于p标签中的所有子元素文本，这里子元素为span标签。</span><br><span class="line">但注意有一些css样式是不具有继承性的。如border:1px solid red;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">7-2</span><br><span class="line">根据权值来判断使用哪个css样式</span><br><span class="line">浏览器是根据权值来判断使用哪种css样式的，权值高的就使用哪种css样式。</span><br><span class="line">下面是权值的规则：</span><br><span class="line">标签的权值为1，类选择符的权值为10，ID选择符的权值最高为100。例如下面的代码：</span><br><span class="line">p&#123;color:red;&#125; &#x2F;*权值为1*&#x2F;</span><br><span class="line">p span&#123;color:green;&#125; &#x2F;*权值为1+1&#x3D;2*&#x2F;</span><br><span class="line">.warning&#123;color:white;&#125; &#x2F;*权值为10*&#x2F;</span><br><span class="line">p span.warning&#123;color:purple;&#125; &#x2F;*权值为1+1+10&#x3D;12*&#x2F;</span><br><span class="line">#footer .note p&#123;color:yellow;&#125; &#x2F;*权值为100+10+1&#x3D;111*&#x2F;</span><br><span class="line">注意：还有一个权值比较特殊--继承也有权值但很低，有的文献提出它只有0.1，所以可以理解为继承的权值最低</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">7-3，层叠</span><br><span class="line">我们来思考一个问题：如果在html文件中对于同一个元素可以有多个css样式存在并且这多个css样式具有相同权重值怎么办？好，这一小节中的层叠帮你解决这个问题。</span><br><span class="line">层叠就是在html文件中对于同一个元素可以有多个css样式存在，当有相同权重的样式存在时，会根据这些css样式的前后顺序来决定，处于最后面的css样式会被应用。</span><br><span class="line">如下面代码:</span><br><span class="line">p&#123;color:red;&#125;</span><br><span class="line">p&#123;color:green;&#125;</span><br><span class="line">&lt;p class&#x3D;&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;&#x2F;span&gt;的小女孩。&lt;&#x2F;p&gt;</span><br><span class="line">最后 p 中的文本会设置为green，这个层叠很好理解，理解为后面的样式会覆盖前面的样式。</span><br><span class="line">所以前面的css样式优先级就不难理解了：</span><br><span class="line">内联样式表（标签内部）&gt; 嵌入样式表（当前文件中）&gt; 外部样式表（外部文件中）。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">7-4，重要性</span><br><span class="line">重要性</span><br><span class="line">我们在做网页代码的时，有些特殊的情况需要为某些样式设置具有最高权值，怎么办？这时候我们可以使用!important来解决。</span><br><span class="line">如下代码：</span><br><span class="line">p&#123;color:red!important;&#125;</span><br><span class="line">p&#123;color:green;&#125;</span><br><span class="line">&lt;p class&#x3D;&quot;first&quot;&gt;三年级时，我还是一个&lt;span&gt;胆小如鼠&lt;&#x2F;span&gt;的小女孩。&lt;&#x2F;p&gt;</span><br><span class="line">这时 p 段落中的文本会显示的red红色。</span><br><span class="line">注意：!important要写在分号的前面</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">八，CSS格式化排版</span><br><span class="line">8-1</span><br><span class="line">文字排版</span><br><span class="line">1，文字排版--字体</span><br><span class="line">我们可以使用css样式为网页中的文字设置字体、字号、颜色等样式属性。下面我们来看一个例子，下面代码实现：为网页中的文字设置字体为宋体。</span><br><span class="line">body&#123;font-family:&quot;宋体&quot;;&#125;</span><br><span class="line">这里注意不要设置不常用的字体，因为如果用户本地电脑上如果没有安装你设置的字体，就会显示浏览器默认的字体。（因为用户是否可以看到你设置的字体样式取决于用户本地电脑上是否安装你设置的字体。）</span><br><span class="line">2，文字排版--字号、颜色</span><br><span class="line">可以使用下面代码设置网页中文字的字号为12像素，并把字体颜色设置为#666(灰色)：</span><br><span class="line">body&#123;font-size:12px;color:#666&#125;</span><br><span class="line">3，文字排版--粗体</span><br><span class="line">我们还可以使用css样式来改变文字的样式：粗体、斜体、下划线、删除线，可以使用下面代码实现设置文字以粗体样式显示出来。</span><br><span class="line">p span&#123;font-weight:bold;&#125;</span><br><span class="line">4，文字排版--斜体</span><br><span class="line">以下代码可以实现文字以斜体样式在浏览器中显示：</span><br><span class="line">p a&#123;font-style:italic;&#125;</span><br><span class="line">&lt;p&gt;三年级时，我还是一个&lt;a&gt;胆小如鼠&lt;&#x2F;a&gt;的小女孩。&lt;&#x2F;p&gt;</span><br><span class="line">5，文字排版--下划线</span><br><span class="line">有些情况下想为文字设置为下划线样式，这样可以在视觉上强调文字，可以使用下面代码来实现：</span><br><span class="line">p a&#123;text-decoration:underline;&#125;</span><br><span class="line">&lt;p&gt;三年级时，我还是一个&lt;a&gt;胆小如鼠&lt;&#x2F;a&gt;的小女孩。&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">删除线，在电商网站上经常见。</span><br><span class="line">p a&#123;text-decoration:line-through;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">8-2</span><br><span class="line">段落排版</span><br><span class="line">1，段落排版--缩进</span><br><span class="line">中文文字中的段前习惯空两个文字的空白，这个特殊的样式可以用下面代码来实现：</span><br><span class="line">p&#123;text-indent:2em;&#125;</span><br><span class="line">注意：2em的意思就是文字的2倍大小。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2，段落排版--行间距</span><br><span class="line">这一小节我们来学习一下另一个在段落排版中起重要作用的行间距属性（line-height），如下代码实现设置段落行间距为1.5倍。</span><br><span class="line">p&#123;line-height:1.5em;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3，段落排版--字间距、字母间距</span><br><span class="line">文字间隔、字母间隔设置：</span><br><span class="line">如果想在网页排版中设置文字间隔或者字母间隔就可以使用    letter-spacing来实现，如下面代码：</span><br><span class="line">h1&#123;</span><br><span class="line">    letter-spacing:50px;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&lt;h1&gt;了不起的盖茨比&lt;&#x2F;h1&gt;</span><br><span class="line">注意：这个样式使用在英文单词时，是设置字母与字母之间的间距。</span><br><span class="line">单词间距设置：</span><br><span class="line">如果我想设置英文单词之间的间距呢？可以使用word-spacing来实现。如下代码：</span><br><span class="line">h1&#123;</span><br><span class="line">    word-spacing:50px;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&lt;h1&gt;welcome to imooc!&lt;&#x2F;h1&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">九，CSS盒模型</span><br><span class="line">9-1</span><br><span class="line">元素分类</span><br><span class="line">在讲解CSS布局之前，我们需要提前知道一些知识，在CSS中，html中的标签元素大体被分为三种不同的类型：块状元素、内联元素和内联块状元素。</span><br><span class="line">常用的块状元素有：</span><br><span class="line">&lt;div&gt;、&lt;p&gt;、&lt;h1&gt;...&lt;h6&gt;、&lt;ol&gt;、&lt;ul&gt;、&lt;dl&gt;、&lt;table&gt;、&lt;address&gt;、&lt;blockquote&gt; 、&lt;form&gt;</span><br><span class="line">常用的内联元素有：</span><br><span class="line">&lt;a&gt;、&lt;span&gt;、&lt;br&gt;、&lt;i&gt;、&lt;em&gt;、&lt;strong&gt;、&lt;label&gt;、&lt;q&gt;、&lt;var&gt;、&lt;cite&gt;、&lt;code&gt;</span><br><span class="line">常用的内联块状元素有：</span><br><span class="line">&lt;img&gt;、&lt;input&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">9-2</span><br><span class="line">元素分类--块级元素</span><br><span class="line">什么是块级元素？在html中&lt;div&gt;、 &lt;p&gt;、&lt;h1&gt;、&lt;form&gt;、&lt;ul&gt; 和 &lt;li&gt;就是块级元素。设置display:block就是将元素显示为块级元素。如下代码就是将行内元素a转换为块状元素，从页使用a元素具有块状元素特点。</span><br><span class="line">a&#123;display:block;&#125;</span><br><span class="line">块级元素特点：</span><br><span class="line">1、每个块级元素都从新的一行开始，并且其后的元素也另起一行。（真霸道，一个块级元素独占一行）</span><br><span class="line">2、元素的高度、宽度、行高以及顶和底边距都可设置。</span><br><span class="line">3、元素宽度在不设置的情况下，是它本身父容器的100%（和父元素的宽度一致），除非设定一个宽度。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">9-3</span><br><span class="line">元素分类--行内元素</span><br><span class="line">在html中，&lt;span&gt;、&lt;a&gt;、&lt;label&gt;、&lt;input&gt;、 &lt;img&gt;、 &lt;strong&gt; 和&lt;em&gt;就是典型的行内元素（inline）元素。当然块状元素也可以通过代码display:inline将元素设置为行内元素。</span><br><span class="line">行内元素特点：</span><br><span class="line">1、和其他元素都在一行上；</span><br><span class="line">2、元素的高度、宽度、行高及顶部和底部边距不可设置；</span><br><span class="line">3、元素的宽度就是它包含的文字或图片的宽度，不可改变。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">9-4</span><br><span class="line">元素分类--内联块状元素</span><br><span class="line">内联块状元素（inline-block）就是同时具备内联元素、块状元素的特点，代码display:inline-block就是将元素设置为内联块状元素。(css2.1新增)，&lt;img&gt;、&lt;input&gt;标签就是这种内联块状标签。</span><br><span class="line">inline-block元素特点：</span><br><span class="line">1、和其他元素都在一行上；</span><br><span class="line">2、元素的高度、宽度、行高以及顶和底边距都可设置。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">9-5</span><br><span class="line">盒模型--边框（一）</span><br><span class="line">盒子模型的边框就是围绕着内容及补白的线，这条线你可以设置它的粗细、样式和颜色(边框三个属性)。</span><br><span class="line">如下面代码为div来设置边框粗细为2px、样式为实心的、颜色为红色的边框：</span><br><span class="line">div&#123;</span><br><span class="line">    border:2px  solid  red;</span><br><span class="line">&#125;</span><br><span class="line">上面是border代码的缩写形式，可以分开写：</span><br><span class="line">div&#123;</span><br><span class="line">    border-width:2px;</span><br><span class="line">    border-style:solid;</span><br><span class="line">    border-color:red;</span><br><span class="line">&#125;</span><br><span class="line">注意：</span><br><span class="line">1、border-style（边框样式）常见样式有：</span><br><span class="line">dashed（虚线）| dotted（点线）| solid（实线）。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2、border-color（边框颜色）中的颜色可设置为十六进制颜色，如:</span><br><span class="line">border-color:#888;&#x2F;&#x2F;前面的井号不要忘掉。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">9-6</span><br><span class="line">盒模型--边框（二）</span><br><span class="line">现在有一个问题，如果有想为p标签单独设置下边框，而其它三边都不设置边框样式怎么办呢？css样式中允许只为一个方向的边框设置样式：</span><br><span class="line">div&#123;border-bottom:1px solid red;&#125;</span><br><span class="line">同样可以使用下面代码实现其它三边上、右、左边框的设置：</span><br><span class="line">border-top:1px solid red;</span><br><span class="line">border-right:1px solid red; </span><br><span class="line">border-left:1px solid red;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">9-7</span><br><span class="line">盒模型--边界</span><br><span class="line">元素与其它元素之间的距离可以使用边界（margin）来设置。边界也是可分为上、右、下、左。如下代码：</span><br><span class="line">div&#123;margin:20px 10px 15px 30px;&#125;</span><br><span class="line">也可以分开写：</span><br><span class="line">div&#123;</span><br><span class="line">   margin-top:20px;</span><br><span class="line">   margin-right:10px;</span><br><span class="line">   margin-bottom:15px;</span><br><span class="line">   margin-left:30px;</span><br><span class="line">&#125;</span><br><span class="line">如果上下左右的边界都为10px;可以这么写：</span><br><span class="line">div&#123; margin:10px;&#125;</span><br><span class="line">如果上下边界一样为10px，左右一样为20px，可以这么写：</span><br><span class="line">div&#123; margin:10px 20px;&#125;</span><br><span class="line">总结一下：padding和margin的区别，padding在边框里，margin在边框外。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">9-8</span><br><span class="line">盒模型--填充</span><br><span class="line">元素内容与边框之间是可以设置距离的，称之为填充。填充也可分为上、右、下、左。如下代码：</span><br><span class="line">div&#123;padding:20px 10px15px 30px;&#125;</span><br><span class="line">顺序一定不要搞混。可以分开写上面代码：</span><br><span class="line">div&#123;</span><br><span class="line">   padding-top:20px;</span><br><span class="line">   padding-right:10px;</span><br><span class="line">   padding-bottom:15px;</span><br><span class="line">   padding-left:30px;</span><br><span class="line">&#125;</span><br><span class="line">如果上、右、下、左的填充都为10px;可以这么写</span><br><span class="line">div&#123;padding:10px;&#125;</span><br><span class="line">如果上下填充一样为10px，左右一样为20px，可以这么写：</span><br><span class="line">div&#123;padding:10px 20px;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">9-9</span><br><span class="line">盒模型代码简写</span><br><span class="line">还记得在讲盒模型时外边距(margin)、内边距(padding)和边框(border)设置上下左右四个方向的边距是按照顺时针方向设置的：上右下左。具体应用在margin和padding的例子如下：</span><br><span class="line">margin:10px 15px 12px 14px;&#x2F;*上设置为10px、右设置为15px、下设置为12px、左设置为14px*&#x2F;</span><br><span class="line">通常有下面三种缩写方法:</span><br><span class="line">1、如果top、right、bottom、left的值相同，如下面代码：</span><br><span class="line">margin:10px 10px 10px 10px;</span><br><span class="line">可缩写为：</span><br><span class="line">margin:10px;</span><br><span class="line">2、如果top和bottom值相同、left和 right的值相同，如下面代码：</span><br><span class="line">margin:10px 20px 10px 20px;</span><br><span class="line">可缩写为：</span><br><span class="line">margin:10px 20px;</span><br><span class="line">3、如果left和right的值相同，如下面代码：</span><br><span class="line">margin:10px 20px 30px 20px;</span><br><span class="line">可缩写为：</span><br><span class="line">margin:10px 20px 30px;</span><br><span class="line">注意：padding、border的缩写方法和margin是一致的。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">9-10</span><br><span class="line">颜色值缩写</span><br><span class="line">关于颜色的css样式也是可以缩写的，当你设置的颜色是16进制的色彩值时，如果每两位的值相同，可以缩写一半。</span><br><span class="line">例子1：</span><br><span class="line">p&#123;color:#000000;&#125;</span><br><span class="line">可以缩写为：</span><br><span class="line">p&#123;color: #000;&#125;</span><br><span class="line">例子2：</span><br><span class="line">p&#123;color: #336699;&#125;</span><br><span class="line">可以缩写为：</span><br><span class="line">p&#123;color: #369;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">十，CSS布局模型</span><br><span class="line">10-1</span><br><span class="line">css布局模型</span><br><span class="line">清楚了CSS 盒模型的基本概念、 盒模型类型， 我们就可以深入探讨网页布局的基本模型了。布局模型与盒模型一样都是 CSS 最基本、 最核心的概念。 但布局模型是建立在盒模型基础之上，又不同于我们常说的 CSS 布局样式或 CSS 布局模板。如果说布局模型是本，那么 CSS 布局模板就是末了，是外在的表现形式。 </span><br><span class="line">CSS包含3种基本的布局模型，用英文概括为：Flow、Layer 和 Float。</span><br><span class="line">在网页中，元素有三种布局模型：</span><br><span class="line">1、流动模型（Flow）</span><br><span class="line">2、浮动模型 (Float)</span><br><span class="line">3、层模型（Layer）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">10-2</span><br><span class="line">流动模型（一）</span><br><span class="line">流动（Flow）：自上而下。</span><br><span class="line">先来说一说流动模型，流动（Flow）是默认的网页布局模式。也就是说网页在默认状态下的 HTML 网页元素都是根据流动模型来分布网页内容的。</span><br><span class="line">流动布局模型具有2个比较典型的特征：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">第一点，块状元素都会在所处的包含元素内自上而下按顺序垂直延伸分布，因为在默认状态下，块状元素的宽度都为100%。实际上，块状元素都会以行的形式占据位置。如右侧代码编辑器中三个块状元素标签(div，h1，p)宽度显示为100%。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">第二点，在流动模型下，内联元素都会在所处的包含元素内从左到右水平分布显示。（内联元素可不像块状元素这么霸道独占一行）</span><br><span class="line">右侧代码编辑器中内联元素标签a、span、em、strong都是内联元素。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">10-3</span><br><span class="line">浮动模型</span><br><span class="line">块状元素这么霸道都是独占一行，如果现在我们想让两个块状元素并排显示，怎么办呢？不要着急，设置元素浮动就可以实现这一愿望。任何元素在默认情况下是不能浮动的，但可以用CSS定义为浮动，如div、p、table、img等元素都可以被定义为浮动。如下代码可以实现两个div元素一行显示。</span><br><span class="line">div&#123;</span><br><span class="line">    width:200px;</span><br><span class="line">    height:200px;</span><br><span class="line">    border:2px red solid;</span><br><span class="line">    float:left;</span><br><span class="line">&#125;</span><br><span class="line">&lt;div id&#x3D;&quot;div1&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;div2&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">注意：设置浮动的同时一定要先设置块状元素的宽度，且需要浮动的几个元素宽度加起来一定要小于容器元素的宽度。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">10-4</span><br><span class="line">什么是层模型？</span><br><span class="line">什么是层布局模型？层布局模型就像是图像软件PhotoShop中非常流行的图层编辑功能一样，每个图层能够精确定位操作，但在网页设计领域，由于网页大小的活动性，层布局没能受到热捧。但是在网页上局部使用层布局还是有其方便之处的。下面我们来学习一下html中的层布局。</span><br><span class="line">如何让html元素在网页中精确定位，就像图像软件PhotoShop中的图层一样可以对每个图层能够精确定位操作。CSS定义了一组定位（positioning）属性来支持层布局模型。</span><br><span class="line">层模型有三种形式：</span><br><span class="line">1、绝对定位(position: absolute)</span><br><span class="line">2、相对定位(position: relative)</span><br><span class="line">3、固定定位(position: fixed)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1，层模型--绝对定位（相对于父类）</span><br><span class="line">如果想为元素设置层模型中的绝对定位，需要设置position:absolute(表示绝对定位)，这条语句的作用将元素从文档流中拖出来，然后使用left、right、top、bottom属性相对于其最接近的一个具有定位属性的父包含块进行绝对定位。如果不存在这样的包含块，则相对于body元素，即相对于浏览器窗口。</span><br><span class="line">如下面代码可以实现div元素相对于浏览器窗口向右移动100px，向下移动50px。</span><br><span class="line">div&#123;</span><br><span class="line">    width:200px;</span><br><span class="line">    height:200px;</span><br><span class="line">    border:2px red solid;</span><br><span class="line">    position:absolute;</span><br><span class="line">    left:100px;</span><br><span class="line">    top:50px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;div id&#x3D;&quot;div1&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2，层模型--相对定位（相对于以前）</span><br><span class="line">如果想为元素设置层模型中的相对定位，需要设置position:relative（表示相对定位），它通过left、right、top、bottom属性确定元素在正常文档流中的偏移位置。相对定位完成的过程是首先按static(float)方式生成一个元素(并且元素像层一样浮动了起来)，然后相对于以前的位置移动，移动的方向和幅度由left、right、top、bottom属性确定，偏移前的位置保留不动。</span><br><span class="line">如下代码实现相对于以前位置向下移动50px，向右移动100px;</span><br><span class="line">#div1&#123;</span><br><span class="line">    width:200px;</span><br><span class="line">    height:200px;</span><br><span class="line">    border:2px red solid;</span><br><span class="line">    position:relative;</span><br><span class="line">    left:100px;</span><br><span class="line">    top:50px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;div id&#x3D;&quot;div1&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3，层模型--固定定位（相对于网页窗口）</span><br><span class="line">固定住某一坐标。</span><br><span class="line">fixed：表示固定定位，与absolute定位类型类似，但它的相对移动的坐标是视图（屏幕内的网页窗口）本身。由于视图本身是固定的，它不会随浏览器窗口的滚动条滚动而变化，除非你在屏幕中移动浏览器窗口的屏幕位置，或改变浏览器窗口的显示大小，因此固定定位的元素会始终位于浏览器窗口内视图的某个位置，不会受文档流动影响，这与background-attachment:fixed?属性功能相同。以下代码可以实现相对于浏览器视图向右移动100px，向下移动50px。并且拖动滚动条时位置固定不变。</span><br><span class="line">#div1&#123;</span><br><span class="line">    width:200px;</span><br><span class="line">    height:200px;</span><br><span class="line">    border:2px red solid;</span><br><span class="line">    position:fixed;</span><br><span class="line">    left:100px;</span><br><span class="line">    top:50px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">10-5</span><br><span class="line">Relative与Absolute组合使用</span><br><span class="line">小伙伴们学习了12-6小节的相对定位的方法：使用position:absolute可以实现被设置元素相对于浏览器（body）设置定位以后，大家有没有想过可不可以相对于其它元素进行定位呢？答案是肯定的，当然可以。使用position:relative来帮忙，但是必须遵守下面规范：</span><br><span class="line">1、参照定位的元素必须是相对定位元素的前辈元素：</span><br><span class="line">&lt;div id&#x3D;&quot;box1&quot;&gt;&lt;!--参照定位的元素--&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;box2&quot;&gt;相对参照元素进行定位&lt;&#x2F;div&gt;&lt;!--相对定位元素--&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">从上面代码可以看出box1是box2的父元素（父元素当然也是前辈元素了）。</span><br><span class="line">2、参照定位的元素必须加入position:relative;</span><br><span class="line">#box1&#123;</span><br><span class="line">    width:200px;</span><br><span class="line">    height:200px;</span><br><span class="line">    position:relative;        </span><br><span class="line">&#125;</span><br><span class="line">3、定位元素加入position:absolute，便可以使用top、bottom、left、right来进行偏移定位了。</span><br><span class="line">#box2&#123;</span><br><span class="line">    position:absolute;</span><br><span class="line">    top:20px;</span><br><span class="line">    left:30px;         </span><br><span class="line">&#125;</span><br><span class="line">这样box2就可以相对于父元素box1定位了（这里注意参照物就可以不是浏览器了，而可以自由设置了）。</span><br></pre></td></tr></table></figure>
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://zhilin.cc/post/355e5789.html>https://zhilin.cc/post/355e5789.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-05T13:55:35+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 5, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/WEB/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>WEB</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zhilin.cc/post/355e5789.html&title=HTML、CSS知识点总结 - zhilin&summary=史上最全的HTML、CSS知识点总结，浅显易懂。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhilin.cc/post/355e5789.html&title=HTML、CSS知识点总结 - zhilin&summary=史上最全的HTML、CSS知识点总结，浅显易懂。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://zhilin.cc/post/355e5789.html&title=HTML、CSS知识点总结 - zhilin&summary=史上最全的HTML、CSS知识点总结，浅显易懂。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/post/e80c82d9.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>肩胛骨</p>
+          <p class='content'>肩胛骨为什么会肩胛骨?长期久坐和低头工作有关，属于肌肉韧带慢性劳损的表现。
+
+肩胛骨位置
+收缩肩胛骨首先第一个步骤就是耸肩，第二个步骤就是，耸起来肩部之后，向后缩我们的肩胛骨，第三个步骤就是下沉...</p>
+        </a>
+      
+      
+        <a class='next' href='/post/63d8c7e6.html'>
+          <p class='title'>什么是网关，路由，DNS，通俗讲解<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>什么是网关，路由，dns？计算机主机网关的作用是什么？
+
+假设你的名字叫小不点，你住在一个大院子里，你的邻居有很多小伙伴，在门口传达室还有个看大门的李大爷，李大爷就是你的网关。当你想跟院子里的某...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+
+  
+
+
+</aside>
+
+
+
+        
+      </div>
+      
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+        Use
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.0.0" target="_blank" class="codename">Volantis</a>
+        as theme
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2020 XXX</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+      <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+  </div>
+  <div>
+    <!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>Copy Text</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>Copy Link</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>Open Link in New Tab</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>Copy Image Link</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
+        
+        
+        
+        
+          id="https:volantisjsorgfaqs"
+        >
+        <i class='fa fa-question fa-fw'></i> 常见问题
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
+        
+        
+        
+        
+          id="https:volantisjsorgexamples"
+        >
+        <i class='fa fa-rss fa-fw'></i> 示例博客
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
+        
+        
+        
+        
+          id="https:volantisjsorgcontributors"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
+        
+        
+        
+        
+          id="https:githubcomvolantis-xvolantis-docs"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
+        
+        
+        
+        
+          id="https:githubcomvolantis-xhexo-theme-volantis"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 主题源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) || "快来评论吧~";
+
+    let path = $.trim($('#pjax-comment-path').text());
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: path,
+      appId: "",
+      appKey: "",
+      pageSize: '10',
+      avatar: 'robohash',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'true',
+      mathJax: 'false',
+      enableQQ: 'true',
+      recordIP: 'false',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
+  $(function () {
+    pjax_valine();
+  });
+</script>
+
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+
+  
+    
+<script src="/js/search.js"></script>
+
+  
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+(function ($) {
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+})(jQuery);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
+    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'https://zhilin.cc' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'https://zhilin.cc' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'https://zhilin.cc' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+<!-- more -->
+
+
+    
+      
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+<!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    <div id="loading-bar-wrapper"><script>NProgress.configure({parent:"#loading-bar-wrapper",trickleSpeed: 100})</script></div>
+    <script>
+      window.ShowLoading = function() {
+        NProgress.start();
+      };
+      window.HideLoading = function() {
+        NProgress.done();
+      }
+    </script>
+  
+</div>
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      $('.l_header .switcher .s-search').removeClass('active'); // 关闭移动端激活的搜索框
+      $('.l_header').removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      $('.wrapper').removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      $('.s-top').unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      window.ShowLoading();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        
+        
+        
+        
+          pjax_valine();
+        
+        
+        
+        
+        
+      } catch (e) {
+        console.log(e);
+      }
+      window.HideLoading();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.HideLoading();
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+
+    
+  </div>
+</body>
+</html>

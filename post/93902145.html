@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2020/9 - zhilin</title>
+  <title>301重定向 - zhilin</title>
+  
+    <meta name="keywords" content="WEB">
   
 
+  
+    <meta name="description" content="什么是301重定向呢？说白了就是通过各种的方法将各种网络请求重新定个方向转到其它位置。当用户或搜索引擎向网站服务器发出浏览请求时，服务器返回的HTTP数据流中头信息（header）中的状态码的一种，表示本网页永久性转移到另一个地址。">
   
 
   <!-- feed -->
@@ -329,7 +331,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg"></div>
           
@@ -407,8 +409,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">301重定向</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -417,14 +419,14 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("half" == "half") { // 半屏 
+    if ("none" == "half") { // 半屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
+    } else if ("none" == "full") { // 全屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
     } 
@@ -438,70 +440,221 @@
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
-      
+    
+    
+      <h1 class="title">
+        301重定向
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
+          
+            
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/post/4a17b156.html">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 26, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
+      <div id="lc-pv" data-title="301重定向" data-path="/post/93902145.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-27</time>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>什么是301重定向呢？说白了就是通过各种的方法将各种网络请求重新定个方向转到其它位置。当用户或搜索引擎向网站服务器发出浏览请求时，服务器返回的HTTP数据流中头信息（header）中的状态码的一种，表示本网页永久性转移到另一个地址。</p>
+<a id="more"></a>
+<h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">php 301重定向代码</span><br><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">$the_host &#x3D; $_SERVER[&#39;HTTP_HOST&#39;];&#x2F;&#x2F;取得当前域名</span><br><span class="line"></span><br><span class="line">$the_url &#x3D; isset($_SERVER[&#39;REQUEST_URI&#39;]) ? $_SERVER[&#39;REQUEST_URI&#39;] : &#39;&#39;;&#x2F;&#x2F;判断地址后面部分</span><br><span class="line"></span><br><span class="line">$the_url &#x3D; strtolower($the_url);&#x2F;&#x2F;将英文字母转成小写</span><br><span class="line"></span><br><span class="line">if($the_url&#x3D;&#x3D;&quot;&#x2F;index.php&quot;)&#x2F;&#x2F;判断是不是首页</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">$the_url&#x3D;&quot;&#x2F;&quot;;&#x2F;&#x2F;如果是首页，赋值为“&#x2F;”</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if($the_host !&#x3D;&#x3D; &#39;www.ganzhilin.net&#39;)&#x2F;&#x2F;如果域名不是带www的网址那么进行下面的301跳转</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">header(&#39;HTTP&#x2F;1.1 301 Moved Permanently&#39;);&#x2F;&#x2F;发出301头部</span><br><span class="line"></span><br><span class="line">header(&#39;Location:http:&#x2F;&#x2F;www.ganzhilin.net&#x2F;&#39;.$the_url);&#x2F;&#x2F;跳转到带www的网址</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">html 301重定向代码,可以在页头加入如下代码：</span><br><span class="line"></span><br><span class="line">&lt;meta http-equiv&#x3D;&quot;refresh&quot; content&#x3D;&quot;0; url&#x3D;http:&#x2F;&#x2F;www.ganzhilin.net&#x2F;&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="ASP"><a href="#ASP" class="headerlink" title="ASP"></a>ASP</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ASP 301重定向代码,</span><br><span class="line"></span><br><span class="line">&lt;%</span><br><span class="line"></span><br><span class="line">Response.Status&#x3D;&quot;301 Moved Permanently&quot;</span><br><span class="line"></span><br><span class="line">Response.AddHeader &quot;Location&quot;,&quot;http:&#x2F;&#x2F;www.ganzhilin.net&#x2F;&quot;</span><br><span class="line"></span><br><span class="line">Response.End</span><br><span class="line"></span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Apache下301转向代码 ,新建.htaccess文件，输入下列内容（需要开启mod_rewrite）：</span><br><span class="line"></span><br><span class="line">RewriteCond %&#123;HTTP_HOST&#125; ^youduan.net [NC]</span><br><span class="line"></span><br><span class="line">RewriteRule ^(.*)$ http:&#x2F;&#x2F;www.ganzhilin.net&#x2F;$1 [L,R&#x3D;301]</span><br></pre></td></tr></table></figure>
+<h2 id="http-ini"><a href="#http-ini" class="headerlink" title="http.ini"></a>http.ini</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">http.ini伪静态规则的主机是最让人头疼的,因为有三个版本的伪静态规则:ISAPI_Rewrite 1.X,ISAPI_Rewrite2.X,ISAPI_Rewrite 3.x总共三个版本.选择适合自己的。代码如下。</span><br><span class="line"></span><br><span class="line">ISAPI_Rewrite 1.X的代码如下:</span><br><span class="line"></span><br><span class="line">[ISAPI_Rewrite]</span><br><span class="line"></span><br><span class="line">CacheClockRate 3600</span><br><span class="line"></span><br><span class="line">RepeatLimit 32</span><br><span class="line"></span><br><span class="line">RewriteCond Host: ^youduan.net$</span><br><span class="line"></span><br><span class="line">RewriteRule (.*) http:&#x2F;&#x2F;www.ganzhilin.net&#x2F; [R,I]</span><br><span class="line"></span><br><span class="line">ISAPI_Rewrite 2.X的代码如下:</span><br><span class="line"></span><br><span class="line">[ISAPI_Rewrite]</span><br><span class="line"></span><br><span class="line">CacheClockRate 3600</span><br><span class="line"></span><br><span class="line">RepeatLimit 32</span><br><span class="line"></span><br><span class="line">RewriteCond Host: ^youduan.net$</span><br><span class="line"></span><br><span class="line">RewriteRule (.*) http:&#x2F;&#x2F;www.ganzhilin.net&#x2F;$1 [I,RP]</span><br><span class="line"></span><br><span class="line">ISAPI_Rewrite 3.X的代码如下:</span><br><span class="line"></span><br><span class="line">[ISAPI_Rewrite]</span><br><span class="line"></span><br><span class="line">CacheClockRate 3600</span><br><span class="line"></span><br><span class="line">RepeatLimit 32</span><br><span class="line"></span><br><span class="line">RewriteCond %&#123;HTTP:Host&#125; ^youduan.net$</span><br><span class="line"></span><br><span class="line">RewriteRule (.*) http:&#x2F;&#x2F;www.ganzhilin.net&#x2F;$1 [NC,R&#x3D;301]</span><br></pre></td></tr></table></figure>
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/post/4a17b156.html'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://zhilin.cc/post/93902145.html>https://zhilin.cc/post/93902145.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-05T10:43:42+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 5, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/WEB/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>WEB</p></a></div>
 
 
-	
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zhilin.cc/post/93902145.html&title=301重定向 - zhilin&summary=什么是301重定向呢？说白了就是通过各种的方法将各种网络请求重新定个方向转到其它位置。当用户或搜索引擎向网站服务器发出浏览请求时，服务器返回的HTTP数据流中头信息（header）中的状态码的一种，表示本网页永久性转移到另一个地址。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhilin.cc/post/93902145.html&title=301重定向 - zhilin&summary=什么是301重定向呢？说白了就是通过各种的方法将各种网络请求重新定个方向转到其它位置。当用户或搜索引擎向网站服务器发出浏览请求时，服务器返回的HTTP数据流中头信息（header）中的状态码的一种，表示本网页永久性转移到另一个地址。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://zhilin.cc/post/93902145.html&title=301重定向 - zhilin&summary=什么是301重定向呢？说白了就是通过各种的方法将各种网络请求重新定个方向转到其它位置。当用户或搜索引擎向网站服务器发出浏览请求时，服务器返回的HTTP数据流中头信息（header）中的状态码的一种，表示本网页永久性转移到另一个地址。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/post/ab8e7ed7.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>葡萄酒的制作方法</p>
+          <p class='content'>葡萄酒的制作方法很多，最简单的葡萄酒的制作方法非常适合家庭自制葡萄酒。尝试自己在家中酿造出甜美的葡萄酒，是一件很有成就感的事。
+
+葡萄酒的制作方法 各种各样，下面我给大家介绍一种最简单的葡萄酒的...</p>
+        </a>
+      
+      
+        <a class='next' href='/post/85ffcc56.html'>
+          <p class='title'>苹果Mac电脑安装原版Win10系统教程<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>据说，50%以上Mac用户都有一个Windows梦，这不是说Mac OS X系统不好，而是绝大部分人用得不习惯，或Mac OS X不兼容我们平常工作或学习环境中用到的应用程序；如果说你的Mac买...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -509,103 +662,28 @@ Qu...
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/avatar1.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">zhilin</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <a href="/tags/Blog/" style="font-size: 22px; color: #636363">Blog</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/WEB/" style="font-size: 20px; color: #707070">WEB</a> <a href="/tags/Windows/" style="font-size: 20px; color: #707070">Windows</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 14px; color: #999">数学</a> <a href="/tags/%E6%98%93%E8%AF%AD%E8%A8%80/" style="font-size: 16px; color: #8b8b8b">易语言</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 18px; color: #7e7e7e">树莓派</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 24px; color: #555">生活</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#php"><span class="toc-text">php</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html"><span class="toc-text">html</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ASP"><span class="toc-text">ASP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Apache"><span class="toc-text">Apache</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#http-ini"><span class="toc-text">http.ini</span></a></li></ol>
     </div>
   </section>
 
 
   
 
-  
-
 
 </aside>
+
 
 
         

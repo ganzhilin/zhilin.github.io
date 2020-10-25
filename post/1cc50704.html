@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2020/9 - zhilin</title>
+  <title>Github Coding强制删除commit记录 - zhilin</title>
+  
+    <meta name="keywords" content="Blog">
   
 
+  
+    <meta name="description" content="最直接、暴力与简单的方法这也是我强烈推荐的，因为暴力、直接、简单，假定原有的远程仓库为 master，操作分为四步：">
   
 
   <!-- feed -->
@@ -329,7 +331,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg"></div>
           
@@ -407,8 +409,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">Github Coding强制删除commit记录</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -417,14 +419,14 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("half" == "half") { // 半屏 
+    if ("none" == "half") { // 半屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
+    } else if ("none" == "full") { // 全屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
     } 
@@ -438,70 +440,270 @@
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
-      
+    
+    
+      <h1 class="title">
+        Github Coding强制删除commit记录
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
+          
+            
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/post/4a17b156.html">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 15, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
+      <div id="lc-pv" data-title="Github Coding强制删除commit记录" data-path="/post/1cc50704.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-27</time>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>最直接、暴力与简单的方法<br>这也是我强烈推荐的，因为暴力、直接、简单，假定原有的远程仓库为 master，操作分为四步：</p>
+<a id="more"></a>
+<ol>
+<li>新建另一个远程仓库，命名为 latest_branch</li>
+<li>将现有的本地代码提交到远程仓库 latest_branch</li>
+<li>删除现有的远程仓库 master</li>
+<li>将远程仓库 latest_branch 命名为 master</li>
+</ol>
+<h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><h2 id="生成SSH"><a href="#生成SSH" class="headerlink" title="生成SSH"></a>生成SSH</h2><p>打开 D:\Github 文件夹 文件夹里面 鼠标右键 打开 Git Bash Here</p>
+<p>生成SSH keys 输入你自己的邮箱地址 (如果已经生成了，可以忽略这一步)<br>ssh-keygen -t rsa -C “<a href="mailto:&#x38;&#x33;&#x35;&#x38;&#50;&#x31;&#x32;&#x38;&#x30;&#x40;&#x71;&#x71;&#x2e;&#99;&#x6f;&#109;">&#x38;&#x33;&#x35;&#x38;&#50;&#x31;&#x32;&#x38;&#x30;&#x40;&#x71;&#x71;&#x2e;&#99;&#x6f;&#109;</a>“<br>提示输入三次密码，我们按三次回车，不设置密码。</p>
+<p>打开 C:\Users\Administrator.ssh\id_rsa.pub<br>此文件里面内容为刚才生成的密钥，准确的复制这个文件的内容。</p>
+<p>GitHub粘贴到 <a target="_blank" rel="noopener" href="https://github.com/settings/ssh">https://github.com/settings/ssh</a></p>
+<h2 id="测试SSH"><a href="#测试SSH" class="headerlink" title="测试SSH"></a>测试SSH</h2><p>测试SSH keys密钥 不要修改下面的内容<br>ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#x69;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a></p>
+<h2 id="配置Git邮箱"><a href="#配置Git邮箱" class="headerlink" title="配置Git邮箱"></a>配置Git邮箱</h2><p>输入你自己的邮箱地址<br>git config –global user.email “<a href="mailto:&#56;&#x33;&#53;&#56;&#50;&#49;&#50;&#56;&#48;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;">&#56;&#x33;&#53;&#56;&#50;&#49;&#50;&#56;&#48;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;</a>“</p>
+<h2 id="克隆你的远程仓库"><a href="#克隆你的远程仓库" class="headerlink" title="克隆你的远程仓库"></a>克隆你的远程仓库</h2><p>git clone <a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;</a>:ganzhilin/ganzhilin.github.io.git</p>
+<h2 id="进入你的本地库"><a href="#进入你的本地库" class="headerlink" title="进入你的本地库"></a>进入你的本地库</h2><p>cd ganzhilin.github.io</p>
+<h2 id="新建一个分支，切换到新的分支"><a href="#新建一个分支，切换到新的分支" class="headerlink" title="新建一个分支，切换到新的分支"></a>新建一个分支，切换到新的分支</h2><p>git checkout –orphan latest_branch</p>
+<h2 id="缓存所有文件（ganzhilin-github-io-文件夹，除了-git-全部删除-新建一个-1-txt）"><a href="#缓存所有文件（ganzhilin-github-io-文件夹，除了-git-全部删除-新建一个-1-txt）" class="headerlink" title="缓存所有文件（ganzhilin.github.io 文件夹，除了.git 全部删除 新建一个 1.txt）"></a>缓存所有文件（ganzhilin.github.io 文件夹，除了.git 全部删除 新建一个 1.txt）</h2><p>git add -A</p>
+<h2 id="提交跟踪过的文件"><a href="#提交跟踪过的文件" class="headerlink" title="提交跟踪过的文件"></a>提交跟踪过的文件</h2><p>git commit -am “Blog”</p>
+<h2 id="删除一个分支"><a href="#删除一个分支" class="headerlink" title="删除一个分支"></a>删除一个分支</h2><p>git branch -D master</p>
+<h2 id="重命名当前分支为master"><a href="#重命名当前分支为master" class="headerlink" title="重命名当前分支为master"></a>重命名当前分支为master</h2><p>git branch -m master</p>
+<h2 id="提交到远程master分支"><a href="#提交到远程master分支" class="headerlink" title="提交到远程master分支"></a>提交到远程master分支</h2><p>git push -f origin master</p>
+<h1 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h1><h2 id="生成SSH-1"><a href="#生成SSH-1" class="headerlink" title="生成SSH"></a>生成SSH</h2><p>打开 D:\Coding 文件夹 文件夹里面 鼠标右键 打开 Git Bash Here</p>
+<p>生成SSH keys 输入你自己的邮箱地址  (如果已经生成了，可以忽略这一步)<br>ssh-keygen -t rsa -C “<a href="mailto:&#56;&#x33;&#53;&#x38;&#x32;&#49;&#50;&#56;&#48;&#64;&#113;&#x71;&#46;&#99;&#111;&#109;">&#56;&#x33;&#53;&#x38;&#x32;&#49;&#50;&#56;&#48;&#64;&#113;&#x71;&#46;&#99;&#111;&#109;</a>“<br>提示输入三次密码，我们按三次回车，不设置密码。</p>
+<p>打开 C:\Users\Administrator.ssh\id_rsa.pub<br>此文件里面内容为刚才生成的密钥，准确的复制这个文件的内容。</p>
+<p>Coding粘贴到 <a target="_blank" rel="noopener" href="https://ganzhilin.coding.net/user/account/setting/keys">https://ganzhilin.coding.net/user/account/setting/keys</a></p>
+<h2 id="测试SSH-1"><a href="#测试SSH-1" class="headerlink" title="测试SSH"></a>测试SSH</h2><p>测试SSH keys密钥 不要修改下面的内容<br>ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#46;&#x63;&#111;&#100;&#105;&#x6e;&#x67;&#46;&#x6e;&#x65;&#116;">&#103;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#46;&#x63;&#111;&#100;&#105;&#x6e;&#x67;&#46;&#x6e;&#x65;&#116;</a></p>
+<h2 id="配置Git邮箱-1"><a href="#配置Git邮箱-1" class="headerlink" title="配置Git邮箱"></a>配置Git邮箱</h2><p>输入你自己的邮箱地址<br>git config –global user.email “<a href="mailto:&#56;&#x33;&#53;&#56;&#50;&#49;&#x32;&#56;&#x30;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#109;">&#56;&#x33;&#53;&#56;&#50;&#49;&#x32;&#56;&#x30;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#109;</a>“</p>
+<h2 id="克隆你的远程仓库-1"><a href="#克隆你的远程仓库-1" class="headerlink" title="克隆你的远程仓库"></a>克隆你的远程仓库</h2><p>git clone <a href="mailto:&#x67;&#105;&#x74;&#x40;&#101;&#46;&#99;&#111;&#100;&#x69;&#110;&#x67;&#x2e;&#x6e;&#101;&#x74;">&#x67;&#105;&#x74;&#x40;&#101;&#46;&#99;&#111;&#100;&#x69;&#110;&#x67;&#x2e;&#x6e;&#101;&#x74;</a>:ganzhilin/ganzhilin.git</p>
+<h2 id="进入你的本地库-1"><a href="#进入你的本地库-1" class="headerlink" title="进入你的本地库"></a>进入你的本地库</h2><p>cd ganzhilin</p>
+<h2 id="新建一个分支，切换到新的分支-1"><a href="#新建一个分支，切换到新的分支-1" class="headerlink" title="新建一个分支，切换到新的分支"></a>新建一个分支，切换到新的分支</h2><p>git checkout –orphan latest_branch</p>
+<h2 id="缓存所有文件（ganzhilin-文件夹，除了-git-全部删除-新建一个-1-txt）"><a href="#缓存所有文件（ganzhilin-文件夹，除了-git-全部删除-新建一个-1-txt）" class="headerlink" title="缓存所有文件（ganzhilin 文件夹，除了.git 全部删除 新建一个 1.txt）"></a>缓存所有文件（ganzhilin 文件夹，除了.git 全部删除 新建一个 1.txt）</h2><p>git add -A</p>
+<h2 id="提交跟踪过的文件-1"><a href="#提交跟踪过的文件-1" class="headerlink" title="提交跟踪过的文件"></a>提交跟踪过的文件</h2><p>git commit -am “Blog”</p>
+<h2 id="删除一个分支-1"><a href="#删除一个分支-1" class="headerlink" title="删除一个分支"></a>删除一个分支</h2><p>git branch -D master</p>
+<h2 id="重命名当前分支为master-1"><a href="#重命名当前分支为master-1" class="headerlink" title="重命名当前分支为master"></a>重命名当前分支为master</h2><p>git branch -m master</p>
+<h2 id="提交到远程master分支-1"><a href="#提交到远程master分支-1" class="headerlink" title="提交到远程master分支"></a>提交到远程master分支</h2><p>git push -f origin master</p>
+<h1 id="Gitee"><a href="#Gitee" class="headerlink" title="Gitee"></a>Gitee</h1><h2 id="生成SSH-2"><a href="#生成SSH-2" class="headerlink" title="生成SSH"></a>生成SSH</h2><p>打开 D:\Gitee 文件夹 文件夹里面 鼠标右键 打开 Git Bash Here</p>
+<p>生成SSH keys 输入你自己的邮箱地址  (如果已经生成了，可以忽略这一步)<br>ssh-keygen -t rsa -C “<a href="mailto:&#x38;&#x33;&#x35;&#56;&#x32;&#49;&#50;&#56;&#48;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;">&#x38;&#x33;&#x35;&#56;&#x32;&#49;&#50;&#56;&#48;&#x40;&#113;&#113;&#46;&#x63;&#111;&#109;</a>“<br>提示输入三次密码，我们按三次回车，不设置密码。</p>
+<p>打开 C:\Users\Administrator.ssh\id_rsa.pub<br>此文件里面内容为刚才生成的密钥，准确的复制这个文件的内容。</p>
+<p>Gitee粘贴到 <a target="_blank" rel="noopener" href="https://gitee.com/profile/sshkeys">https://gitee.com/profile/sshkeys</a></p>
+<h2 id="测试SSH-2"><a href="#测试SSH-2" class="headerlink" title="测试SSH"></a>测试SSH</h2><p>测试SSH keys密钥 不要修改下面的内容<br>ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#x69;&#x74;&#x65;&#x65;&#x2e;&#x63;&#111;&#109;">&#103;&#105;&#116;&#64;&#103;&#x69;&#x74;&#x65;&#x65;&#x2e;&#x63;&#111;&#109;</a></p>
+<h2 id="配置Git邮箱-2"><a href="#配置Git邮箱-2" class="headerlink" title="配置Git邮箱"></a>配置Git邮箱</h2><p>输入你自己的邮箱地址<br>git config –global user.email “<a href="mailto:&#x38;&#x33;&#x35;&#56;&#50;&#x31;&#x32;&#x38;&#48;&#64;&#x71;&#x71;&#46;&#x63;&#x6f;&#x6d;">&#x38;&#x33;&#x35;&#56;&#50;&#x31;&#x32;&#x38;&#48;&#64;&#x71;&#x71;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
+<h2 id="克隆你的远程仓库-2"><a href="#克隆你的远程仓库-2" class="headerlink" title="克隆你的远程仓库"></a>克隆你的远程仓库</h2><p>git clone <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#x65;&#101;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#x65;&#101;&#46;&#x63;&#x6f;&#109;</a>:ganzhilin/ganzhilin.git</p>
+<h2 id="进入你的本地库-2"><a href="#进入你的本地库-2" class="headerlink" title="进入你的本地库"></a>进入你的本地库</h2><p>cd ganzhilin</p>
+<h2 id="新建一个分支，切换到新的分支-2"><a href="#新建一个分支，切换到新的分支-2" class="headerlink" title="新建一个分支，切换到新的分支"></a>新建一个分支，切换到新的分支</h2><p>git checkout –orphan latest_branch</p>
+<h2 id="缓存所有文件（ganzhilin-文件夹，除了-git-全部删除-新建一个-1-txt）-1"><a href="#缓存所有文件（ganzhilin-文件夹，除了-git-全部删除-新建一个-1-txt）-1" class="headerlink" title="缓存所有文件（ganzhilin 文件夹，除了.git 全部删除 新建一个 1.txt）"></a>缓存所有文件（ganzhilin 文件夹，除了.git 全部删除 新建一个 1.txt）</h2><p>git add -A</p>
+<h2 id="提交跟踪过的文件-2"><a href="#提交跟踪过的文件-2" class="headerlink" title="提交跟踪过的文件"></a>提交跟踪过的文件</h2><p>git commit -am “Blog”</p>
+<h2 id="删除一个分支-2"><a href="#删除一个分支-2" class="headerlink" title="删除一个分支"></a>删除一个分支</h2><p>git branch -D master</p>
+<h2 id="重命名当前分支为master-2"><a href="#重命名当前分支为master-2" class="headerlink" title="重命名当前分支为master"></a>重命名当前分支为master</h2><p>git branch -m master</p>
+<h2 id="提交到远程master分支-2"><a href="#提交到远程master分支-2" class="headerlink" title="提交到远程master分支"></a>提交到远程master分支</h2><p>git push -f origin master</p>
+<h1 id="删除-Git-文件夹"><a href="#删除-Git-文件夹" class="headerlink" title="删除 .Git 文件夹"></a>删除 .Git 文件夹</h1><p>删除下图 .Git 文件夹</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/TajGNQDdc/TajGNQDdc0.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/TajGNQDdc/TajGNQDdc0.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>生成 .Git 文件夹</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/TajGNQDdc/TajGNQDdc_1.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/TajGNQDdc/TajGNQDdc_1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="><br>提交到远程 master 分支之后 commit记录=1  感觉非常的清爽，也不会出现版本冲突，同步错误等BUG！</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/post/4a17b156.html'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://zhilin.cc/post/1cc50704.html>https://zhilin.cc/post/1cc50704.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-27T22:22:12+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 27, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Blog/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Blog</p></a></div>
 
 
-	
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zhilin.cc/post/1cc50704.html&title=Github Coding强制删除commit记录 - zhilin&summary=最直接、暴力与简单的方法这也是我强烈推荐的，因为暴力、直接、简单，假定原有的远程仓库为 master，操作分为四步："
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhilin.cc/post/1cc50704.html&title=Github Coding强制删除commit记录 - zhilin&summary=最直接、暴力与简单的方法这也是我强烈推荐的，因为暴力、直接、简单，假定原有的远程仓库为 master，操作分为四步："
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://zhilin.cc/post/1cc50704.html&title=Github Coding强制删除commit记录 - zhilin&summary=最直接、暴力与简单的方法这也是我强烈推荐的，因为暴力、直接、简单，假定原有的远程仓库为 master，操作分为四步："
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/post/2ed09f69.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>EMOJI符号大全</p>
+          <p class='content'>🌹🍀🍎💰📱🌙🍁🍂🍃🌷💎🔪🔫🏀⚽⚡👄👍🔥
+
+emoji表情😀😁😂😃😄😅😆😉😊😋😎😍😘😗😙😚☺😇😐😑😶😏😣😥😮😯�...</p>
+        </a>
+      
+      
+        <a class='next' href='/post/41913326.html'>
+          <p class='title'>使用Coding的构建（持续集成CI）功能实现Coding仓库和github gitee的同步<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>gridea发布博客文章之后，内容推送到coding仓库的master分支后，触发同步，就会自动同步到github gitee。
+
+coding的持续集成使用的是Jenkinsfile实现的pi...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -509,103 +711,28 @@ Qu...
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/avatar1.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">zhilin</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <a href="/tags/Blog/" style="font-size: 22px; color: #636363">Blog</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/WEB/" style="font-size: 20px; color: #707070">WEB</a> <a href="/tags/Windows/" style="font-size: 20px; color: #707070">Windows</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 14px; color: #999">数学</a> <a href="/tags/%E6%98%93%E8%AF%AD%E8%A8%80/" style="font-size: 16px; color: #8b8b8b">易语言</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 18px; color: #7e7e7e">树莓派</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 24px; color: #555">生活</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90SSH"><span class="toc-text">生成SSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95SSH"><span class="toc-text">测试SSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEGit%E9%82%AE%E7%AE%B1"><span class="toc-text">配置Git邮箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E4%BD%A0%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">克隆你的远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E4%BD%A0%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%BA%93"><span class="toc-text">进入你的本地库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF%EF%BC%8C%E5%88%87%E6%8D%A2%E5%88%B0%E6%96%B0%E7%9A%84%E5%88%86%E6%94%AF"><span class="toc-text">新建一个分支，切换到新的分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%AD%98%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%EF%BC%88ganzhilin-github-io-%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E9%99%A4%E4%BA%86-git-%E5%85%A8%E9%83%A8%E5%88%A0%E9%99%A4-%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA-1-txt%EF%BC%89"><span class="toc-text">缓存所有文件（ganzhilin.github.io 文件夹，除了.git 全部删除 新建一个 1.txt）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E8%B7%9F%E8%B8%AA%E8%BF%87%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-text">提交跟踪过的文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF"><span class="toc-text">删除一个分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%91%BD%E5%90%8D%E5%BD%93%E5%89%8D%E5%88%86%E6%94%AF%E4%B8%BAmaster"><span class="toc-text">重命名当前分支为master</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8Bmaster%E5%88%86%E6%94%AF"><span class="toc-text">提交到远程master分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90SSH-1"><span class="toc-text">生成SSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95SSH-1"><span class="toc-text">测试SSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEGit%E9%82%AE%E7%AE%B1-1"><span class="toc-text">配置Git邮箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E4%BD%A0%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93-1"><span class="toc-text">克隆你的远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E4%BD%A0%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%BA%93-1"><span class="toc-text">进入你的本地库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF%EF%BC%8C%E5%88%87%E6%8D%A2%E5%88%B0%E6%96%B0%E7%9A%84%E5%88%86%E6%94%AF-1"><span class="toc-text">新建一个分支，切换到新的分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%AD%98%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%EF%BC%88ganzhilin-%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E9%99%A4%E4%BA%86-git-%E5%85%A8%E9%83%A8%E5%88%A0%E9%99%A4-%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA-1-txt%EF%BC%89"><span class="toc-text">缓存所有文件（ganzhilin 文件夹，除了.git 全部删除 新建一个 1.txt）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E8%B7%9F%E8%B8%AA%E8%BF%87%E7%9A%84%E6%96%87%E4%BB%B6-1"><span class="toc-text">提交跟踪过的文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF-1"><span class="toc-text">删除一个分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%91%BD%E5%90%8D%E5%BD%93%E5%89%8D%E5%88%86%E6%94%AF%E4%B8%BAmaster-1"><span class="toc-text">重命名当前分支为master</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8Bmaster%E5%88%86%E6%94%AF-1"><span class="toc-text">提交到远程master分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90SSH-2"><span class="toc-text">生成SSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95SSH-2"><span class="toc-text">测试SSH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEGit%E9%82%AE%E7%AE%B1-2"><span class="toc-text">配置Git邮箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E4%BD%A0%E7%9A%84%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93-2"><span class="toc-text">克隆你的远程仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E4%BD%A0%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%BA%93-2"><span class="toc-text">进入你的本地库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF%EF%BC%8C%E5%88%87%E6%8D%A2%E5%88%B0%E6%96%B0%E7%9A%84%E5%88%86%E6%94%AF-2"><span class="toc-text">新建一个分支，切换到新的分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%AD%98%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%EF%BC%88ganzhilin-%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E9%99%A4%E4%BA%86-git-%E5%85%A8%E9%83%A8%E5%88%A0%E9%99%A4-%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA-1-txt%EF%BC%89-1"><span class="toc-text">缓存所有文件（ganzhilin 文件夹，除了.git 全部删除 新建一个 1.txt）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E8%B7%9F%E8%B8%AA%E8%BF%87%E7%9A%84%E6%96%87%E4%BB%B6-2"><span class="toc-text">提交跟踪过的文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF-2"><span class="toc-text">删除一个分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%91%BD%E5%90%8D%E5%BD%93%E5%89%8D%E5%88%86%E6%94%AF%E4%B8%BAmaster-2"><span class="toc-text">重命名当前分支为master</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8Bmaster%E5%88%86%E6%94%AF-2"><span class="toc-text">提交到远程master分支</span></a></li></ol>
     </div>
   </section>
 
 
   
 
-  
-
 
 </aside>
+
 
 
         

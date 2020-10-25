@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -19,9 +17,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2020/9 - zhilin</title>
+  <title>linux最常用的20个命令 - zhilin</title>
+  
+    <meta name="keywords" content="Linux">
   
 
+  
+    <meta name="description" content="玩过Linux的人都会知道，Linux中的命令的确是非常多，但是玩过Linux的人也从来不会因为Linux的命令如此之多而烦恼，因为我们只需要掌握我们最常用的命令就可以了。当然你也可以在使用时去找一下man，他会帮你解决不少的问题。然而每个人玩Linux的目的都不同，所以他们常用的命令也就差异非常大，而我主要是用...">
   
 
   <!-- feed -->
@@ -329,7 +331,7 @@
   
     
     
-        <div class='cover-wrapper  dock' style="display: none;">
+        <div class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg"></div>
           
@@ -407,8 +409,8 @@
  
  
 <div id="pjax-data" style="display: none"> 
-  <div id="pjax-ispage">false</div> 
-  <div id="pjax-pageTitle"></div> 
+  <div id="pjax-ispage">true</div> 
+  <div id="pjax-pageTitle">linux最常用的20个命令</div> 
   <div id="pjax-enable-cover">true</div> 
   <div id="pjax-comment-path"></div> 
   <div id="pjax-comment-placeholder"></div> 
@@ -417,14 +419,14 @@
  
 <script> 
   // 处理封面 此时 jquery 还没加载 
-  if ("half" == "none") { // 移除封面 
+  if ("none" == "none") { // 移除封面 
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none"; 
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show"); 
   } else { 
-    if ("half" == "half") { // 半屏 
+    if ("none" == "half") { // 半屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half'); 
       document.getElementsByClassName('scroll-down')[0].style.display = "none"; 
-    } else if ("half" == "full") { // 全屏 
+    } else if ("none" == "full") { // 全屏 
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full'); 
       document.getElementsByClassName('scroll-down')[0].style.display = ""; 
     } 
@@ -438,70 +440,281 @@
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
-      
+    
+    
+      <h1 class="title">
+        linux最常用的20个命令
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
+          
+            
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/post/4a17b156.html">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 28, 2020</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
+      <div id="lc-pv" data-title="linux最常用的20个命令" data-path="/post/e5ec58d6.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-09-27</time>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p>玩过Linux的人都会知道，Linux中的命令的确是非常多，但是玩过Linux的人也从来不会因为Linux的命令如此之多而烦恼，因为我们只需要掌握我们最常用的命令就可以了。当然你也可以在使用时去找一下man，他会帮你解决不少的问题。然而每个人玩Linux的目的都不同，所以他们常用的命令也就差异非常大，而我主要是用Linux进行C/C++和shell程序编写的，所以常用到的命令可以就会跟一个管理Linux系统的人有所不同。因为不想在使用是总是东查西找，所以在此总结一下，方便一下以后的查看。不多说，下面就说说我最常用的Linux命令。</p>
+<a id="more"></a>
+<p>1、cd命令<br>这是一个非常基本，也是大家经常需要使用的命令，它用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;root&#x2F;Docements  切换到目录&#x2F;root&#x2F;Docements  </span><br><span class="line">cd .&#x2F;path          切换到当前目录下的path目录中，“.”表示当前目录    </span><br><span class="line">cd ..&#x2F;path         切换到上层目录中的path目录中，“..”表示上一层目录  </span><br></pre></td></tr></table></figure>
+<p>2、ls命令<br>这是一个非常有用的查看文件与目录的命令，list之意，它的参数非常多，下面就列出一些我常用的参数吧，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-l ：列出长数据串，包含文件的属性与权限数据等  </span><br><span class="line">-a ：列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）  </span><br><span class="line">-d ：仅列出目录本身，而不是列出目录的文件数据  </span><br><span class="line">-h ：将文件容量以较易读的方式（GB，kB等）列出来  </span><br><span class="line">-R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来  </span><br></pre></td></tr></table></figure>
+<p>注：这些参数也可以组合使用，下面举两个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -l  以长数据串的形式列出当前目录下的数据文件和目录  </span><br><span class="line">ls -lR  以长数据串的形式列出当前目录下的所有文件  </span><br></pre></td></tr></table></figure>
+<p>3、grep命令<br>该命令常用于分析一行的信息，若当中有我们所需要的信息，就将该行显示出来，该命令通常与管道命令一起使用，用于对一些命令的输出进行筛选加工等等，它的简单语法为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [-acinv] [--color&#x3D;auto] &#39;查找字符串&#39; filename  </span><br></pre></td></tr></table></figure>
+<p>它的常用参数如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-a ：将binary文件以text文件的方式查找数据  </span><br><span class="line">-c ：计算找到‘查找字符串’的次数  </span><br><span class="line">-i ：忽略大小写的区别，即把大小写视为相同  </span><br><span class="line">-v ：反向选择，即显示出没有‘查找字符串’内容的那一行  </span><br><span class="line">例如：  </span><br><span class="line">取出文件&#x2F;etc&#x2F;man.config中包含MANPATH的行，并把找到的关键字加上颜色  </span><br><span class="line">grep --color&#x3D;auto &#39;MANPATH&#39; &#x2F;etc&#x2F;man.config  </span><br><span class="line">把ls -l的输出中包含字母file（不区分大小写）的内容输出  </span><br><span class="line">ls -l | grep -i file  </span><br></pre></td></tr></table></figure>
+<p>4、find命令<br>find是一个基于查找的功能非常强大的命令，相对而言，它的使用也相对较为复杂，参数也比较多，所以在这里将给把它们分类列出，它的基本语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">find [PATH] [option] [action]</span><br><span class="line"></span><br><span class="line">与时间有关的参数：  </span><br><span class="line">-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；  </span><br><span class="line">-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；  </span><br><span class="line">-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；  </span><br><span class="line">-newer file : 列出比file还要新的文件名  </span><br><span class="line">例如：  </span><br><span class="line">find &#x2F;root -mtime 0  在当前目录下查找今天之内有改动的文件  </span><br><span class="line"></span><br><span class="line">与用户或用户组名有关的参数：  </span><br><span class="line">-user name : 列出文件所有者为name的文件  </span><br><span class="line">-group name : 列出文件所属用户组为name的文件  </span><br><span class="line">-uid n : 列出文件所有者为用户ID为n的文件  </span><br><span class="line">-gid n : 列出文件所属用户组为用户组ID为n的文件  </span><br><span class="line">例如：  </span><br><span class="line">find &#x2F;home&#x2F;ljianhui -user ljianhui  在目录&#x2F;home&#x2F;ljianhui中找出所有者为ljianhui文件  </span><br><span class="line"></span><br><span class="line">与文件权限及名称有关的参数：  </span><br><span class="line">-name filename ：找出文件名为filename的文件  </span><br><span class="line">-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件  </span><br><span class="line">-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、 </span><br><span class="line">目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；  </span><br><span class="line">-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；  </span><br><span class="line">-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示  </span><br><span class="line">-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示  </span><br><span class="line">例如：  </span><br><span class="line">find &#x2F; -name passwd  查找文件名为passwd的文件  </span><br><span class="line">find . -perm 0755  查找当前目录中文件权限的0755的文件  </span><br><span class="line">find . -size +12k  查找当前目录中大于12KB的文件，注意c表示byte  </span><br></pre></td></tr></table></figure>
+<p>5、cp命令<br>该命令用于复制文件，copy之意，它还可以把多个文件一次性地复制到一个目录下，它的常用参数如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-a ：将文件的特性一起复制  </span><br><span class="line">-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份  </span><br><span class="line">-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行  </span><br><span class="line">-r ：递归持续复制，用于目录的复制行为  </span><br><span class="line">-u ：目标文件与源文件有差异时才会复制  </span><br></pre></td></tr></table></figure>
+<p>例如 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp -a file1 file2  连同文件的所有特性把文件file1复制成文件file2  </span><br><span class="line">cp file1 file2 file3 dir  把文件file1、file2、file3复制到目录dir中  </span><br></pre></td></tr></table></figure>
+<p>6、mv命令<br>该命令用于移动文件、目录或更名，move之意，它的常用参数如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖  </span><br><span class="line">-i ：若目标文件已经存在，就会询问是否覆盖  </span><br><span class="line">-u ：若目标文件已经存在，且比目标文件新，才会更新  </span><br><span class="line">注：该命令可以把一个文件或多个文件一次移动一个文件夹中，但是最后一个目标文件一定要是“目录”。</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv file1 file2 file3 dir   把文件file1、file2、file3移动到目录dir中  </span><br><span class="line">mv file1 file2   把文件file1重命名为file2  </span><br></pre></td></tr></table></figure>
+<p>7、rm命令<br>该命令用于删除文件或目录，remove之间，它的常用参数如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f ：就是force的意思，忽略不存在的文件，不会出现警告消息  </span><br><span class="line">-i ：互动模式，在删除前会询问用户是否操作  </span><br><span class="line">-r ：递归删除，最常用于目录删除，它是一个非常危险的参数  </span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm -i file   删除文件file，在删除之前会询问是否进行该操作  </span><br><span class="line">rm -fr dir   强制删除目录dir中的所有文件  </span><br></pre></td></tr></table></figure>
+<p>8、ps命令<br>该命令用于将某个时间点的进程运行情况选取下来并输出，process之意，它的常用参数如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-A ：所有的进程均显示出来  </span><br><span class="line">-a ：不与terminal有关的所有进程  </span><br><span class="line">-u ：有效用户的相关进程  </span><br><span class="line">-x ：一般与a参数一起使用，可列出较完整的信息  </span><br><span class="line">-l ：较长，较详细地将PID的信息列出  </span><br></pre></td></tr></table></figure>
+<p>其实我们只要记住ps一般使用的命令参数搭配即可，它们并不多，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ps aux   查看系统所有的进程数据  </span><br><span class="line">ps ax   查看不与terminal有关的所有进程  </span><br><span class="line">ps -lA   查看系统所有的进程数据  </span><br><span class="line">ps axjf   查看连同一部分进程树状态  </span><br></pre></td></tr></table></figure>
+<p>9、kill命令<br>该命令用于向某个工作（%jobnumber）或者是某个PID（数字）传送一个信号，它通常与ps和jobs命令一起使用，它的基本语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -signal PID  </span><br></pre></td></tr></table></figure>
+<p>signal的常用参数如下：<br>注：最前面的数字为信号的代号，使用时可以用代号代替相应的信号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1：SIGHUP，启动被终止的进程  </span><br><span class="line">2：SIGINT，相当于输入ctrl+c，中断一个程序的进行  </span><br><span class="line">9：SIGKILL，强制中断一个进程的进行  </span><br><span class="line">15：SIGTERM，以正常的结束进程方式来终止进程  </span><br><span class="line">17：SIGSTOP，相当于输入ctrl+z，暂停一个进程的进行  </span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">以正常的结束进程方式来终于第一个后台工作，可用jobs命令查看后台中的第一个工作进程  </span><br><span class="line">kill -SIGTERM %1   </span><br><span class="line">重新改动进程ID为PID的进程，PID可用ps命令通过管道命令加上grep命令进行筛选获得  </span><br><span class="line">kill -SIGHUP PID  </span><br></pre></td></tr></table></figure>
+<p>10、killall命令<br>该命令用于向一个命令启动的进程发送一个信号，它的一般语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall [-iIe] [command name]  </span><br></pre></td></tr></table></figure>
+<p>它的参数如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-i ：交互式的意思，若需要删除时，会询问用户  </span><br><span class="line">-e ：表示后面接的command name要一致，但command name不能超过15个字符  </span><br><span class="line">-I ：命令名称忽略大小写  </span><br><span class="line">例如：  </span><br><span class="line">killall -SIGHUP syslogd  重新启动syslogd  </span><br></pre></td></tr></table></figure>
+<p>11、file命令<br>该命令用于判断接在file命令后的文件的基本数据，因为在Linux下文件的类型并不是以后缀为分的，所以这个命令对我们来说就很有用了，它的用法非常简单，基本语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file filename  </span><br><span class="line">例如：  </span><br><span class="line">file .&#x2F;test  </span><br></pre></td></tr></table></figure>
+<p>12、tar命令<br>该命令用于对文件进行打包，默认情况并不会压缩，如果指定了相应的参数，它还会调用相应的压缩程序（如gzip和bzip等）进行压缩和解压。它的常用参数如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-c ：新建打包文件  </span><br><span class="line">-t ：查看打包文件的内容含有哪些文件名  </span><br><span class="line">-x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中  </span><br><span class="line">-j ：通过bzip2的支持进行压缩&#x2F;解压缩  </span><br><span class="line">-z ：通过gzip的支持进行压缩&#x2F;解压缩  </span><br><span class="line">-v ：在压缩&#x2F;解压缩过程中，将正在处理的文件名显示出来  </span><br><span class="line">-f filename ：filename为要处理的文件  </span><br><span class="line">-C dir ：指定压缩&#x2F;解压缩的目录dir  </span><br></pre></td></tr></table></figure>
+<p>上面的解说可以已经让你晕过去了，但是通常我们只需要记住下面三条命令即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">压缩：tar -jcv -f filename.tar.bz2 要被处理的文件或目录名称  </span><br><span class="line">查询：tar -jtv -f filename.tar.bz2  </span><br><span class="line">解压：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录  </span><br></pre></td></tr></table></figure>
+<p>注：文件名并不定要以后缀tar.bz2结尾，这里主要是为了说明使用的压缩程序为bzip2</p>
+<p>13、cat命令<br>该命令用于查看文本文件的内容，后接要查看的文件名，通常可用管道与more和less一起使用，从而可以一页页地查看数据。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat text | less 查看text文件中的内容  </span><br><span class="line">注：这条命令也可以使用less text来代替 </span><br><span class="line">&#96;&#96;&#96; </span><br><span class="line">14、chgrp命令</span><br><span class="line">该命令用于改变文件所属用户组，它的使用非常简单，它的基本用法如下：</span><br></pre></td></tr></table></figure>
+<p>chgrp [-R] dirname/filename<br>-R ：进行递归的持续对所有文件和子目录更改<br>例如：<br>chgrp users -R ./dir  递归地把dir目录下中的所有文件和子目录下所有文件的用户组修改为users  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">15、chown命令</span><br><span class="line">该命令用于改变文件的所有者，与chgrp命令的使用方法相同，只是修改的文件属性不同，不再详述。</span><br><span class="line"></span><br><span class="line">16、chmod命令</span><br><span class="line">该命令用于改变文件的权限，一般的用法如下：</span><br></pre></td></tr></table></figure>
+<p>chmod [-R] xyz 文件或目录<br>-R：进行递归的持续更改，即连同子目录下的所有文件都会更改  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">同时，chmod还可以使用u（user）、g（group）、o（other）、a（all）和+（加入）、-（删除）、&#x3D;（设置）跟rwx搭配来对文件的权限进行更改。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>例如：<br>chmod 0755 file 把file的文件权限改变为-rxwr-xr-x<br>chmod g+w file 向file的文件权限中加入用户组可写权限  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">18、vim命令</span><br><span class="line">该命令主要用于文本编辑，它接一个或多个文件名作为参数，如果文件存在就打开，如果文件不存在就以该文件名创建一个文件。vim是一个非常好用的文本编辑器，它里面有很多非常好用的命令，在这里不再多说。你可以从这里下载 [vim常用操作](https:&#x2F;&#x2F;download.csdn.net&#x2F;detail&#x2F;ljianhui&#x2F;6215287) 的详细说明。</span><br><span class="line"></span><br><span class="line">19、gcc命令</span><br><span class="line">对于一个用Linux开发C程序的人来说，这个命令就非常重要了，它用于把C语言的源程序文件，编译成可执行程序，由于g++的很多参数跟它非常相似，所以这里只介绍gcc的参数，它的常用参数如下：</span><br></pre></td></tr></table></figure>
+<p>-o ：output之意，用于指定生成一个可执行文件的文件名<br>-c ：用于把源文件生成目标文件（.o)，并阻止编译器创建一个完整的程序<br>-I ：增加编译时搜索头文件的路径<br>-L ：增加编译时搜索静态连接库的路径<br>-S ：把源文件生成汇编代码文件<br>-lm：表示标准库的目录中名为libm.a的函数库<br>-lpthread ：连接NPTL实现的线程库<br>-std= ：用于指定把使用的C语言的版本  </p>
+<p>例如：<br>把源文件test.c按照c99标准编译成可执行程序test<br>gcc -o test test.c -lm -std=c99<br>把源文件test.c转换为相应的汇编程序源文件test.s<br>gcc -S test.c  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">20、time命令</span><br><span class="line">该命令用于测算一个命令（即程序）的执行时间。它的使用非常简单，就像平时输入命令一样，不过在命令的前面加入一个time即可，例如：</span><br></pre></td></tr></table></figure>
+<p>time ./process<br>time ps aux  </p>
+<p>```<br>在程序或命令运行结束后，在最后输出了三个时间，它们分别是：<br>user：用户CPU时间，命令执行完成花费的用户CPU时间，即命令在用户态中执行时间总和；<br>system：系统CPU时间，命令执行完成花费的系统CPU时间，即命令在核心态中执行时间总和；<br>real：实际时间，从command命令行开始执行到运行终止的消逝时间；</p>
+<p>注：用户CPU时间和系统CPU时间之和为CPU时间，即命令占用CPU执行的时间总和。实际时间要大于CPU时间，因为Linux是多任务操作系统，往往在执行一条命令时，系统还要处理其它任务。另一个需要注意的问题是即使每次执行相同命令，但所花费的时间也是不一样，其花费时间是与系统运行相关的。</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/post/4a17b156.html'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://zhilin.cc/post/e5ec58d6.html>https://zhilin.cc/post/e5ec58d6.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-28T10:57:01+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jun 28, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div>
 
 
-	
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zhilin.cc/post/e5ec58d6.html&title=linux最常用的20个命令 - zhilin&summary=玩过Linux的人都会知道，Linux中的命令的确是非常多，但是玩过Linux的人也从来不会因为Linux的命令如此之多而烦恼，因为我们只需要掌握我们最常用的命令就可以了。当然你也可以在使用时去找一下man，他会帮你解决不少的问题。然而每个人玩Linux的目的都不同，所以他们常用的命令也就差异非常大，而我主要是用Linux进行C/C++和shell程序编写的，所以常用到的命令可以就会跟一个管理Linux系统的人有所不同。因为不想在使用是总是东查西找，所以在此总结一下，方便一下以后的查看。不多说，下面就说说我最常用的Linux命令。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhilin.cc/post/e5ec58d6.html&title=linux最常用的20个命令 - zhilin&summary=玩过Linux的人都会知道，Linux中的命令的确是非常多，但是玩过Linux的人也从来不会因为Linux的命令如此之多而烦恼，因为我们只需要掌握我们最常用的命令就可以了。当然你也可以在使用时去找一下man，他会帮你解决不少的问题。然而每个人玩Linux的目的都不同，所以他们常用的命令也就差异非常大，而我主要是用Linux进行C/C++和shell程序编写的，所以常用到的命令可以就会跟一个管理Linux系统的人有所不同。因为不想在使用是总是东查西找，所以在此总结一下，方便一下以后的查看。不多说，下面就说说我最常用的Linux命令。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://zhilin.cc/post/e5ec58d6.html&title=linux最常用的20个命令 - zhilin&summary=玩过Linux的人都会知道，Linux中的命令的确是非常多，但是玩过Linux的人也从来不会因为Linux的命令如此之多而烦恼，因为我们只需要掌握我们最常用的命令就可以了。当然你也可以在使用时去找一下man，他会帮你解决不少的问题。然而每个人玩Linux的目的都不同，所以他们常用的命令也就差异非常大，而我主要是用Linux进行C/C++和shell程序编写的，所以常用到的命令可以就会跟一个管理Linux系统的人有所不同。因为不想在使用是总是东查西找，所以在此总结一下，方便一下以后的查看。不多说，下面就说说我最常用的Linux命令。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/post/df0aadce.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>追梦win8皮肤模块</p>
+          <p class='content'>1：编译时不会把没有用到的皮肤资源打包，编译出来的程序体积小。
+2：不会向系统写入任何东西。
+3：还去除了，界面上的 “小衣服” 哦！
+
+皮肤使用说明.↓.
+下载地址：https://ganzh...</p>
+        </a>
+      
+      
+        <a class='next' href='/post/ab8e7ed7.html'>
+          <p class='title'>葡萄酒的制作方法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>葡萄酒的制作方法很多，最简单的葡萄酒的制作方法非常适合家庭自制葡萄酒。尝试自己在家中酿造出甜美的葡萄酒，是一件很有成就感的事。
+
+葡萄酒的制作方法 各种各样，下面我给大家介绍一种最简单的葡萄酒的...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -509,103 +722,14 @@ Qu...
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/avatar1.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">zhilin</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
 
 
-    <div class='content'>
-      <a href="/tags/Blog/" style="font-size: 22px; color: #636363">Blog</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/WEB/" style="font-size: 20px; color: #707070">WEB</a> <a href="/tags/Windows/" style="font-size: 20px; color: #707070">Windows</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 14px; color: #999">数学</a> <a href="/tags/%E6%98%93%E8%AF%AD%E8%A8%80/" style="font-size: 16px; color: #8b8b8b">易语言</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 18px; color: #7e7e7e">树莓派</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 24px; color: #555">生活</a>
-    </div>
-  </section>
-
-
-  
 
   
 
 
 </aside>
+
 
 
         
