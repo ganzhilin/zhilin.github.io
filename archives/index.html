@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive - Hexo</title>
+  <title>Archive - zhilin</title>
   
 
   
@@ -41,6 +41,8 @@
 
   
 
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/ico.png">
   
 
   
@@ -92,7 +94,7 @@
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/logo.png'/>
           
           
           
@@ -113,7 +115,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-rss fa-fw'></i>博客
+                  <i class='fas fa-rss fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -227,7 +229,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-rss fa-fw'></i>博客
+                  <i class='fas fa-rss fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -329,13 +331,11 @@
     
         <div class='cover-wrapper  dock' style="display: none;">
           
-            <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg"></div>
           
           <div class='cover-body'>
   <div class='top'>
     
-    
-      <p class="title">Volantis</p>
     
     
   </div>
@@ -475,7 +475,7 @@
     
       
         <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+          <img no-lazy src='https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/avatar1.png'/>
         </a>
       
     
@@ -484,7 +484,7 @@
         
         
         
-          <p><span id="jinrishici-sentence">Hexo</span></p>
+          <p><span id="jinrishici-sentence">zhilin</span></p>
           <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
         
       </div>
@@ -1207,7 +1207,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'https://example.com' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1225,7 +1225,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'https://example.com' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1247,7 +1247,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'http://example.com' + pv.getAttribute('data-path');
+          var url = 'https://example.com' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增

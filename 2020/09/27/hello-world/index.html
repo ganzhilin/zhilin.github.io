@@ -17,7 +17,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Hello World - Hexo</title>
+  <title>Hello World - zhilin</title>
   
 
   
@@ -39,6 +39,8 @@
 
   
 
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/ico.png">
   
 
   
@@ -90,7 +92,7 @@
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
+            <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/ganzhilin/ganzhilin-imgs/images/logo.png'/>
           
           
           
@@ -111,7 +113,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-rss fa-fw'></i>博客
+                  <i class='fas fa-rss fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -225,7 +227,7 @@
                   
                     id="home"
                   >
-                  <i class='fas fa-rss fa-fw'></i>博客
+                  <i class='fas fa-rss fa-fw'></i>首页
                 </a>
                 
               </li>
@@ -327,13 +329,11 @@
     
         <div class='cover-wrapper post dock' style="display: none;">
           
-            <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg"></div>
           
           <div class='cover-body'>
   <div class='top'>
     
-    
-      <p class="title">Volantis</p>
     
     
   </div>
@@ -528,7 +528,7 @@
               
             
               
-                <p>本文永久链接是：<a href=http://example.com/2020/09/27/hello-world/>http://example.com/2020/09/27/hello-world/</a></p>
+                <p>本文永久链接是：<a href=https://example.com/2020/09/27/hello-world/>https://example.com/2020/09/27/hello-world/</a></p>
               
             
           </blockquote>
@@ -567,7 +567,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2020/09/27/hello-world/&title=Hello World - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://example.com/2020/09/27/hello-world/&title=Hello World - zhilin&summary="
           
           >
           
@@ -579,7 +579,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2020/09/27/hello-world/&title=Hello World - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://example.com/2020/09/27/hello-world/&title=Hello World - zhilin&summary="
           
           >
           
@@ -591,7 +591,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2020/09/27/hello-world/&title=Hello World - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://example.com/2020/09/27/hello-world/&title=Hello World - zhilin&summary="
           
           >
           
@@ -1323,7 +1323,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'https://example.com' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1341,7 +1341,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'https://example.com' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1363,7 +1363,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'http://example.com' + pv.getAttribute('data-path');
+          var url = 'https://example.com' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增
